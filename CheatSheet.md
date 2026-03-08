@@ -1,4 +1,4 @@
-## German Grammar Cheatsheet (This content is based on teachings and guidance from **Mr. Talha Waheed**)
+## German Grammar Cheatsheet (This content is based on teachings and guidance from **Mr. Talha Waheed Chauhan**)
 
 ---
 > - **Last updated:**  07/03/2026 
