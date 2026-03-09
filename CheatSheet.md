@@ -29,7 +29,7 @@
 | **Absolute Beginner** `Absolute Beginner` | A1 level concepts |
 | **Beginner** `Beginner` | A2 level concepts |
 
-<p align="center"> <img src="https://github-readme-streak-stats.herokuapp.com/?user=realistichassan" /> </p> 
+
 
 </td>
 
