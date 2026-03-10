@@ -40,7 +40,7 @@
 | Sr. No.| Name | Profile |
 |-------|-----|--------|
 | 1 | Mr. Hassan Javed  M.Sc. | [link](https://hassanjaved1010.wixsite.com/hassan/) |
-| 2 | Ms. Mamoona Khan. | [link]--- |
+| 2 | Ms. Mamoona Khan | [link] (---) |
 
 
 **Peer Reviewed by**
