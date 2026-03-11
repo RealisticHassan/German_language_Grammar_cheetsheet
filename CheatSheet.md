@@ -39,7 +39,7 @@
 
 | Sr. No.| Name | Profile |
 |-------|-----|--------|
-| 1 | Mr. Hassan Javed  M.Sc. | [link](https://hassanjaved1010.wixsite.com/hassan/) |
+| 1 | Mr. Hassan Javed  M.Sc. | [link](https://github.com/RealisticHassan/German_language_Grammar_cheetsheet/blob/main/temp.md) |
 | 2 | Ms. Mamoona Khan | [link](https://#/hassan/) |
 
 
