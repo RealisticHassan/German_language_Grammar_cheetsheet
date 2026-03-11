@@ -1,4 +1,3 @@
-# About me
 
 ![About me](pic.png)
  
