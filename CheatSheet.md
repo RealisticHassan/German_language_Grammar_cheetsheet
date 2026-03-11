@@ -40,7 +40,7 @@
 | Sr. No.| Name | Profile |
 |-------|-----|--------|
 | 1 | Mr. Hassan Javed  M.Sc. | [link](https://github.com/RealisticHassan/German_language_Grammar_cheetsheet/blob/main/temp.md) |
-| 2 | Ms. Mamoona Khan | [link](https://#/hassan/) |
+| 2 | Ms. Mamoona Khan | [link](https://pubg.com/en) |
 
 
 **Peer Reviewed by**
