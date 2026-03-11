@@ -1,5 +1,6 @@
 # My Profile
 
-![.](1.png)
+![About me](pic.png)
+ 
 
 > **It is enough. You already know about me.**
