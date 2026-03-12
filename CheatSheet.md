@@ -49,7 +49,7 @@
 |-------|------|--------|
 | 1 | Mr. Muhammad Adil Faisal | [link](https://www.linkedin.com/in/muhammad-adil-faisal-12817b108/) |
 | 2 | Mr. Ahsan Ullah | [link](https://www.linkedin.com/in/ahsanullah512/) |
-| 3 | Mr. Talha Waheed | [link](https://www.loading.com/) |
+| 3 | Mr. Talha Waheed | [link](https://www.facebook.com/talha.w.chauhan) |
   
 
 
