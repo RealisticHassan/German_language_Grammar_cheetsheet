@@ -5533,7 +5533,7 @@ Ich zeige **dir** mein neues Handy.
 </details>
 
 <details>
-<summary><b>📌 Wichtige Regeln für Nominativ, Akkusativ und Dativ im Satz (Important Rules for German Cases in a Sentence)</b></summary> <code>Beginner</code>
+<summary><b>📌 Wichtige Regeln für Nominativ, Akkusativ und Dativ im Satz (Important Rules for German Cases in a Sentence)</b> <code>Beginner</code> </summary>
 
 <table>
 <tr>
