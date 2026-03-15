@@ -5126,7 +5126,7 @@ Es gibt eine Schule.
 
 
 <details>
-<summary><b>📌 Dativergänzung & Stellung von Dativ- und Akkusativobjekt | Dative complement & position of dative and accusative objects</b> <code>Beginner</code></summary>
+<summary><b>📌 Dativergänzung & Stellung von Dativ- und Akk. | Dative complement & position of dative and accusative objects</b> <code>Beginner</code></summary>
 
 <table>
 <tr>
