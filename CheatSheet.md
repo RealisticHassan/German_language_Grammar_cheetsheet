@@ -4541,7 +4541,6 @@ Example
 
 </details>
 
-<details>
 
 <details>
 <summary><b>📌 Verben mit Dativ (Dative Verbs) – Part II</b></summary> <code>Beginner</code></summary>
@@ -4739,6 +4738,8 @@ Ich widerspreche **dir**.
 </table>
 
 </details>
+
+<details>
 <summary><b>📌 Verbtypen – Transitive, Intransitive und Ditransitive Verben</b> | <code>Beginner</code></summary>
 
 <table>
