@@ -4416,9 +4416,7 @@ Example
 | verzeihen (jdm.) | to forgive |
 
 </td>
-</tr>
-</table>
-
+<td>
 ---
 
 ### 🔹 Example Sentences (from your picture)
@@ -4533,6 +4531,10 @@ Example
 - gefallen **mir**  
 - helfen **dir**  
 - danken **ihm**
+
+</td>
+</tr>
+</table>
 
 </details>
 
