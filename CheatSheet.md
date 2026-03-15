@@ -4386,9 +4386,8 @@ Example
 
 - jdm helfen → to help someone
 
-</td>
 
-<td valign="top">
+---
 
 ### 🔹 Common Dative Verbs
 
@@ -4415,6 +4414,11 @@ Example
 | vergeben (jdm.) | to forgive |
 | verzeihen (jdm.) | to forgive |
 
+
+
+</td>
+
+<td valign="top">
 
 ---
 
