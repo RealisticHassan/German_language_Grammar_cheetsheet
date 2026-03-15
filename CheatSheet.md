@@ -5038,10 +5038,8 @@ Meinem Bruder.
 Was kaufst du deinem Bruder?  
 Einen Computer.
 
-</td>
-</tr>
 
-</table>
+
 
 ---
 
@@ -5105,7 +5103,10 @@ Example
 
 der → den → dem  
 wer → wen → wem
+</td>
+</tr>
 
+</table>
 </details>
 
 ======= EXTRA CONTETNT GOES HERE =========
