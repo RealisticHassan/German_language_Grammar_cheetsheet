@@ -3982,7 +3982,7 @@ verkaufen → hat verkauft
 </details>
 
 <details>
-<summary><b>📌 Wechselpräpositionen – an / auf (Location)</b> | <code>A1–A2</code></summary>
+<summary><b>📌 Wechselpräpositionen – an / auf (Location)</b> | <code>Beginner</code></summary>
 
 <table>
 <tr>
