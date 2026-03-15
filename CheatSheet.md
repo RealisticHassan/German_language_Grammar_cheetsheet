@@ -4541,6 +4541,209 @@ Example
 
 </details>
 
+<details>
+<summary><b>📌 Verbtypen – Transitive, Intransitive und Ditransitive Verben</b> | <code>Beginner</code></summary>
+
+<table>
+<tr>
+<td valign="top">
+
+### 🔹 Intransitive Verben
+
+**Definition**
+
+Verben, die **kein Akkusativobjekt** brauchen.
+
+They describe an action that **does not transfer to an object**.
+
+Structure
+
+Subjekt + Verb
+
+Examples
+
+| Verb | Meaning |
+|-----|-----|
+| schlafen | to sleep |
+| gehen | to go |
+| sterben | to die |
+| fallen | to fall |
+| wandern | to hike |
+| wachsen | to grow |
+| aufwachen | to wake up |
+| verschwinden | to disappear |
+
+Example sentences
+
+Ich schlafe in der Nacht.  
+(I sleep at night)
+
+Ich gehe mit meinen Freunden.  
+(I go with my friends)
+
+Mein Vater ist gestorben.  
+(My father died)
+
+Ich gehe ins Bett schlafen.  
+(I go to bed to sleep)
+
+⚠ Important
+
+These verbs **do not take Akkusativ objects**.
+
+---
+
+### 🔹 Transitive Verben
+
+**Definition**
+
+Verben, die **ein Akkusativobjekt** brauchen.
+
+They describe an action that **affects something or someone**.
+
+Structure
+
+Subjekt + Verb + Akkusativobjekt
+
+Examples
+
+| Verb | Meaning |
+|-----|-----|
+| brauchen | to need |
+| haben | to have |
+| lieben | to love |
+| mögen | to like |
+| kaufen | to buy |
+| suchen | to search |
+| finden | to find |
+| lesen | to read |
+| machen | to make |
+| tragen | to carry / wear |
+
+Example sentences
+
+Ich brauche Hilfe.  
+(I need help)
+
+Ich habe ein Auto.  
+(I have a car)
+
+Ich liebe dich.  
+(I love you)
+
+Ich koche Abendessen.  
+(I cook dinner)
+
+⚠ Important
+
+Without an **object**, the sentence often feels incomplete.
+
+</td>
+
+<td valign="top">
+
+### 🔹 Verben, die transitiv und intransitiv sein können
+
+**Definition**
+
+Some verbs can be **both transitive and intransitive**.
+
+They **may take an object but do not have to**.
+
+Examples
+
+| Verb | Meaning |
+|-----|-----|
+| essen | to eat |
+| brechen | to break |
+| schreiben | to write |
+| fahren | to drive |
+| öffnen | to open |
+| beginnen | to begin |
+| verstehen | to understand |
+| lernen | to learn |
+| ändern | to change |
+| steigen | to rise |
+
+Example sentences
+
+Ich lese gerade.  
+(I am reading)
+
+Ich lese gerade ein Buch.  
+(I am reading a book)
+
+Er bricht den Stift.  
+(He breaks the pen)
+
+Der Stift bricht.  
+(The pen breaks)
+
+Ich fahre nach Bremen.  
+(I drive to Bremen)
+
+Ich fahre ein Auto.  
+(I drive a car)
+
+---
+
+### 🔹 Ditransitive Verben
+
+**Definition**
+
+Verben, die **zwei Objekte** haben können:
+
+• **Dativobjekt** (person)  
+• **Akkusativobjekt** (thing)
+
+Structure
+
+Subjekt + Verb + Dativ + Akkusativ
+
+Examples
+
+| Verb | Meaning |
+|-----|-----|
+| geben | to give |
+| schenken | to gift |
+| schicken | to send |
+| leihen | to lend |
+| bringen | to bring |
+| zeigen | to show |
+| kaufen | to buy (for someone) |
+| wünschen | to wish |
+
+Example sentences
+
+Ich gebe Ali ein Buch.  
+(I give Ali a book)
+
+Ich bringe euch einen Kaffee.  
+(I bring you a coffee)
+
+Ich kaufe meinem Bruder einen Computer.  
+(I buy my brother a computer)
+
+Ich gebe einen Computer.  
+(I give a computer)
+
+⚠ Important
+
+Person → **Dativ**  
+Thing → **Akkusativ**
+
+Example
+
+Ich gebe **Ali** (Dativ) **ein Buch** (Akkusativ).
+
+</td>
+</tr>
+
+</table>
+
+</details>
+
+
 ======= EXTRA CONTETNT GOES HERE =========
 
 <details>
