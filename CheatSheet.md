@@ -4335,7 +4335,7 @@ Es regnet stark, **deshalb nehme ich einen Regenschirm mit.**
 
 
 <details>
-<summary><b>📌 Verben mit Dativ (Dative Verbs)</b></summary> <code>Beginner</code></summary>
+<summary><b>📌 Verben mit Dativ (Dative Verbs) Part I</b></summary> <code>Beginner</code></summary>
 
 <table>
 <tr>
@@ -4542,6 +4542,203 @@ Example
 </details>
 
 <details>
+
+<details>
+<summary><b>📌 Verben mit Dativ (Dative Verbs) – Part II</b></summary> <code>Beginner</code></summary>
+
+<table>
+<tr>
+<td valign="top">
+
+### 🔹 What are Dative Verbs?
+
+Some German verbs **require the Dative case (Dativ)**.
+
+The **person receiving the action is in Dativ**.
+
+Structure
+
+Subject + Verb + **Dativ object**
+
+Example
+
+Ich widerspreche **dir**.  
+(I contradict **you**.)
+
+---
+
+### 🔹 Abbreviations used
+
+| Abbreviation | Meaning |
+|--------------|--------|
+| jdm. | jemandem (someone – Dativ) |
+| jdn. | jemanden (someone – Akkusativ) |
+| etw. | etwas (something) |
+
+Example
+
+jdm widersprechen → to contradict someone
+
+---
+
+### 🔹 Dativ Verbs (Part II)
+
+| Verb | Meaning |
+|------|--------|
+| widersprechen (jdm.) | to contradict |
+| zusehen (jdm. bei etw.) | to watch someone |
+| fremdgehen (jdm.) | to cheat on someone |
+| zustimmen (jdm./etw.) | to agree with |
+| ähneln (jdm./etw.) | to resemble |
+| begegnen (jdm.) | to meet / come across |
+| beistehen (jdm.) | to stand by someone |
+| beitreten (jdm./etw.) | to join |
+| drohen (jdm. mit etw.) | to threaten |
+| entgegengehen (jdm.) | to go to meet |
+| entgegenfahren (jdm./etw.) | to drive towards |
+| entgegenkommen (jdm.) | to come towards |
+| gratulieren (jdm. zu etw.) | to congratulate |
+| einfallen (jdm.) | to come to someone's mind |
+| gehorchen (jdm./etw.) | to obey |
+| genügen (jdm.) | to be enough |
+| guttun (jdm./etw.) | to benefit |
+| nützen (jdm./etw.) | to benefit |
+| ausweichen (jdm./etw.) | to avoid |
+| dienen (jdm.) | to serve |
+| gelingen (jdm.) | to succeed |
+| misslingen (jdm.) | to fail |
+| sich nähern (jdm.) | to approach |
+| sich zuwenden (jdm.) | to turn to someone |
+
+</td>
+
+<td valign="top">
+
+### 🔹 Example Sentences
+
+widersprechen  
+Der Chef widerspricht **seinem Mitarbeiter**.  
+(The boss contradicts **his employee**.)
+
+zusehen  
+Kann ich **dir** bei deiner Arbeit zusehen?  
+(Can I watch **you** while you work?)
+
+fremdgehen  
+Bist du **mir** fremdgegangen?  
+(Have you cheated on **me**?)
+
+zustimmen  
+Der Politiker stimmt **dem neuen Gesetz** zu.  
+(The politician agrees with **the new law**.)
+
+ähneln  
+Ich ähnele **meinem Bruder**.  
+(I resemble **my brother**.)
+
+begegnen  
+Ich bin heute Morgen zufällig **einem alten Freund** begegnet.  
+(I happened to meet **an old friend** this morning.)
+
+beistehen  
+Ich stehe **dir** in dieser schweren Zeit bei.  
+(I stand by **you** in this difficult time.)
+
+beitreten  
+Ich bin gestern **einem Fußballclub** beigetreten.  
+(I joined **a football club** yesterday.)
+
+drohen  
+Der Lehrer droht **den Schülern** mit extra Hausaufgaben.  
+(The teacher threatens **the students** with extra homework.)
+
+entgegengehen  
+Ich gehe **dir** schon mal entgegen.  
+(I go to meet **you**.)
+
+entgegenfahren  
+Er fährt **dir** schon entgegen.  
+(He drives towards **you**.)
+
+entgegenkommen  
+Kommst du **mir** entgegen?  
+(Are you coming towards **me**?)
+
+gratulieren  
+Ich gratuliere **dir** zum Geburtstag.  
+(I congratulate **you** on your birthday.)
+
+einfallen  
+Fällt **dir** noch etwas ein?  
+(Does anything else come to **your** mind?)
+
+gehorchen  
+Der Soldat gehorcht **dem General**.  
+(The soldier obeys **the general**.)
+
+genügen  
+Das genügt **mir**.  
+(That is enough for **me**.)
+
+guttun  
+Ein Urlaub würde **dir** guttun.  
+(A vacation would do **you** good.)
+
+nützen  
+Der Sieg nützt **dem Team** nichts mehr.  
+(The victory no longer benefits **the team**.)
+
+ausweichen  
+Du konntest **dem Hindernis** ausweichen.  
+(You managed to avoid **the obstacle**.)
+
+dienen  
+Wie kann ich **Ihnen** dienen?  
+(How can I serve **you**?)
+
+gelingen  
+Die Präsentation ist **ihm** gut gelungen.  
+(The presentation succeeded **for him**.)
+
+misslingen  
+Der Test ist **mir** total misslungen.  
+(The test completely failed **for me**.)
+
+sich nähern  
+Der Löwe nähert sich **seiner Beute**.  
+(The lion approaches **its prey**.)
+
+sich zuwenden  
+Sie wendet sich immer **ihrem Chef** zu.  
+(She always turns to **her boss**.)
+
+---
+
+### 🔹 Quick Memory Trick
+
+Many **Dative verbs describe interaction with a person**.
+
+Examples
+
+- widersprechen **jemandem**  
+- zustimmen **jemandem**  
+- helfen **jemandem**  
+- gratulieren **jemandem**
+
+⚡ Easy rule
+
+If the action **goes toward a person**, German often uses **Dativ**.
+
+Example
+
+Ich gratuliere **dir**.  
+Ich widerspreche **dir**.
+
+</td>
+</tr>
+</table>
+
+</details>
 <summary><b>📌 Verbtypen – Transitive, Intransitive und Ditransitive Verben</b> | <code>Beginner</code></summary>
 
 <table>
@@ -4926,7 +5123,7 @@ Es gibt eine Schule.
 
 
 <details>
-<summary><b>📌 Dativergänzung & Stellung von Dativ- und Akkusativobjekt | Dative complement & position of dative and accusative objects</b> | <code>Beginner</code></summary>
+<summary><b>📌 Dativergänzung & Stellung von Dativ- und Akkusativobjekt | Dative complement & position of dative and accusative objects</b> <code>Beginner</code></summary>
 
 <table>
 <tr>
