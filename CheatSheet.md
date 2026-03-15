@@ -2289,7 +2289,7 @@ Very important for B1 level.
 </details>
 
 <details>
-<summary><b>📌 Konjunktiv II – könnte (können)</b> | <code>Beginner</code></summary>
+<summary><b>📌 Konjunktiv II – könnte (können)</b> | <code> Beginner </code> </summary>
 
 <table>
 <tr>
