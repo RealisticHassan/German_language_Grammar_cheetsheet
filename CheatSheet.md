@@ -5314,7 +5314,7 @@ wer → wen → wem
 </details>
 
 <details>
-<summary><b>📌 Wichtige Verben mit Akkusativ und Dativ (Important Verbs with Accusative and Dative)</b></summary> <code>Beginner</code></summary>
+<summary><b>📌 Wichtige Verben mit Akkusativ und Dativ (Important Verbs with Accusative and Dative)</b> <code>Beginner</code></summary>
 
 <table>
 <tr>
