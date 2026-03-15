@@ -2,7 +2,7 @@
 
 ---
 > - **Last updated:**  17.03.2026 
-> - **Access:**  lifetime
+> - **Access:**  Lifetime
 ---
 
 
