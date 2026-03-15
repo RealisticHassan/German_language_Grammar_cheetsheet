@@ -4415,8 +4415,7 @@ Example
 | vergeben (jdm.) | to forgive |
 | verzeihen (jdm.) | to forgive |
 
-</td>
-<td>
+
 ---
 
 ### 🔹 Example Sentences (from your picture)
