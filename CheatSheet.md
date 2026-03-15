@@ -4924,6 +4924,190 @@ Es gibt eine Schule.
 
 </details>
 
+
+<details>
+<summary><b>📌 Dativergänzung & Stellung von Dativ- und Akkusativobjekt</b> | <code>Beginner</code></summary>
+
+<table>
+<tr>
+<td valign="top">
+
+### 🔹 Dativergänzung (Dativobjekt)
+
+**Definition**
+
+The **Dativ** shows **to whom something is given, shown, or done**.
+
+German question word
+
+| Question | Meaning |
+|---|---|
+| Wem? | To whom? |
+
+Example question structure
+
+Wem gibt / kauft / zeigt ... ?
+
+---
+
+### 🔹 Examples
+
+Wem kauft Markus die Fußballschuhe?  
+Markus kauft **seinem Sohn** die Fußballschuhe.
+
+Wem zeigt Klaus die Stadt?  
+Klaus zeigt **seinem Vater** die Stadt.
+
+---
+
+### 🔹 Dativ + Akkusativ together
+
+Often a **Dativ object and Akkusativ object appear together**.
+
+Example sentences
+
+Anita backt **ihrer Mutter** einen Kuchen.  
+Frank schreibt **seinen Eltern** einen Brief.
+
+Structure
+
+Subjekt + Verb + **Dativ (person)** + **Akkusativ (thing)**
+
+---
+
+### 🔹 Verben mit Dativ
+
+Some verbs **always use Dativ**.
+
+Examples
+
+Er hilft seinem Vater.  
+(He helps his father)
+
+Ich antworte ihm.  
+(I answer him)
+
+Harald dankt seiner Schwester herzlich.  
+(Harald thanks his sister warmly)
+
+Sie glaubt ihr nicht.  
+(She does not believe her)
+
+</td>
+
+<td valign="top">
+
+### 🔹 Personalpronomen (Nominativ / Akkusativ / Dativ)
+
+| Artikel | Nominativ | Akkusativ | Dativ |
+|---|---|---|---|
+| der | er | ihn | ihm |
+| die | sie | sie | ihr |
+| das | es | es | ihm |
+| die (Plural) | sie | sie | ihnen |
+
+Personal pronouns
+
+| Person | Nominativ | Akkusativ | Dativ |
+|---|---|---|---|
+| ich | ich | mich | mir |
+| du | du | dich | dir |
+| wir | wir | uns | uns |
+| ihr | ihr | euch | euch |
+| Sie | Sie | Sie | Ihnen |
+
+---
+
+### 🔹 Example with two objects
+
+Ich kaufe **meinem Bruder** **einen Computer**.
+
+Variations
+
+Einen Computer kaufe ich meinem Bruder.  
+Meinem Bruder kaufe ich einen Computer.
+
+Questions
+
+Wer kauft seinem Bruder einen Computer?  
+Ich.
+
+Wem kaufst du einen Computer?  
+Meinem Bruder.
+
+Was kaufst du deinem Bruder?  
+Einen Computer.
+
+</td>
+</tr>
+
+</table>
+
+---
+
+### 🔹 Stellung von Dativ- und Akkusativobjekt
+
+**1️⃣ Nomen + Nomen**
+
+First **Dativ**, then **Akkusativ**
+
+Example
+
+Anita schenkt ihrem Sohn ein Buch.  
+Ali schenkt seinem Vater einen Computer.
+
+---
+
+**2️⃣ Pronomen + Pronomen**
+
+First **Akkusativ**, then **Dativ**
+
+Example
+
+Er schenkt **ihn ihm**.  
+Sie schenkt **sie ihr**.
+
+---
+
+**3️⃣ Pronomen + Nomen**
+
+First **Pronoun**, then **Noun**
+
+Examples
+
+Anita schenkt **es ihrem Sohn**.  
+Anita schenkt **ihm das Buch**.
+
+---
+
+### 🔹 More Examples
+
+Alina schenkt ihrer Tochter eine Tasche.  
+Sie schenkt sie ihr.
+
+Das Kind schenkt dem Mädchen ein Buch.  
+Es schenkt es ihm.
+
+Die Kinder schenken ihren Eltern die Blumen.  
+Sie schenken sie ihnen.
+
+---
+
+### 🔹 Quick Question Overview
+
+| Case | Question |
+|---|---|
+| Nominativ | Wer? |
+| Akkusativ | Wen? |
+| Dativ | Wem? |
+
+Example
+
+der → den → dem  
+wer → wen → wem
+
+</details>
+
 ======= EXTRA CONTETNT GOES HERE =========
 
 <details>
