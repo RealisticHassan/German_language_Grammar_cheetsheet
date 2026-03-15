@@ -5532,6 +5532,167 @@ Ich zeige **dir** mein neues Handy.
 
 </details>
 
+<details>
+<summary><b>📌 Wichtige Regeln für Nominativ, Akkusativ und Dativ im Satz (Important Rules for German Cases in a Sentence)</b></summary> <code>Beginner</code>
+
+<table>
+<tr>
+<td valign="top">
+
+### 🔹 Rule 1 — Subject = Nominativ
+
+In every German sentence, the **subject is always in Nominativ**.
+
+The subject answers:
+
+| Question | Meaning |
+|---|---|
+| Wer? | Who? |
+| Was? | What? |
+
+Example
+
+Der Mann kauft ein Auto.
+
+Subject → **Der Mann** (Nominativ)
+
+---
+
+### 🔹 Rule 2 — Dativ is usually a Person
+
+The **Dativ object usually refers to a person**.
+
+It answers the question:
+
+| Question | Meaning |
+|---|---|
+| Wem? | To whom? |
+
+Example
+
+Ich gebe **dem Mann** ein Buch.
+
+Dativ → dem Mann (person)  
+Akkusativ → ein Buch (thing)
+
+⚠ Important
+
+Most of the time
+
+**Person → Dativ**  
+**Thing → Akkusativ**
+
+---
+
+### 🔹 Rule 3 — Many Verbs require Dativ
+
+Some verbs **always use the Dativ case**.
+
+Example verbs
+
+| Verb | Meaning |
+|---|---|
+| helfen | to help |
+| danken | to thank |
+| folgen | to follow |
+| vertrauen | to trust |
+| glauben | to believe |
+| gefallen | to like |
+
+Example
+
+Ich helfe **dir**.  
+(I help you)
+
+Du glaubst **mir**.  
+(You believe me)
+
+</td>
+
+<td valign="top">
+
+### 🔹 Rule 4 — Order of Dativ and Akkusativ (Noun + Noun)
+
+If **both objects are nouns**, the order is:
+
+**Dativ → Akkusativ**
+
+Example
+
+Ich kaufe **meinem Bruder** **einen Computer**.
+
+Dativ → meinem Bruder  
+Akkusativ → einen Computer
+
+---
+
+### 🔹 Rule 5 — Personal Pronouns (Pronoun + Pronoun)
+
+If **both objects are pronouns**, the order changes:
+
+**Akkusativ → Dativ**
+
+Example
+
+Ich gebe **es dir**.  
+(I give it to you)
+
+Structure
+
+Subject + Verb + **Akk Pronoun + Dat Pronoun**
+
+---
+
+### 🔹 Rule 6 — Pronoun + Noun
+
+If one object is a **pronoun** and the other is a **noun**:
+
+The **pronoun comes first**.
+
+Example
+
+Ich gebe **dir das Buch**.
+
+Pronoun → dir  
+Noun → das Buch
+
+Another example
+
+Ich gebe **es meinem Bruder**.
+
+---
+
+### 🔹 Quick Summary
+
+| Situation | Order |
+|---|---|
+| Noun + Noun | Dativ → Akkusativ |
+| Pronoun + Pronoun | Akkusativ → Dativ |
+| Pronoun + Noun | Pronoun → Noun |
+
+---
+
+### 🔹 Easy Memory Trick
+
+Think like this:
+
+Person → **Dativ**
+
+Thing → **Akkusativ**
+
+Example
+
+Ich schenke **meiner Mutter** **Blumen**.
+
+Dativ → meiner Mutter  
+Akkusativ → Blumen
+
+</td>
+</tr>
+</table>
+
+</details>
+
 ======= EXTRA CONTETNT GOES HERE =========
 
 <details>
