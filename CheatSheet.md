@@ -4993,11 +4993,7 @@ Harald dankt seiner Schwester herzlich.
 Sie glaubt ihr nicht.  
 (She does not believe her)
 
-</td>
-
-<td valign="top">
-
-### 🔹 Personalpronomen (Nominativ / Akkusativ / Dativ)
+---
 
 | Artikel | Nominativ | Akkusativ | Dativ |
 |---|---|---|---|
@@ -5016,7 +5012,15 @@ Personal pronouns
 | ihr | ihr | euch | euch |
 | Sie | Sie | Sie | Ihnen |
 
----
+
+
+</td>
+
+<td valign="top">
+
+### 🔹 Personalpronomen (Nominativ / Akkusativ / Dativ)
+
+
 
 ### 🔹 Example with two objects
 
