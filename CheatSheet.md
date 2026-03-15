@@ -5383,6 +5383,37 @@ jdm etw geben → to give someone something
 | wünschen (jdm. etw.) | to wish |
 | zeigen (jdm. etw.) | to show |
 
+---
+
+### 🔹 Quick Rule
+
+In most German sentences with **two objects**:
+
+**Person → Dativ**  
+**Thing → Akkusativ**
+
+Example
+
+Ich kaufe **meiner Mutter** **ein Geschenk**.
+
+Dativ → meiner Mutter  
+Akkusativ → ein Geschenk
+
+⚡ Easy Memory
+
+If you can say in English:
+
+**“someone something”**
+
+German usually uses
+
+**Dativ + Akkusativ**
+
+Example
+
+give **someone something**
+
+→ jemandem etwas geben
 </td>
 
 <td valign="top">
@@ -5493,37 +5524,7 @@ zeigen
 Ich zeige **dir** mein neues Handy.  
 (I show **you** my new phone.)
 
----
 
-### 🔹 Quick Rule
-
-In most German sentences with **two objects**:
-
-**Person → Dativ**  
-**Thing → Akkusativ**
-
-Example
-
-Ich kaufe **meiner Mutter** **ein Geschenk**.
-
-Dativ → meiner Mutter  
-Akkusativ → ein Geschenk
-
-⚡ Easy Memory
-
-If you can say in English:
-
-**“someone something”**
-
-German usually uses
-
-**Dativ + Akkusativ**
-
-Example
-
-give **someone something**
-
-→ jemandem etwas geben
 
 </td>
 </tr>
