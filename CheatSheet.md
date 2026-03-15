@@ -4335,7 +4335,7 @@ Es regnet stark, **deshalb nehme ich einen Regenschirm mit.**
 
 
 <details>
-<summary><b>📌 Verben mit Dativ (Dative Verbs)</b></summary>
+<summary><b>📌 Verben mit Dativ (Dative Verbs)</b></summary> <code>Beginner</code></summary>
 
 <table>
 <tr>
@@ -4743,6 +4743,186 @@ Ich gebe **Ali** (Dativ) **ein Buch** (Akkusativ).
 
 </details>
 
+
+<details>
+<summary><b>📌 Ergänzungen – Nominativ und Akkusativ Ergänzung</b> | <code>Beginner</code></summary>
+
+<table>
+<tr>
+<td valign="top">
+
+### 🔹 Nominativergänzung (Subject)
+
+**Definition**
+
+The **Nominativ** shows **who or what performs the action**.
+
+German question words
+
+| Question | Meaning |
+|---|---|
+| Wer? | Who? |
+| Was? | What? |
+
+Structure
+
+Subjekt + Verb + (Objekt)
+
+Important rule
+
+In questions about the subject, **the verb stays singular**.
+
+Example questions
+
+Wer macht Urlaub in Italien?  
+Wer hat Urlaub?  
+Wer isst den Apfel?
+
+Example answers
+
+Petra macht Urlaub in Italien.  
+Peter und Thomas haben Urlaub.  
+Ali isst den Apfel.
+
+More examples
+
+Wer macht einen Apfelkuchen heute?  
+Ich mache einen Apfelkuchen.
+
+Wer schläft in meinem Bett?  
+Ich schlafe in deinem Bett.
+
+---
+
+### 🔹 Nominativergänzung mit sein / werden / heißen
+
+Some verbs connect the subject with **another nominative element**.
+
+Important verbs
+
+| Verb | Meaning |
+|---|---|
+| sein | to be |
+| werden | to become |
+| heißen | to be called |
+
+Question structure
+
+Wer / Was bist / ist / wird ... ?
+
+Examples
+
+Wer ist das?  
+Das ist unsere Kursleiterin.
+
+Wer bist du?  
+Ich bin ein Freund von Peter.
+
+Was ist gut?  
+Das Wetter ist gut.
+
+Was seid ihr von Beruf?  
+Wir sind Architekten.
+
+Was wird er?  
+Er wird ein Arzt.
+
+Was ist das?  
+Das ist ein Bus.
+
+Wie heißt du?  
+Ich heiße Talha.
+
+</td>
+
+<td valign="top">
+
+### 🔹 Nach "sein" und "werden"
+
+After **sein** and **werden**, we can use:
+
+• a **Nominativergänzung (noun)**  
+• an **adjective**
+
+Meaning of **werden**
+
+werden = something **changes or develops**
+
+Examples
+
+Das ist der neue Lehrer.  
+(This is the new teacher)
+
+Der Film war sehr interessant.  
+(The film was very interesting)
+
+Sie wird Ärztin.  
+(She becomes a doctor)
+
+Am Nachmittag wurde es sehr heiß.  
+(In the afternoon it became very hot)
+
+---
+
+### 🔹 Akkusativergänzung (Akkusativobjekt)
+
+**Definition**
+
+The **Akkusativ** shows the **direct object** of the action.
+
+German questions
+
+| Question | Meaning |
+|---|---|
+| Wen? | Whom? |
+| Was? | What? |
+
+Structure
+
+Subjekt + Verb + Akkusativobjekt
+
+Examples
+
+Wen trifft Alina am Donnerstag?  
+Am Donnerstag trifft Alina eine Freundin.
+
+Was machen Peter und Thomas?  
+Sie machen einen Ausflug.
+
+Was hat Ali in seiner Hand?  
+In seiner Hand hat er einen Ring.
+
+---
+
+### 🔹 "es gibt" + Akkusativ
+
+The expression **es gibt** always uses **Akkusativ**.
+
+Meaning
+
+es gibt = there is / there are
+
+Example
+
+Was gibt es im Klassenzimmer?
+
+Es gibt einen Tisch und eine Tafel.
+
+⚠ Important
+
+After **es gibt** → always **Akkusativ**
+
+Example
+
+Es gibt einen Lehrer.  
+Es gibt eine Schule.
+
+</td>
+</tr>
+
+</table>
+
+</details>
 
 ======= EXTRA CONTETNT GOES HERE =========
 
