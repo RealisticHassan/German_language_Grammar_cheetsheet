@@ -4343,9 +4343,9 @@ Es regnet stark, **deshalb nehme ich einen Regenschirm mit.**
 
 ### 🔹 What are Dative Verbs?
 
-Some German verbs **always require the Dativ case**.
+Some German verbs **always take the Dative case (Dativ)**.
 
-That means the **person receiving the action is in Dativ**, not Akkusativ.
+That means the **person affected by the action is in Dativ**, not Akkusativ.
 
 Structure:
 
@@ -4354,7 +4354,7 @@ Subject + Verb + **Dative Object**
 Example
 
 - Ich helfe **dir**.  
-- Er glaubt **mir**.  
+(I help **you**)
 
 ---
 
@@ -4372,25 +4372,19 @@ Example
 | Sie | Ihnen |
 | sie | ihnen |
 
-Example
-
-- Ich helfe **dir**.  
-- Sie glaubt **ihm**.  
-- Wir danken **Ihnen**.
-
 ---
 
-### 🔹 jdm / jdn meaning
+### 🔹 Abbreviations in Dictionaries
 
-In dictionaries:
-
-- **jdm. = jemandem (Dativ)**  
-- **jdn. = jemanden (Akkusativ)**  
-- **etw. = etwas (something)**  
+| Abbreviation | Meaning |
+|-------------|--------|
+| jdm. | jemandem (someone – Dativ) |
+| jdn. | jemanden (someone – Akkusativ) |
+| etw. | etwas (something) |
 
 Example
 
-- jdm helfen → to help **someone (dative)**
+- jdm helfen → to help someone
 
 </td>
 
@@ -4398,7 +4392,7 @@ Example
 
 ### 🔹 Common Dative Verbs
 
-| Verb | English |
+| Verb | Meaning |
 |------|--------|
 | antworten (jdm.) | to answer someone |
 | folgen (jdm./etw.) | to follow |
@@ -4410,12 +4404,12 @@ Example
 | raten (jdm.) | to advise |
 | schmecken (jdm.) | to taste |
 | wehtun (jdm.) | to hurt |
-| zuhören (jdm.) | to listen |
+| zuhören (jdm.) | to listen to |
 | befehlen (jdm.) | to command |
 | danken (jdm.) | to thank |
 | fehlen (jdm./etw.) | to miss / lack |
 | nachlaufen (jdm./etw.) | to run after |
-| nachrennen (jdm./etw.) | to chase |
+| nachrennen (jdm./etw.) | to run after |
 | passen (jdm.) | to suit |
 | vertrauen (jdm.) | to trust |
 | vergeben (jdm.) | to forgive |
@@ -4427,84 +4421,120 @@ Example
 
 ---
 
-### 🔹 Example Sentences
+### 🔹 Example Sentences (from your picture)
 
 antworten  
-- Ich antworte **dir** später.
+- Ich antworte **dir** später.  
+(I will answer **you** later.)
 
 folgen  
-- Ich folge **dem Mann**.
+- Ich folge **dem Mann** unauffällig.  
+(I follow **the man** unnoticed.)
 
 gefallen  
-- Die Wohnung gefällt **mir**.
+- Gefällt **dir** deine neue Wohnung?  
+(Do **you** like your new apartment?)  
+
+- Die Wohnung gefällt **mir**.  
+(I like the apartment.)
 
 gehören  
-- Das Auto gehört **dem Nachbarn**.
+- Das Auto gehört **dem neuen Nachbarn**.  
+(The car belongs to **the new neighbour**.)
 
 glauben  
-- Warum glaubst du **mir** nicht?
+- Warum glaubst du **mir** nicht?  
+(Why don't you believe **me**?)
 
 helfen  
-- Sie hilft **dem alten Mann**.
+- Sie hilft **dem alten Mann**.  
+(She helps **the old man**.)
 
 passieren  
-- Passiert **dir** das oft?
+- Passiert **dir** das öfter?  
+(Does that happen to **you** often?)
 
 raten  
-- Der Arzt hat **meinem Opa** geraten, sich auszuruhen.
+- Der Arzt hat **meinem Opa** geraten, sich auszuruhen.  
+(The doctor advised **my grandfather** to rest.)
 
 schmecken  
-- Die Pizza schmeckt **mir** sehr gut.
+- Pizza schmeckt **meiner Mutter** nicht.  
+(Pizza doesn't taste good to **my mother**.)
 
 wehtun  
-- Mein Kopf tut **mir** weh.
+- Sie hat **ihm** wehgetan.  
+(She hurt **him**.)
 
 zuhören  
-- Die Schüler hören **dem Lehrer** zu.
+- Die Schüler hören **dem Lehrer** zu.  
+(The students listen to **the teacher**.)
+
+befehlen  
+- Der General befiehlt **dem Soldaten**, zu schießen.  
+(The general orders **the soldier** to shoot.)
 
 danken  
-- Ich danke **dir** für deine Hilfe.
+- Ich danke **dir** für deine Hilfe.  
+(I thank **you** for your help.)
 
 fehlen  
-- Du fehlst **mir**.
+- Mir fehlen die Worte.  
+(I have no words.)  
+
+- Du fehlst **mir**.  
+(I miss **you**.)
+
+nachlaufen  
+- Ich laufe **dem Ball** nach.  
+(I run after **the ball**.)
+
+nachrennen  
+- Ich renne **dem Auto** nach.  
+(I run after **the car**.)
 
 passen  
-- Die Hose passt **mir** nicht.
+- Die Hose passt **mir** nicht mehr.  
+(The trousers no longer fit **me**.)
 
 vertrauen  
-- Ich vertraue **meinem Bruder**.
+- Ich vertraue **meinem Bruder**.  
+(I trust **my brother**.)
 
-vergeben / verzeihen  
-- Ich kann **dir** vergeben.  
-- Ich kann **dir** verzeihen.
+vergeben  
+- Ich kann **meinem Mann** nicht vergeben.  
+(I cannot forgive **my husband**.)
+
+verzeihen  
+- Ich kann **meinem Mann** nicht verzeihen.  
+(I cannot forgive **my husband**.)
 
 ---
 
 ### 🔹 Quick Memory
 
-Most common **Dative verbs to memorize first**
+Common **Dative verbs**
 
 - helfen  
 - danken  
 - gefallen  
 - gehören  
-- folgen  
 - glauben  
+- folgen  
 - zuhören  
 - vertrauen  
 
-⚡ Trick
+⚡ Easy trick
 
-If the verb describes **giving support, feeling, or relation to someone**, it often takes **Dativ**.
+If the verb expresses **feeling / relation to someone**, it often uses **Dativ**.
 
 Example
 
-- helfen mir  
-- danken dir  
-- gefallen ihm  
+- gefallen **mir**  
+- helfen **dir**  
+- danken **ihm**
 
 </details>
-
 
 ======= EXTRA CONTETNT GOES HERE =========
 
