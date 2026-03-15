@@ -2406,6 +2406,106 @@ Very important for B1 level speaking.
 
 </details>
 
+
+<details>
+<summary><b>📌 Konjunktiv II – könnte (können) Part II</b> | <code>Beginner</code></summary>
+
+<table>
+<tr>
+<td valign="top">
+
+### 🔹 Formation
+
+Konjunktiv II = Präteritum + Umlaut
+
+konnte → könnte
+
+---
+
+### 🔹 Conjugation
+
+| Pronoun | Form |
+|----------|--------|
+| ich | könnte |
+| du | könntest |
+| er/sie/es | könnte |
+| wir | könnten |
+| ihr | könntet |
+| sie/Sie | könnten |
+
+---
+
+### 🔹 Sentence Structure
+
+Subject + könnte + ... + Infinitive (END)
+
+**Example:**
+Du könntest mehr lernen.
+
+---
+
+</td>
+
+<td valign="top">
+
+### 🔹 Usage
+
+### 1️⃣ Polite Requests
+
+- Könnten Sie mir helfen?
+- Könntest du bitte die Tür schließen?
+- Könnten Sie bitte langsamer sprechen?
+
+More polite than:
+Kannst du...?
+
+---
+
+### 2️⃣ Suggestions / Advice
+
+- Du könntest mehr Obst essen.
+- Du könntest früher schlafen gehen.
+- Wir könnten morgen ins Restaurant gehen.
+
+---
+
+### 3️⃣ Possibility (Not certain)
+
+- Es könnte morgen regnen.
+- Er könnte schon zu Hause sein.
+- Der Zug könnte verspätet sein.
+
+---
+
+### 🔹 Comparison
+
+| Form | Meaning |
+|------|---------|
+| kann | real ability |
+| konnte | past ability |
+| könnte | possible / polite / hypothetical |
+
+---
+
+### 🔹 Example Comparison
+
+Mach die Tür zu! (Direct)
+
+Kannst du die Tür schließen? (Normal)
+
+Könntest du bitte die Tür schließen? (Very polite)
+
+---
+
+Very important for B1 speaking and writing.
+
+</td>
+</tr>
+</table>
+
+</details>
+
+
 <details>
 <summary><b>📌 Giving Advice: könnte vs sollte vs Imperativ</b> | <code>Beginner</code></summary>
 
@@ -2615,103 +2715,6 @@ Very important fixed-case prepositions.
 
 </details>
 
-<details>
-<summary><b>📌 Konjunktiv II – könnte (können)</b></summary>
-
-<table>
-<tr>
-<td valign="top">
-
-### 🔹 Formation
-
-Konjunktiv II = Präteritum + Umlaut
-
-konnte → könnte
-
----
-
-### 🔹 Conjugation
-
-| Pronoun | Form |
-|----------|--------|
-| ich | könnte |
-| du | könntest |
-| er/sie/es | könnte |
-| wir | könnten |
-| ihr | könntet |
-| sie/Sie | könnten |
-
----
-
-### 🔹 Sentence Structure
-
-Subject + könnte + ... + Infinitive (END)
-
-**Example:**
-Du könntest mehr lernen.
-
----
-
-</td>
-
-<td valign="top">
-
-### 🔹 Usage
-
-### 1️⃣ Polite Requests
-
-- Könnten Sie mir helfen?
-- Könntest du bitte die Tür schließen?
-- Könnten Sie bitte langsamer sprechen?
-
-More polite than:
-Kannst du...?
-
----
-
-### 2️⃣ Suggestions / Advice
-
-- Du könntest mehr Obst essen.
-- Du könntest früher schlafen gehen.
-- Wir könnten morgen ins Restaurant gehen.
-
----
-
-### 3️⃣ Possibility (Not certain)
-
-- Es könnte morgen regnen.
-- Er könnte schon zu Hause sein.
-- Der Zug könnte verspätet sein.
-
----
-
-### 🔹 Comparison
-
-| Form | Meaning |
-|------|---------|
-| kann | real ability |
-| konnte | past ability |
-| könnte | possible / polite / hypothetical |
-
----
-
-### 🔹 Example Comparison
-
-Mach die Tür zu! (Direct)
-
-Kannst du die Tür schließen? (Normal)
-
-Könntest du bitte die Tür schließen? (Very polite)
-
----
-
-Very important for B1 speaking and writing.
-
-</td>
-</tr>
-</table>
-
-</details>
 
 <details>
 <summary><b>📌 Interrogativartikel – Was für … ?</b> | <code>Beginner</code></summary>
