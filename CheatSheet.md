@@ -5313,6 +5313,224 @@ wer → wen → wem
 </table>
 </details>
 
+<details>
+<summary><b>📌 Wichtige Verben mit Akkusativ und Dativ (Important Verbs with Accusative and Dative)</b></summary> <code>Beginner</code></summary>
+
+<table>
+<tr>
+<td valign="top">
+
+### 🔹 What are Akkusativ + Dativ Verbs?
+
+Some German verbs take **two objects** in a sentence.
+
+• **Dativ → person**  
+• **Akkusativ → thing**
+
+Structure
+
+Subject + Verb + **Dativ (person)** + **Akkusativ (thing)**
+
+Example
+
+Ich gebe **dir** **ein Buch**.  
+(I give **you** **a book**.)
+
+---
+
+### 🔹 Abbreviations
+
+| Abbreviation | Meaning |
+|--------------|--------|
+| jdm. | jemandem (someone – Dativ) |
+| jdn. | jemanden (someone – Akkusativ) |
+| etw. | etwas (something) |
+
+Example
+
+jdm etw geben → to give someone something
+
+---
+
+### 🔹 Important Verbs with Dativ + Akkusativ
+
+| Verb | Meaning |
+|------|--------|
+| anbieten (jdm. etw.) | to offer |
+| bezahlen (jdm. etw.) | to pay for |
+| bestellen (jdm. etw.) | to order |
+| bringen (jdm. etw.) | to bring |
+| empfehlen (jdm. etw.) | to recommend |
+| erklären (jdm. etw.) | to explain |
+| erzählen (jdm. etw.) | to tell |
+| geben (jdm. etw.) | to give |
+| holen (jdm. etw.) | to get |
+| kaufen (jdm. etw.) | to buy |
+| kochen (jdm. etw.) | to cook |
+| leihen (jdm. etw.) | to lend |
+| liefern (jdm. etw.) | to deliver |
+| mitbringen (jdm. etw.) | to bring along |
+| renovieren (jdm. etw.) | to renovate |
+| reparieren (jdm. etw.) | to repair |
+| reservieren (jdm. etw.) | to reserve |
+| sagen (jdm. etw.) | to say |
+| schenken (jdm. etw.) | to gift |
+| schicken (jdm. etw.) | to send |
+| schneiden (jdm. etw.) | to cut |
+| schreiben (jdm. etw.) | to write |
+| servieren (jdm. etw.) | to serve |
+| verkaufen (jdm. etw.) | to sell |
+| wünschen (jdm. etw.) | to wish |
+| zeigen (jdm. etw.) | to show |
+
+</td>
+
+<td valign="top">
+
+### 🔹 Example Sentences
+
+anbieten  
+Mein Chef hat **mir** drei Wochen Urlaub angeboten.  
+(My boss offered **me** three weeks of vacation.)
+
+bezahlen  
+Ich bin glücklich, wenn mein Freund **mir** das Essen bezahlt.  
+(I am happy when my boyfriend pays **me** for the meal.)
+
+bestellen  
+Mein Mann hat **mir** einen Ring bestellt.  
+(My husband ordered **me** a ring.)
+
+bringen  
+Bring **mir** bitte mein Handy.  
+(Please bring **me** my phone.)
+
+empfehlen  
+Mein Freund hat **mir** diesen Film empfohlen.  
+(My friend recommended this film **to me**.)
+
+erklären  
+Kannst du **mir** bitte diese Matheaufgabe erklären?  
+(Can you explain this math problem **to me**?)
+
+erzählen  
+Meine Mutter hat **mir** immer eine Geschichte erzählt.  
+(My mother always told **me** a story.)
+
+geben  
+Gib **mir** bitte ein Brot.  
+(Please give **me** a bread.)
+
+holen  
+Kannst du **mir** ein Glas Wasser holen?  
+(Can you get **me** a glass of water?)
+
+kaufen  
+Ich kaufe **meiner Mutter** ein Geschenk.  
+(I buy **my mother** a gift.)
+
+kochen  
+Meine Schwester hat **mir** ein neues Rezept gekocht.  
+(My sister cooked **me** a new recipe.)
+
+leihen  
+Kannst du **mir** dein Fahrrad leihen?  
+(Can you lend **me** your bike?)
+
+liefern  
+Die Firma liefert **uns** neue Möbel.  
+(The company delivers **us** new furniture.)
+
+mitbringen  
+Kannst du **mir** etwas Essen mitbringen?  
+(Can you bring **me** some food?)
+
+renovieren  
+Der Arbeiter renoviert **uns** das Haus.  
+(The worker renovates **our** house.)
+
+reparieren  
+Der Mechaniker repariert **mir** das Auto.  
+(The mechanic repairs **my** car.)
+
+reservieren  
+Ich reserviere **dir** einen Tisch.  
+(I reserve **you** a table.)
+
+sagen  
+Ich sage **dir** die Wahrheit.  
+(I tell **you** the truth.)
+
+schenken  
+Ich schenke **meiner Mutter** Blumen.  
+(I gift **my mother** flowers.)
+
+schicken  
+Ich schicke **dir** eine Nachricht.  
+(I send **you** a message.)
+
+schneiden  
+Ich schneide **dir** einen Apfel.  
+(I cut **you** an apple.)
+
+schreiben  
+Ich schreibe **dir** einen Brief.  
+(I write **you** a letter.)
+
+servieren  
+Der Kellner serviert **uns** das Essen.  
+(The waiter serves **us** the food.)
+
+verkaufen  
+Er verkauft **mir** sein Auto.  
+(He sells **me** his car.)
+
+wünschen  
+Ich wünsche **dir** viel Glück.  
+(I wish **you** good luck.)
+
+zeigen  
+Ich zeige **dir** mein neues Handy.  
+(I show **you** my new phone.)
+
+---
+
+### 🔹 Quick Rule
+
+In most German sentences with **two objects**:
+
+**Person → Dativ**  
+**Thing → Akkusativ**
+
+Example
+
+Ich kaufe **meiner Mutter** **ein Geschenk**.
+
+Dativ → meiner Mutter  
+Akkusativ → ein Geschenk
+
+⚡ Easy Memory
+
+If you can say in English:
+
+**“someone something”**
+
+German usually uses
+
+**Dativ + Akkusativ**
+
+Example
+
+give **someone something**
+
+→ jemandem etwas geben
+
+</td>
+</tr>
+</table>
+
+</details>
+
 ======= EXTRA CONTETNT GOES HERE =========
 
 <details>
