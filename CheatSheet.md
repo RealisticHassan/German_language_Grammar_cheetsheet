@@ -4334,6 +4334,178 @@ Es regnet stark, **deshalb nehme ich einen Regenschirm mit.**
 </details>
 
 
+<details>
+<summary><b>📌 Verben mit Dativ (Dative Verbs)</b></summary>
+
+<table>
+<tr>
+<td valign="top">
+
+### 🔹 What are Dative Verbs?
+
+Some German verbs **always require the Dativ case**.
+
+That means the **person receiving the action is in Dativ**, not Akkusativ.
+
+Structure:
+
+Subject + Verb + **Dative Object**
+
+Example
+
+- Ich helfe **dir**.  
+- Er glaubt **mir**.  
+
+---
+
+### 🔹 Dativ Pronouns
+
+| Nominativ | Dativ |
+|-----------|-------|
+| ich | mir |
+| du | dir |
+| er | ihm |
+| sie | ihr |
+| es | ihm |
+| wir | uns |
+| ihr | euch |
+| Sie | Ihnen |
+| sie | ihnen |
+
+Example
+
+- Ich helfe **dir**.  
+- Sie glaubt **ihm**.  
+- Wir danken **Ihnen**.
+
+---
+
+### 🔹 jdm / jdn meaning
+
+In dictionaries:
+
+- **jdm. = jemandem (Dativ)**  
+- **jdn. = jemanden (Akkusativ)**  
+- **etw. = etwas (something)**  
+
+Example
+
+- jdm helfen → to help **someone (dative)**
+
+</td>
+
+<td valign="top">
+
+### 🔹 Common Dative Verbs
+
+| Verb | English |
+|------|--------|
+| antworten (jdm.) | to answer someone |
+| folgen (jdm./etw.) | to follow |
+| gefallen (jdm.) | to like |
+| gehören (jdm.) | to belong |
+| glauben (jdm.) | to believe |
+| helfen (jdm.) | to help |
+| passieren (jdm.) | to happen to someone |
+| raten (jdm.) | to advise |
+| schmecken (jdm.) | to taste |
+| wehtun (jdm.) | to hurt |
+| zuhören (jdm.) | to listen |
+| befehlen (jdm.) | to command |
+| danken (jdm.) | to thank |
+| fehlen (jdm./etw.) | to miss / lack |
+| nachlaufen (jdm./etw.) | to run after |
+| nachrennen (jdm./etw.) | to chase |
+| passen (jdm.) | to suit |
+| vertrauen (jdm.) | to trust |
+| vergeben (jdm.) | to forgive |
+| verzeihen (jdm.) | to forgive |
+
+</td>
+</tr>
+</table>
+
+---
+
+### 🔹 Example Sentences
+
+antworten  
+- Ich antworte **dir** später.
+
+folgen  
+- Ich folge **dem Mann**.
+
+gefallen  
+- Die Wohnung gefällt **mir**.
+
+gehören  
+- Das Auto gehört **dem Nachbarn**.
+
+glauben  
+- Warum glaubst du **mir** nicht?
+
+helfen  
+- Sie hilft **dem alten Mann**.
+
+passieren  
+- Passiert **dir** das oft?
+
+raten  
+- Der Arzt hat **meinem Opa** geraten, sich auszuruhen.
+
+schmecken  
+- Die Pizza schmeckt **mir** sehr gut.
+
+wehtun  
+- Mein Kopf tut **mir** weh.
+
+zuhören  
+- Die Schüler hören **dem Lehrer** zu.
+
+danken  
+- Ich danke **dir** für deine Hilfe.
+
+fehlen  
+- Du fehlst **mir**.
+
+passen  
+- Die Hose passt **mir** nicht.
+
+vertrauen  
+- Ich vertraue **meinem Bruder**.
+
+vergeben / verzeihen  
+- Ich kann **dir** vergeben.  
+- Ich kann **dir** verzeihen.
+
+---
+
+### 🔹 Quick Memory
+
+Most common **Dative verbs to memorize first**
+
+- helfen  
+- danken  
+- gefallen  
+- gehören  
+- folgen  
+- glauben  
+- zuhören  
+- vertrauen  
+
+⚡ Trick
+
+If the verb describes **giving support, feeling, or relation to someone**, it often takes **Dativ**.
+
+Example
+
+- helfen mir  
+- danken dir  
+- gefallen ihm  
+
+</details>
+
+
 ======= EXTRA CONTETNT GOES HERE =========
 
 <details>
