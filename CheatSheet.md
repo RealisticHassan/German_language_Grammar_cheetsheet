@@ -4335,7 +4335,7 @@ Es regnet stark, **deshalb nehme ich einen Regenschirm mit.**
 
 
 <details>
-<summary><b>📌 Verben mit Dativ (Dative Verbs) Part I</b></summary> <code>Beginner</code></summary>
+<summary><b>📌 Verben mit Dativ (Dative Verbs) Part I</b> <code>Beginner</code></summary>
 
 <table>
 <tr>
@@ -4543,7 +4543,7 @@ Example
 
 
 <details>
-<summary><b>📌 Verben mit Dativ (Dative Verbs) – Part II</b></summary> <code>Beginner</code></summary>
+<summary><b>📌 Verben mit Dativ (Dative Verbs) – Part II</b> <code>Beginner</code></summary>
 
 <table>
 <tr>
