@@ -4609,6 +4609,28 @@ jdm widersprechen → to contradict someone
 | sich nähern (jdm.) | to approach |
 | sich zuwenden (jdm.) | to turn to someone |
 
+
+---
+
+### 🔹 Quick Memory Trick
+
+Many **Dative verbs describe interaction with a person**.
+
+Examples
+
+- widersprechen **jemandem**  
+- zustimmen **jemandem**  
+- helfen **jemandem**  
+- gratulieren **jemandem**
+
+⚡ Easy rule
+
+If the action **goes toward a person**, German often uses **Dativ**.
+
+Example
+
+Ich gratuliere **dir**.  
+Ich widerspreche **dir**.
 </td>
 
 <td valign="top">
@@ -4711,27 +4733,7 @@ sich zuwenden
 Sie wendet sich immer **ihrem Chef** zu.  
 (She always turns to **her boss**.)
 
----
 
-### 🔹 Quick Memory Trick
-
-Many **Dative verbs describe interaction with a person**.
-
-Examples
-
-- widersprechen **jemandem**  
-- zustimmen **jemandem**  
-- helfen **jemandem**  
-- gratulieren **jemandem**
-
-⚡ Easy rule
-
-If the action **goes toward a person**, German often uses **Dativ**.
-
-Example
-
-Ich gratuliere **dir**.  
-Ich widerspreche **dir**.
 
 </td>
 </tr>
