@@ -5908,6 +5908,184 @@ Akkusativ → Blumen
 
 </details>
 
+<details>
+<summary><b>📌 Nebensatz mit „wenn“ und „als“ (Subordinate Clauses with “when”)</b> | <code>Beginnner</code></summary>
+
+<table>
+<tr>
+<td valign="top">
+
+### 🔹 Temporalsätze (Time Clauses)
+
+**Temporalsätze** describe **time**.
+
+They answer questions like:
+
+| Question | Meaning |
+|---|---|
+| Wann? | When? |
+| Seit wann? | Since when? |
+| Bis wann? | Until when? |
+
+They can describe:
+
+• a **specific time**  
+• a **repeated event**  
+• a **duration**
+
+---
+
+### 🔹 Nebensatz Rule
+
+In a **Nebensatz (subordinate clause)** the **verb goes to the end**.
+
+Structure
+
+Hauptsatz + Nebensatz
+
+Example
+
+Ich war traurig, **als ich krank war**.
+
+---
+
+### 🔹 „als“ — one time in the past
+
+„als“ describes an event that happened **once in the past**.
+
+Examples
+
+Als ich das erste Mal in Deutschland war, war das Wetter nicht sehr gut.  
+
+Eine Musikgruppe hat gespielt, als wir das Städtchen besichtigt haben.
+
+Meaning
+
+When I was in Germany for the first time, the weather was not very good.
+
+---
+
+### 🔹 „wenn“ — repeated events in the past
+
+„wenn“ describes something that happened **many times in the past**.
+
+Often used with
+
+| Word | Meaning |
+|---|---|
+| immer | always |
+| jedes Mal | every time |
+
+Examples
+
+Immer wenn Jan aus dem Wasser gekommen ist, musste er sich in der Sonne aufwärmen.
+
+(Jedes Mal) Wenn Jan das Zelt zusammenfalten wollte, hat es sich wieder geöffnet.
+
+Jan musste sich immer in der Sonne aufwärmen, wenn er aus dem Wasser gekommen ist.
+
+Das Zelt hat sich jedes Mal wieder geöffnet, wenn Jan es zusammenfalten wollte.
+
+</td>
+
+<td valign="top">
+
+### 🔹 „wenn“ — present or future
+
+„wenn“ is also used for events in the **present or future**.
+
+The **wenn-clause can come before or after the main clause**.
+
+Examples
+
+Ich erhole mich am besten, **wenn ich faulenze**.  
+(I relax best when I do nothing.)
+
+Wenn das Wetter morgen schön ist, **(dann)** machen wir einen Ausflug.  
+(If the weather is nice tomorrow, we will go on a trip.)
+
+Wenn ich von der Schule nach Hause komme, koche ich mir einen Kaffee.
+
+Ich will diese neuen Schuhe kaufen, wenn sie im Angebot sind.
+
+⚠ Important
+
+If the **wenn-clause comes first**, the main clause can start with **„dann“**.
+
+Example
+
+Wenn das Wasser kocht, **dann** entsteht Dampf.
+
+---
+
+### 🔹 Replacement with „bei“
+
+Sometimes **wenn + present/future** can be replaced with:
+
+**bei + Dativ**
+
+Example
+
+Wenn ich morgen einkaufe, darf ich Kaffee nicht vergessen.
+
+→ Beim Einkaufen morgen darf ich Kaffee nicht vergessen.
+
+Meaning
+
+When I go shopping tomorrow, I must not forget coffee.
+
+---
+
+### 🔹 Position of Nebensatz
+
+The subordinate clause can be **before or after** the main clause.
+
+1️⃣ Nebensatz first
+
+Wenn ich Zeit habe, gehe ich spazieren.
+
+2️⃣ Hauptsatz first
+
+Ich gehe spazieren, wenn ich Zeit habe.
+
+⚠ Important
+
+Verb always goes **to the end of the Nebensatz**.
+
+---
+
+### 🔹 Quick Comparison
+
+| Word | Use | Example |
+|---|---|---|
+| als | one time in the past | Als ich Kind war |
+| wenn | repeated past | Wenn ich krank war |
+| wenn | present / future | Wenn ich Zeit habe |
+
+---
+
+### 🔹 Easy Memory Trick
+
+Use **ALS** → one past event  
+
+Use **WENN** →  
+• repeated events  
+• present  
+• future  
+
+Example
+
+Als ich klein war, spielte ich Fußball.
+
+Wenn ich Zeit habe, spiele ich Fußball.
+
+</td>
+</tr>
+</table>
+
+</details>
+
+
 ======= EXTRA CONTETNT GOES HERE =========
 
 <details>
