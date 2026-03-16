@@ -3985,7 +3985,7 @@ verkaufen → hat verkauft
 </details>
 
 <details>
-<summary><b>📌 Wechselpräpositionen – an / auf (Location)</b> | <code>Beginner</code></summary>
+<summary><b>📌 Wechselpräpositionen – an / auf (Location) Part I</b> | <code>Beginner</code></summary>
 
 <table>
 <tr>
@@ -4131,6 +4131,218 @@ Use **AUF** when something is:
 </table>
 
 </details>
+
+<details>
+<summary><b>📌 Wechselpräpositionen mit Dativ und Akkusativ (Two-Way Prepositions) Part II</b> | <code>Beginner</code></summary>
+
+<table>
+<tr>
+<td valign="top">
+
+### 🔹 What are Wechselpräpositionen?
+
+**Wechselpräpositionen** are prepositions that can take **two cases**:
+
+• **Dativ**  
+• **Akkusativ**
+
+The case depends on **movement or position**.
+
+| Question | Case | Meaning |
+|---|---|---|
+| Wo? | Dativ | location / position |
+| Wohin? | Akkusativ | direction / movement |
+
+Example
+
+Ich bin **im Kino**.  
+(I am in the cinema – location)
+
+Ich gehe **ins Kino**.  
+(I go into the cinema – movement)
+
+---
+
+### 🔹 The 9 Wechselpräpositionen
+
+| Preposition | Meaning |
+|---|---|
+| an | on / at |
+| auf | on |
+| in | in / into |
+| über | over |
+| unter | under |
+| vor | in front of |
+| hinter | behind |
+| neben | next to |
+| zwischen | between |
+
+---
+
+### 🔹 Wo? → Dativ (Location)
+
+Used when something **is already in a place**.
+
+Structure
+
+Verb + Preposition + **Dativ**
+
+Examples
+
+Der Kuchen steht **auf dem Stuhl**.  
+(The cake is on the chair)
+
+Die Vase steht **auf dem Herd**.  
+(The vase is on the stove)
+
+Die Socken liegen **auf dem Tisch**.  
+(The socks lie on the table)
+
+Die Decke liegt **unter dem Tisch**.  
+(The blanket lies under the table)
+
+Das Papier liegt **auf dem Boden**.  
+(The paper lies on the floor)
+
+</td>
+
+<td valign="top">
+
+### 🔹 Wohin? → Akkusativ (Direction)
+
+Used when there is **movement toward a place**.
+
+Structure
+
+Verb + Preposition + **Akkusativ**
+
+Examples
+
+Sie legt die Decke **auf den Tisch**.  
+(She puts the blanket onto the table)
+
+Sie legt die Socken **in den Schrank**.  
+(She puts the socks into the cupboard)
+
+Sie legt das Papier **ins Regal**.  
+(She puts the paper into the shelf)
+
+Sie stellt den Kuchen **auf den Tisch**.  
+(She places the cake onto the table)
+
+Sie stellt die Vase **neben das Sofa**.  
+(She puts the vase next to the sofa)
+
+---
+
+### 🔹 Example with "Kino"
+
+Wo? (location)
+
+Ich bin **im Kino**.
+
+Wohin? (direction)
+
+Ich gehe **ins Kino**.
+
+Explanation
+
+in + dem = **im**  
+in + das = **ins**
+
+---
+
+### 🔹 More Examples
+
+Wo?
+
+Wir studieren **in München**.  
+Die Kinder spielen **auf dem Spielplatz**.
+
+Wohin?
+
+Wir gehen **in die Mediathek**.  
+Sie bringt den Müll **in die Mülltonne**.
+
+---
+
+### 🔹 Typical Verbs
+
+Verbs that answer **Wohin? (movement)**
+
+| Verb | Meaning |
+|---|---|
+| gehen | to go |
+| bringen | to bring |
+| fahren | to drive |
+| steigen | to climb |
+| fliegen | to fly |
+
+Example
+
+Der Vogel fliegt **über den Baum**.
+
+---
+
+Verbs that answer **Wo? (location)**
+
+| Verb | Meaning |
+|---|---|
+| sein | to be |
+| sitzen | to sit |
+| stehen | to stand |
+| liegen | to lie |
+| bleiben | to stay |
+
+Example
+
+Der Kuchen steht **auf dem Tisch**.
+
+---
+
+### 🔹 Contractions
+
+| Preposition + Article | Short form |
+|---|---|
+| in dem | im |
+| in das | ins |
+| an dem | am |
+| an das | ans |
+
+Examples
+
+Ich bin **im** Kino.  
+Ich gehe **ins** Kino.
+
+---
+
+### 🔹 Quick Memory Trick
+
+Ask yourself one question:
+
+**Movement? → Akkusativ**
+
+Example
+
+Ich lege das Buch **auf den Tisch**.
+
+**Position? → Dativ**
+
+Example
+
+Das Buch liegt **auf dem Tisch**.
+
+⚡ Easy rule
+
+**Wohin? → Akkusativ**  
+**Wo? → Dativ**
+
+</td>
+</tr>
+</table>
+
+</details>
+
 
 <details>
 <summary><b>📌 deshalb vs trotzdem – Sentence Connectors (Result & Contrast)</b> | <code>Beginner</code></summary>
