@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goethe A1 German Vocabulary — Complete Study Guide</title>
+<style>
+  :root {
+    --gold: #f5c842;
+    --dark: #1a1a2e;
+    --card: #16213e;
+    --accent: #0f3460;
+    --green: #4ade80;
+    --red: #f87171;
+    --blue: #60a5fa;
+    --purple: #c084fc;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--dark); color: var(--text); font-family: 'Segoe UI', sans-serif; min-height: 100vh; }
+
+  header {
+    background: linear-gradient(135deg, #0f3460, #1a1a2e);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 3px solid var(--gold);
+  }
+  header h1 { font-size: 2rem; color: var(--gold); margin-bottom: 0.4rem; }
+  header p { color: var(--muted); font-size: 0.95rem; }
+
+  .stats-bar {
+    display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;
+    padding: 1rem 2rem; background: var(--accent);
+  }
+  .stat { text-align: center; }
+  .stat .num { font-size: 1.6rem; font-weight: 700; color: var(--gold); }
+  .stat .label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+
+  .controls {
+    display: flex; flex-wrap: wrap; gap: 0.75rem; padding: 1.25rem 2rem;
+    align-items: center; background: #111827; border-bottom: 1px solid #2d3748;
+    position: sticky; top: 0; z-index: 100;
+  }
+  input[type="text"] {
+    flex: 1; min-width: 200px; padding: 0.55rem 1rem;
+    background: var(--card); border: 1px solid #374151; border-radius: 8px;
+    color: var(--text); font-size: 0.95rem;
+  }
+  select {
+    padding: 0.55rem 1rem; background: var(--card); border: 1px solid #374151;
+    border-radius: 8px; color: var(--text); font-size: 0.9rem; cursor: pointer;
+  }
+  .btn {
+    padding: 0.55rem 1.2rem; border-radius: 8px; border: none; cursor: pointer;
+    font-weight: 600; font-size: 0.88rem; transition: all 0.2s;
+  }
+  .btn-gold { background: var(--gold); color: #1a1a2e; }
+  .btn-gold:hover { background: #fbbf24; }
+  .btn-outline { background: transparent; border: 1px solid var(--muted); color: var(--muted); }
+  .btn-outline:hover { border-color: var(--text); color: var(--text); }
+  .btn-green { background: #166534; color: var(--green); }
+  .btn-red { background: #7f1d1d; color: var(--red); }
+
+  #count-display { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
+
+  .grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.25rem; padding: 1.5rem 2rem;
+  }
+
+  .card {
+    background: var(--card); border-radius: 14px; padding: 1.25rem;
+    border: 1px solid #2d3748; transition: transform 0.2s, border-color 0.2s;
+    cursor: pointer; position: relative;
+  }
+  .card:hover { transform: translateY(-3px); border-color: var(--gold); }
+  .card.learned { border-color: var(--green); background: #0d2818; }
+  .card.learning { border-color: #fbbf24; background: #1c1508; }
+
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem; }
+  .german { font-size: 1.25rem; font-weight: 700; color: white; }
+  .article { font-size: 0.8rem; color: var(--purple); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+  .category-badge {
+    font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 999px;
+    font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;
+  }
+
+  .english { font-size: 1rem; color: var(--blue); margin-bottom: 0.5rem; }
+  .pronunciation {
+    font-size: 0.82rem; color: var(--gold); background: rgba(245,200,66,0.1);
+    padding: 0.25rem 0.6rem; border-radius: 6px; display: inline-block; margin-bottom: 0.6rem;
+    font-family: monospace;
+  }
+  .example { font-size: 0.85rem; color: var(--muted); font-style: italic; border-left: 2px solid #374151; padding-left: 0.6rem; margin-bottom: 0.5rem; }
+  .example span { color: #94a3b8; display: block; font-style: normal; margin-top: 2px; font-size: 0.82rem; }
+  .memory-hack {
+    font-size: 0.82rem; background: rgba(192,132,252,0.1); border: 1px solid rgba(192,132,252,0.3);
+    border-radius: 8px; padding: 0.45rem 0.7rem; color: #d8b4fe; margin-top: 0.4rem;
+  }
+  .memory-hack::before { content: "🧠 "; }
+
+  .card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 0.75rem; }
+  .mark-btn { font-size: 0.75rem; padding: 0.3rem 0.7rem; border-radius: 6px; border: none; cursor: pointer; font-weight: 600; }
+  .mark-learned { background: #166534; color: var(--green); }
+  .mark-learned:hover { background: #14532d; }
+  .mark-review { background: #78350f; color: #fbbf24; }
+  .mark-review:hover { background: #92400e; }
+
+  .section-header {
+    padding: 0.6rem 2rem; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 2px; color: var(--gold); background: rgba(245,200,66,0.06);
+    border-bottom: 1px solid #2d3748; border-top: 1px solid #2d3748;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+
+  .quiz-panel {
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85);
+    z-index: 200; align-items: center; justify-content: center;
+  }
+  .quiz-panel.active { display: flex; }
+  .quiz-box {
+    background: var(--card); border-radius: 18px; padding: 2.5rem;
+    max-width: 500px; width: 90%; text-align: center; border: 2px solid var(--gold);
+  }
+  .quiz-q { font-size: 1.8rem; font-weight: 700; color: white; margin-bottom: 0.5rem; }
+  .quiz-hint { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .quiz-options { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1.5rem; }
+  .quiz-opt {
+    padding: 0.75rem; border-radius: 10px; border: 2px solid #374151;
+    background: #0f172a; color: var(--text); cursor: pointer; font-size: 0.95rem;
+    transition: all 0.15s;
+  }
+  .quiz-opt:hover { border-color: var(--gold); }
+  .quiz-opt.correct { border-color: var(--green); background: #14532d; color: var(--green); }
+  .quiz-opt.wrong { border-color: var(--red); background: #7f1d1d; color: var(--red); }
+  .quiz-score { font-size: 1rem; color: var(--muted); margin-bottom: 1rem; }
+
+  .progress-bar { height: 6px; background: #1e293b; border-radius: 3px; overflow: hidden; margin: 0.5rem 0 1rem; }
+  .progress-fill { height: 100%; background: var(--gold); border-radius: 3px; transition: width 0.3s; }
+
+  footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.8rem; border-top: 1px solid #1e293b; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🇩🇪 Goethe-Zertifikat A1 — Complete Vocabulary</h1>
+  <p>~650 words · English translations · Pronunciation guides · Memory hacks</p>
+</header>
+
+<div class="stats-bar">
+  <div class="stat"><div class="num" id="total-count">0</div><div class="label">Total Words</div></div>
+  <div class="stat"><div class="num" id="learned-count" style="color:var(--green)">0</div><div class="label">Learned ✓</div></div>
+  <div class="stat"><div class="num" id="review-count" style="color:#fbbf24">0</div><div class="label">Reviewing</div></div>
+  <div class="stat"><div class="num" id="progress-pct">0%</div><div class="label">Progress</div></div>
+</div>
+
+<div class="controls">
+  <input type="text" id="search" placeholder="🔍 Search German or English...">
+  <select id="filter-cat">
+    <option value="all">All Categories</option>
+    <option value="nouns">Nouns</option>
+    <option value="verbs">Verbs</option>
+    <option value="adjectives">Adjectives</option>
+    <option value="phrases">Phrases</option>
+    <option value="other">Other</option>
+  </select>
+  <select id="filter-status">
+    <option value="all">All Status</option>
+    <option value="unstarted">Not Started</option>
+    <option value="learning">Reviewing</option>
+    <option value="learned">Learned</option>
+  </select>
+  <button class="btn btn-gold" onclick="startQuiz()">🎯 Quiz Me!</button>
+  <button class="btn btn-outline" onclick="resetAll()">Reset Progress</button>
+  <span id="count-display"></span>
+</div>
+
+<div id="vocab-container"></div>
+
+<!-- Quiz Panel -->
+<div class="quiz-panel" id="quiz-panel">
+  <div class="quiz-box">
+    <div class="quiz-score" id="quiz-score">Question 1 / 10</div>
+    <div class="progress-bar"><div class="progress-fill" id="quiz-progress" style="width:0%"></div></div>
+    <div class="quiz-q" id="quiz-q"></div>
+    <div class="quiz-hint" id="quiz-hint"></div>
+    <div class="quiz-options" id="quiz-opts"></div>
+    <button class="btn btn-outline" onclick="closeQuiz()" style="margin-top:0.5rem">✕ Close Quiz</button>
+  </div>
+</div>
+
+<footer>Goethe-Institut A1 Start Deutsch 1 · Wortliste · All ~650 vocabulary items</footer>
+
+<script>
+const VOCAB = [
+  // ── A ──
+  {g:"ab", e:"from / starting from", cat:"other", pron:"APP", ex:"Ab morgen muss ich arbeiten.", ex_e:"Starting tomorrow I have to work.", hack:"Think 'ab' = 'off from' — like a rocket lifting off from a launch point."},
+  {g:"aber", e:"but / however", cat:"other", pron:"AH-ber", ex:"Ich bin oft im Büro, aber nur kurz.", ex_e:"I'm often in the office, but only briefly.", hack:"'Aber' sounds like 'uh-ber' — imagine saying 'But, uber-nope!'"},
+  {g:"abfahren", e:"to depart / leave (vehicle)", cat:"verbs", pron:"APP-far-en", ex:"Wir fahren um zwölf Uhr ab.", ex_e:"We depart at twelve o'clock.", hack:"'Ab' = off, 'fahren' = drive. Drive off!"},
+  {g:"die Abfahrt", e:"departure", cat:"nouns", art:"die", pron:"APP-fart", ex:"Vor der Abfahrt rufe ich an.", ex_e:"Before departure I'll call.", hack:"Ab-FAHRT — the 'fahrt' is just 'journey/drive'. The train FAHRT-s away."},
+  {g:"abgeben", e:"to hand in / give back", cat:"verbs", pron:"APP-gay-ben", ex:"Ich muss meine Schlüssel abgeben.", ex_e:"I have to hand in my keys.", hack:"'Geben' = give, 'ab' = away. Give away/hand over."},
+  {g:"abholen", e:"to pick up / collect", cat:"verbs", pron:"APP-ho-len", ex:"Wann kann ich den Schrank abholen?", ex_e:"When can I pick up the wardrobe?", hack:"'Holen' = to fetch. Ab-fetch = fetch and bring back."},
+  {g:"der Absender", e:"sender (of a letter)", cat:"nouns", art:"der", pron:"APP-zen-der", ex:"Ein Brief ohne Absender.", ex_e:"A letter without a sender.", hack:"Ab-SENDER — the person who 'sends it off'."},
+  {g:"Achtung", e:"Attention! / Watch out!", cat:"phrases", pron:"AHKH-toong", ex:"Achtung! Das dürfen Sie nicht tun.", ex_e:"Attention! You must not do that.", hack:"Sounds like 'action!' — shout it before something important happens."},
+  {g:"die Adresse", e:"address", cat:"nouns", art:"die", pron:"ah-DRES-seh", ex:"Können Sie mir seine Adresse sagen?", ex_e:"Can you tell me his address?", hack:"Almost identical to English 'address' — just add an 'e' at the end."},
+  {g:"all-", e:"all / every / everything", cat:"other", pron:"ALL", ex:"Alles Gute! Das ist alles.", ex_e:"All the best! That is everything.", hack:"'Alles' = 'all-es'. Even in English we say 'all-es-good'."},
+  {g:"allein", e:"alone", cat:"adjectives", pron:"ah-LINE", ex:"Er kommt allein.", ex_e:"He comes alone.", hack:"'All-ein' = 'all-one'. When you're alone, you're ALL ONE person there."},
+  {g:"also", e:"so / therefore / well then", cat:"other", pron:"AHL-zo", ex:"Also, es ist so...", ex_e:"So, it is like this...", hack:"Germans say 'also' to mean 'so/therefore' — like 'alsooo, let me explain'."},
+  {g:"alt", e:"old", cat:"adjectives", pron:"AHLT", ex:"Wie alt sind Sie?", ex_e:"How old are you?", hack:"'Alt' sounds like 'old' said with a German accent. Alt = old!"},
+  {g:"das Alter", e:"age", cat:"nouns", art:"das", pron:"AHL-ter", ex:"Alter: 26 Jahre.", ex_e:"Age: 26 years.", hack:"Same root as 'alt' (old). Your 'alter' = how old you are."},
+  {g:"an", e:"at / on / to (direction)", cat:"other", pron:"AHN", ex:"Wir treffen uns am Bahnhof.", ex_e:"We meet at the station.", hack:"'An' is like the English prefix 'an-' meaning toward/onto something."},
+  {g:"anbieten", e:"to offer", cat:"verbs", pron:"AHN-bee-ten", ex:"Was darf ich dir anbieten?", ex_e:"What may I offer you?", hack:"'Bieten' = to offer/bid. 'An-bieten' = offer up to someone."},
+  {g:"das Angebot", e:"offer / special deal", cat:"nouns", art:"das", pron:"AHN-ge-boht", ex:"Heute sind Schuhe im Angebot.", ex_e:"Today shoes are on special offer.", hack:"An-ge-BOT — like a 'bet/bid' made to you. A deal offered up."},
+  {g:"ander-", e:"other / different", cat:"other", pron:"AHN-der", ex:"Ich möchte die andere Jacke.", ex_e:"I'd like the other jacket.", hack:"'Ander' sounds like 'under' but means 'other'. The OTHER one under your nose!"},
+  {g:"anfangen", e:"to begin / start", cat:"verbs", pron:"AHN-fang-en", ex:"Der Unterricht fängt gleich an.", ex_e:"The class starts right away.", hack:"'Fangen' = to catch/grab. You 'grab the start' — begin!"},
+  {g:"der Anfang", e:"beginning / start", cat:"nouns", art:"der", pron:"AHN-fang", ex:"Am Anfang der Straße.", ex_e:"At the beginning of the street.", hack:"An-FANG — you 'fang' (catch) the beginning."},
+  {g:"anklicken", e:"to click (computer)", cat:"verbs", pron:"AHN-click-en", ex:"Du musst dieses Wort anklicken.", ex_e:"You have to click this word.", hack:"'Klicken' = click. Same as English, just with 'an-' (onto) in front."},
+  {g:"ankommen", e:"to arrive", cat:"verbs", pron:"AHN-kom-en", ex:"Wann kommt dieser Zug in Hamburg an?", ex_e:"When does this train arrive in Hamburg?", hack:"An-KOMMEN = 'come onto' = arrive at the destination."},
+  {g:"die Ankunft", e:"arrival", cat:"nouns", art:"die", pron:"AHN-koonft", ex:"Auf diesem Plan steht die Ankunftszeit.", ex_e:"This schedule shows the arrival time.", hack:"An-KUNFT. 'Kunft' comes from 'kommen' (come). Arrival = the coming-to."},
+  {g:"ankreuzen", e:"to cross/tick (a box)", cat:"verbs", pron:"AHN-kroyt-sen", ex:"Auf dem Formular müssen Sie ankreuzen.", ex_e:"On the form you must tick boxes.", hack:"'Kreuz' = cross. An-kreuz-en = put a cross on it. Like an X on a form!"},
+  {g:"anmachen", e:"to turn on (light/device)", cat:"verbs", pron:"AHN-mach-en", ex:"Mach bitte das Licht an!", ex_e:"Please turn on the light!", hack:"'Machen' = make/do. 'An-machen' = make it go ON."},
+  {g:"(sich) anmelden", e:"to register / sign up", cat:"verbs", pron:"AHN-mel-den", ex:"Wo kann ich mich anmelden?", ex_e:"Where can I register?", hack:"'Melden' = to report. An-melden = report yourself in = register."},
+  {g:"die Anmeldung", e:"registration", cat:"nouns", art:"die", pron:"AHN-mel-doong", ex:"Eine Anmeldung ist nicht möglich.", ex_e:"Registration is not possible.", hack:"From 'anmelden'. The '-ung' suffix turns verbs into nouns, like English '-ing'."},
+  {g:"die Anrede", e:"salutation / form of address", cat:"nouns", art:"die", pron:"AHN-ray-deh", ex:"Schreiben Sie eine Anrede.", ex_e:"Write a salutation.", hack:"An-REDE = 'speech-to'. The words you address someone with at the start."},
+  {g:"anrufen", e:"to call (phone)", cat:"verbs", pron:"AHN-roo-fen", ex:"Kann man Sie anrufen?", ex_e:"Can one call you?", hack:"'Rufen' = to call/shout. An-rufen = call to someone. ANRUFEN = phone call!"},
+  {g:"der Anruf", e:"phone call", cat:"nouns", art:"der", pron:"AHN-roof", ex:"Sie bekommt viele Anrufe.", ex_e:"She receives many calls.", hack:"An-RUF = a 'ruf' (call) made to someone."},
+  {g:"der Anrufbeantworter", e:"answering machine", cat:"nouns", art:"der", pron:"AHN-roof-be-ant-vor-ter", ex:"Sprechen Sie auf den Anrufbeantworter.", ex_e:"Please speak on the answering machine.", hack:"Anruf (call) + beantworter (answerer). The machine that ANSWERS your CALLS!"},
+  {g:"die Ansage", e:"announcement", cat:"nouns", art:"die", pron:"AHN-zah-geh", ex:"Hören Sie die Ansagen.", ex_e:"Listen to the announcements.", hack:"An-SAGE = 'say-to'. Something said/announced to you."},
+  {g:"der Anschluss", e:"connection (train/phone)", cat:"nouns", art:"der", pron:"AHN-shloos", ex:"In Mannheim haben Sie Anschluss.", ex_e:"In Mannheim you have a connection.", hack:"An-SCHLUSS = 'close-to'. Two things that close/connect together."},
+  {g:"antworten", e:"to answer / reply", cat:"verbs", pron:"AHN-tvort-en", ex:"Er antwortet nicht.", ex_e:"He doesn't answer.", hack:"'Antwort' looks like 'answer' backwards scrambled. Just memorise: ANTWORT = ANSWER."},
+  {g:"die Antwort", e:"answer / reply", cat:"nouns", art:"die", pron:"AHN-tvort", ex:"Er gibt keine Antwort.", ex_e:"He gives no answer.", hack:"ANTWORT ≈ ANSWER. Both start with AN-!"},
+  {g:"die Anzeige", e:"advertisement / notice", cat:"nouns", art:"die", pron:"AHN-tsy-geh", ex:"Ich habe Ihre Anzeige gelesen.", ex_e:"I read your advertisement.", hack:"An-ZEIGE = 'show-to'. Something shown/displayed to people."},
+  {g:"(sich) anziehen", e:"to get dressed / put on", cat:"verbs", pron:"AHN-tsee-en", ex:"Ich muss mich noch anziehen.", ex_e:"I still have to get dressed.", hack:"'Ziehen' = to pull. An-ziehen = pull clothes onto yourself!"},
+  {g:"das Apartment", e:"apartment", cat:"nouns", art:"das", pron:"ah-PART-ment", ex:"Wir haben ein Apartment gemietet.", ex_e:"We rented an apartment.", hack:"Same as English 'apartment'! Easy!"},
+  {g:"der Apfel", e:"apple", cat:"nouns", art:"der", pron:"APP-fel", ex:"Ein Pfund Äpfel bitte.", ex_e:"One pound of apples please.", hack:"'Apfel' — an APE fell from the APPle tree!"},
+  {g:"der Appetit", e:"appetite", cat:"nouns", art:"der", pron:"ah-peh-TEET", ex:"Guten Appetit!", ex_e:"Enjoy your meal!", hack:"'Appetit' = 'appetite'. Identical meaning! Guten Appetit = Bon appétit!"},
+  {g:"arbeiten", e:"to work", cat:"verbs", pron:"AR-by-ten", ex:"Wo arbeiten Sie?", ex_e:"Where do you work?", hack:"'Arbeit' — think 'ARBeit' = ARBor (labor). Work = Arbeit."},
+  {g:"die Arbeit", e:"work / job", cat:"nouns", art:"die", pron:"AR-bite", ex:"Mein Bruder sucht Arbeit.", ex_e:"My brother is looking for work.", hack:"AR-BITE — your work BITES into your time!"},
+  {g:"arbeitslos", e:"unemployed", cat:"adjectives", pron:"AR-bits-lohs", ex:"Er ist schon lange arbeitslos.", ex_e:"He has been unemployed for a long time.", hack:"Arbeit (work) + los (without). WITHOUT WORK = unemployed."},
+  {g:"der Arbeitsplatz", e:"workplace", cat:"nouns", art:"der", pron:"AR-bits-plahts", ex:"An meinem Arbeitsplatz fehlt ein Drucker.", ex_e:"My workplace is missing a printer.", hack:"Arbeit (work) + Platz (place). Work-PLACE!"},
+  {g:"der Arm", e:"arm", cat:"nouns", art:"der", pron:"AHRM", ex:"Mein Arm tut weh.", ex_e:"My arm hurts.", hack:"'Arm' in German = arm in English. Same word, same meaning!"},
+  {g:"der Arzt", e:"doctor (male) / physician", cat:"nouns", art:"der", pron:"ARTST", ex:"Morgen habe ich einen Termin beim Arzt.", ex_e:"Tomorrow I have a doctor's appointment.", hack:"'Arzt' — an ARZTocrat who heals people. Think 'artsy doctor'."},
+  {g:"auch", e:"also / too / as well", cat:"other", pron:"OWKH", ex:"Ich bin auch Spanier.", ex_e:"I am also Spanish.", hack:"AUCH ≈ 'ouch' — 'Ouch, I hurt ALSO!'"},
+  {g:"auf", e:"on / onto / open", cat:"other", pron:"OWF", ex:"Die Kinder spielen auf der Straße.", ex_e:"The children play on the street.", hack:"AUF sounds like 'off' but means ON. In German, the light is 'auf' when it's ON!"},
+  {g:"die Aufgabe", e:"task / exercise / assignment", cat:"nouns", art:"die", pron:"OWF-gah-beh", ex:"Das ist eine schwere Aufgabe.", ex_e:"That is a difficult task.", hack:"Auf-GABE = 'give-up' (as in give in/submit). You give up your task = submit it."},
+  {g:"aufhören", e:"to stop / finish / end", cat:"verbs", pron:"OWF-her-en", ex:"Der Kurs hört in einer Woche auf.", ex_e:"The course ends in one week.", hack:"Auf-HÖREN = 'listen-up' reversed. When you say 'stop listening' = stop!"},
+  {g:"aufstehen", e:"to get up / stand up", cat:"verbs", pron:"OWF-shtay-en", ex:"Ich muss um vier Uhr aufstehen.", ex_e:"I have to get up at four o'clock.", hack:"Auf (up) + stehen (stand). Stand UP = aufstehen. Like 'upstanding'!"},
+  {g:"der Aufzug", e:"elevator / lift", cat:"nouns", art:"der", pron:"OWF-tsoog", ex:"In diesem Haus gibt es keinen Aufzug.", ex_e:"There is no elevator in this building.", hack:"Auf (up) + Zug (pull). Something that PULLS you UP = elevator!"},
+  {g:"das Auge", e:"eye", cat:"nouns", art:"das", pron:"OW-geh", ex:"Er hat blaue Augen.", ex_e:"He has blue eyes.", hack:"'Auge' sounds like 'OW-geh' — you poke your EYE and say OW!"},
+  {g:"aus", e:"from / out of / off (device)", cat:"other", pron:"OWS", ex:"Er kommt aus Brasilien.", ex_e:"He comes from Brazil.", hack:"AUS = out. He's out FROM somewhere. Light AUS = light out = off."},
+  {g:"der Ausflug", e:"excursion / day trip", cat:"nouns", art:"der", pron:"OWS-floog", ex:"Wir machen einen Ausflug nach Heidelberg.", ex_e:"We're going on a day trip to Heidelberg.", hack:"Aus-FLUG = out-flight. You FLY OUT for a trip!"},
+  {g:"ausfüllen", e:"to fill in / fill out", cat:"verbs", pron:"OWS-fewl-en", ex:"Füllen Sie bitte dieses Formular aus.", ex_e:"Please fill out this form.", hack:"Aus (out) + füllen (fill). Fill it OUT = complete the form."},
+  {g:"der Ausgang", e:"exit", cat:"nouns", art:"der", pron:"OWS-gang", ex:"Wo ist der Ausgang?", ex_e:"Where is the exit?", hack:"Aus-GANG = out-gang/path. The path GOING OUT = exit."},
+  {g:"die Auskunft", e:"information / inquiry", cat:"nouns", art:"die", pron:"OWS-koonft", ex:"Können Sie mir eine Auskunft geben?", ex_e:"Can you give me some information?", hack:"Aus-KUNFT = out-knowledge. Knowledge that comes OUT to you = info."},
+  {g:"das Ausland", e:"abroad / foreign country", cat:"nouns", art:"das", pron:"OWS-lahnt", ex:"Fahren Sie ins Ausland?", ex_e:"Are you travelling abroad?", hack:"Aus-LAND = out-land. The LAND OUTSIDE your own country!"},
+  {g:"der Ausländer", e:"foreigner", cat:"nouns", art:"der", pron:"OWS-len-der", ex:"Sind Sie Ausländerin?", ex_e:"Are you a foreigner?", hack:"From Ausland. A person FROM the out-land."},
+  {g:"ausländisch", e:"foreign", cat:"adjectives", pron:"OWS-len-dish", ex:"Ich habe nur ausländisches Geld.", ex_e:"I only have foreign money.", hack:"Ausländisch = foreign. From 'Ausland' + -isch (like -ish in English)."},
+  {g:"ausmachen", e:"to turn off (light/device)", cat:"verbs", pron:"OWS-mach-en", ex:"Mach bitte das Licht aus!", ex_e:"Please turn off the light!", hack:"Aus (off) + machen (make). Make it go OFF."},
+  {g:"die Aussage", e:"statement", cat:"nouns", art:"die", pron:"OWS-zah-geh", ex:"Ist die Aussage richtig oder falsch?", ex_e:"Is the statement correct or false?", hack:"Aus-SAGE = out-say. What is SAID OUT = a statement."},
+  {g:"aussehen", e:"to look / appear", cat:"verbs", pron:"OWS-zay-en", ex:"Das sieht schön aus.", ex_e:"That looks beautiful.", hack:"Aus-SEHEN = out-see. What COMES OUT to be SEEN = appearance."},
+  {g:"aussteigen", e:"to get off (bus/train)", cat:"verbs", pron:"OWS-shty-gen", ex:"Wo muss ich aussteigen?", ex_e:"Where do I have to get off?", hack:"Aus (out) + steigen (climb). Climb OUT of the vehicle."},
+  {g:"der Ausweis", e:"ID card / identity document", cat:"nouns", art:"der", pron:"OWS-vice", ex:"Hier ist mein Ausweis.", ex_e:"Here is my ID.", hack:"Aus-WEIS = out-show. The card that SHOWS/PROVES who you are."},
+  {g:"(sich) ausziehen", e:"to undress / take off (clothes)", cat:"verbs", pron:"OWS-tsee-en", ex:"Zieh die Schuhe aus, bitte!", ex_e:"Take off your shoes, please!", hack:"Aus (off/out) + ziehen (pull). Pull clothes OFF your body."},
+  {g:"das Auto", e:"car", cat:"nouns", art:"das", pron:"OW-to", ex:"Er kommt mit dem Auto.", ex_e:"He comes by car.", hack:"'Auto' = car. Same as English 'auto(mobile)'!"},
+  {g:"die Autobahn", e:"motorway / highway", cat:"nouns", art:"die", pron:"OW-to-bahn", ex:"Wo geht's hier zur Autobahn?", ex_e:"Where is the motorway from here?", hack:"Auto (car) + Bahn (path/track). The CAR PATH = motorway!"},
+  {g:"der Automat", e:"vending machine / automated machine", cat:"nouns", art:"der", pron:"ow-to-MAHT", ex:"Fahrkarten gibt es am Automaten.", ex_e:"Tickets are available at the machine.", hack:"'Automat' = automaton/vending machine. Automatic machine!"},
+
+  // ── B ──
+  {g:"das Baby", e:"baby", cat:"nouns", art:"das", pron:"BAY-bee", ex:"Mein Kind ist noch ein Baby.", ex_e:"My child is still a baby.", hack:"Identical to English 'baby'!"},
+  {g:"die Bäckerei", e:"bakery", cat:"nouns", art:"die", pron:"beck-er-EYE", ex:"Ich geh schnell zur Bäckerei.", ex_e:"I'll quickly go to the bakery.", hack:"BÄCKER = baker. Bäcker-EI = baker's shop. '-ei' = shop/place."},
+  {g:"das Bad", e:"bathroom / bath", cat:"nouns", art:"das", pron:"BAHT", ex:"Wir haben kein großes Bad.", ex_e:"We don't have a large bathroom.", hack:"BAD = bath. A 'bad' bathroom? No — just BATH in German!"},
+  {g:"baden", e:"to bathe / have a bath", cat:"verbs", pron:"BAH-den", ex:"Ich bade nicht gern, ich dusche lieber.", ex_e:"I don't like bathing, I prefer showering.", hack:"'Baden' = to bathe. Think of Baden-Baden, the famous spa town!"},
+  {g:"die Bahn", e:"train / railway", cat:"nouns", art:"die", pron:"BAHN", ex:"Wir fahren lieber mit der Bahn.", ex_e:"We prefer travelling by train.", hack:"BAHN = path/track. Think of the AUTO-BAHN = car track. Bahn alone = train track."},
+  {g:"der Bahnhof", e:"train station", cat:"nouns", art:"der", pron:"BAHN-hof", ex:"Komme ich hier zum Bahnhof?", ex_e:"Does this way lead to the station?", hack:"Bahn (train) + Hof (courtyard/yard). The TRAIN YARD = station!"},
+  {g:"der Bahnsteig", e:"platform (train)", cat:"nouns", art:"der", pron:"BAHN-shtyg", ex:"Auf welchem Bahnsteig fährt der Zug?", ex_e:"Which platform does the train depart from?", hack:"Bahn (train) + Steig (ascent/step). Where you STEP UP to the train."},
+  {g:"bald", e:"soon", cat:"other", pron:"BAHLT", ex:"Ich komme bald.", ex_e:"I'm coming soon.", hack:"'BALD' in German means SOON, not without hair! Bald = soon = before long."},
+  {g:"der Balkon", e:"balcony", cat:"nouns", art:"der", pron:"bal-KOHN", ex:"Die Wohnung hat einen kleinen Balkon.", ex_e:"The apartment has a small balcony.", hack:"Same as English 'balcony'! Easy."},
+  {g:"die Banane", e:"banana", cat:"nouns", art:"die", pron:"bah-NAH-neh", ex:"Drei Bananen, bitte!", ex_e:"Three bananas, please!", hack:"'Banane' = banana. Virtually identical!"},
+  {g:"die Bank", e:"bank / bench", cat:"nouns", art:"die", pron:"BAHNK", ex:"Die Bank schließt um vier Uhr.", ex_e:"The bank closes at four o'clock.", hack:"'Bank' = bank (money) AND bench! Context tells you which. Sit on a BANK(bench)!"},
+  {g:"bar", e:"cash (in cash)", cat:"other", pron:"BAR", ex:"Muss ich bar zahlen?", ex_e:"Do I have to pay cash?", hack:"'Bar' = cash. Think: a bar of gold = pure cash!"},
+  {g:"der Bauch", e:"stomach / belly", cat:"nouns", art:"der", pron:"BOWKH", ex:"Mir tut der Bauch weh.", ex_e:"My stomach hurts.", hack:"BAUCH sounds like 'ouch in the belly' — BAUCHache!"},
+  {g:"der Baum", e:"tree", cat:"nouns", art:"der", pron:"BOWM", ex:"Fahr nicht an den Baum!", ex_e:"Don't drive into the tree!", hack:"BAUM — a BOOM when the tree falls down!"},
+  {g:"der Beamte", e:"official / civil servant", cat:"nouns", art:"der", pron:"be-AHM-teh", ex:"Fragen Sie die Beamtin!", ex_e:"Ask the official!", hack:"BEAMTE — they're always beaming (beamt) with authority!"},
+  {g:"bedeuten", e:"to mean / signify", cat:"verbs", pron:"be-DOY-ten", ex:"Was bedeutet das Wort?", ex_e:"What does the word mean?", hack:"Be-DEUT-en. 'Deut' = German/Deutsch. What does it mean in DEUTSCH?"},
+  {g:"beginnen", e:"to begin / start", cat:"verbs", pron:"be-GIN-en", ex:"Das Spiel beginnt um 15.30 Uhr.", ex_e:"The game begins at 15:30.", hack:"'Beginnen' ≈ 'begin'. Nearly identical to English!"},
+  {g:"bei", e:"near / at / with / by", cat:"other", pron:"BY", ex:"Ich wohne bei meinen Eltern.", ex_e:"I live with my parents.", hack:"BEI sounds like 'by'. 'BY the station' = 'bei dem Bahnhof'."},
+  {g:"beide", e:"both", cat:"other", pron:"BY-deh", ex:"Beide Eltern arbeiten.", ex_e:"Both parents work.", hack:"BEIDE = both. 'By-deh' two = both of them by each other."},
+  {g:"das Bein", e:"leg", cat:"nouns", art:"das", pron:"BYNE", ex:"Mein rechtes Bein tut weh.", ex_e:"My right leg hurts.", hack:"BEIN sounds like BONE — your leg has a bone in it!"},
+  {g:"das Beispiel", e:"example", cat:"nouns", art:"das", pron:"BY-shpeel", ex:"Kannst du mir ein Beispiel sagen?", ex_e:"Can you give me an example?", hack:"Bei-SPIEL = by-game/play. An example is like a PLAY that shows you something."},
+  {g:"bekannt", e:"well-known / familiar", cat:"adjectives", pron:"be-KAHNT", ex:"Picasso ist sehr bekannt.", ex_e:"Picasso is very well-known.", hack:"Be-KANNT = be-known. Something KNOWN/familiar."},
+  {g:"der/die Bekannte", e:"acquaintance", cat:"nouns", art:"der/die", pron:"be-KAHNT-eh", ex:"Ein Bekannter von mir heißt Klaus.", ex_e:"An acquaintance of mine is called Klaus.", hack:"From 'bekannt'. Someone you KNOW but not a close friend."},
+  {g:"bekommen", e:"to receive / get", cat:"verbs", pron:"be-KOM-en", ex:"Haben Sie meinen Brief bekommen?", ex_e:"Did you receive my letter?", hack:"Be-KOMMEN = 'come to you'. Something that COMES to you = received!"},
+  {g:"benutzen", e:"to use / make use of", cat:"verbs", pron:"be-NOOT-sen", ex:"Bitte nicht benutzen!", ex_e:"Please do not use!", hack:"Be-NUTZEN. 'Nützen' = to be useful. To USE something = benutzen."},
+  {g:"der Beruf", e:"profession / occupation", cat:"nouns", art:"der", pron:"be-ROOF", ex:"Was sind Sie von Beruf?", ex_e:"What is your profession?", hack:"Be-RUF = be-called. What you are CALLED to do = your vocation/profession!"},
+  {g:"besetzt", e:"busy / occupied / taken", cat:"adjectives", pron:"be-ZETST", ex:"Die Nummer ist immer besetzt.", ex_e:"The number is always busy.", hack:"Be-SETZT = be-sat. The seat/phone is SAT upon = occupied."},
+  {g:"besichtigen", e:"to visit / view (sights)", cat:"verbs", pron:"be-ZIKH-ti-gen", ex:"Ich möchte den Dom besichtigen.", ex_e:"I'd like to visit the cathedral.", hack:"Be-SICHT-igen. 'Sicht' = sight/view. To go SEE the sights = besichtigen."},
+  {g:"besser", e:"better", cat:"adjectives", pron:"BES-ser", ex:"Es geht mir schon besser.", ex_e:"I'm already feeling better.", hack:"BESSER ≈ 'better'. BESSEr = BETTER with a German accent!"},
+  {g:"best-", e:"best", cat:"adjectives", pron:"BEST", ex:"Am besten treffen wir uns morgen.", ex_e:"Best if we meet tomorrow.", hack:"BEST = best. Same in English! Am besten = 'at the best'."},
+  {g:"bestellen", e:"to order", cat:"verbs", pron:"be-SHTEL-en", ex:"Wir möchten bestellen, bitte.", ex_e:"We'd like to order, please.", hack:"Be-STELLEN. 'Stellen' = to place. To PLACE an order = bestellen."},
+  {g:"besuchen", e:"to visit", cat:"verbs", pron:"be-ZOO-khen", ex:"Darf ich dich besuchen?", ex_e:"May I visit you?", hack:"Be-SUCHEN = be-seek. Go SEEKING someone out = visiting them."},
+  {g:"das Bett", e:"bed", cat:"nouns", art:"das", pron:"BET", ex:"Wir brauchen noch ein Kinderbett.", ex_e:"We still need a child's bed.", hack:"BETT ≈ 'bed'. Almost the same word! Double T but same meaning."},
+  {g:"bezahlen", e:"to pay", cat:"verbs", pron:"be-TSAH-len", ex:"Wo muss ich bezahlen?", ex_e:"Where do I have to pay?", hack:"Be-ZAHLEN = 'be-number'. Pay with your numbers (money)!"},
+  {g:"das Bier", e:"beer", cat:"nouns", art:"das", pron:"BEER", ex:"Noch ein Bier bitte.", ex_e:"Another beer please.", hack:"BIER = BEER. Same pronunciation essentially!"},
+  {g:"das Bild", e:"picture / image", cat:"nouns", art:"das", pron:"BILT", ex:"Hast du ein Bild von deinem Sohn?", ex_e:"Do you have a picture of your son?", hack:"BILD = picture. Think 'BILDBOARD' = billboard = big picture!"},
+  {g:"billig", e:"cheap / inexpensive", cat:"adjectives", pron:"BIL-ikh", ex:"Die Jacke kostet nur 10 Euro — billig!", ex_e:"The jacket costs only 10 euros — cheap!", hack:"BILLIG — think of paying a BILLy-goat amount. Cheap!"},
+  {g:"die Birne", e:"pear", cat:"nouns", art:"die", pron:"BEER-neh", ex:"Ein Kilo Birnen, bitte!", ex_e:"One kilo of pears, please!", hack:"BIRNE also means 'light bulb' — a pear-SHAPED bulb!"},
+  {g:"bis", e:"until / up to", cat:"other", pron:"BISS", ex:"Ich fahre nur bis Stuttgart.", ex_e:"I'm only going as far as Stuttgart.", hack:"BIS = until. Think 'bis-ect' = cut until halfway. BIS = up to that point."},
+  {g:"bisschen", e:"a little / a bit", cat:"other", pron:"BIS-khen", ex:"Ein bisschen Deutsch.", ex_e:"A little German.", hack:"BISSCHEN = little bite. A tiny BITE (Biss) of something = a little bit!"},
+  {g:"bitte", e:"please / you're welcome", cat:"phrases", pron:"BIT-teh", ex:"Eine Tasse Kaffee, bitte!", ex_e:"A cup of coffee, please!", hack:"BITTE = please. 'BITTE schön' = you're welcome. Always polite!"},
+  {g:"die Bitte", e:"request", cat:"nouns", art:"die", pron:"BIT-teh", ex:"Ich habe noch eine Bitte.", ex_e:"I have one more request.", hack:"Same word as 'bitte'! A Bitte = a polite request."},
+  {g:"bitten", e:"to ask / request", cat:"verbs", pron:"BIT-en", ex:"Darf ich Sie um etwas bitten?", ex_e:"May I ask you something?", hack:"Bitten = to request/beg. Think 'bitten by the need to ask'!"},
+  {g:"bleiben", e:"to stay / remain", cat:"verbs", pron:"BLY-ben", ex:"Ich bleibe heute zu Hause.", ex_e:"I'm staying home today.", hack:"BLEIBEN ≈ 'BLEIBen'. Think BLEEP as in 'bleep me when you stay!'"},
+  {g:"der Bleistift", e:"pencil", cat:"nouns", art:"der", pron:"BLY-shtift", ex:"Hast du einen Bleistift?", ex_e:"Do you have a pencil?", hack:"Blei (lead) + Stift (pen/stick). A LEAD STICK = pencil!"},
+  {g:"der Blick", e:"view / glance / look", cat:"nouns", art:"der", pron:"BLIK", ex:"Von diesem Hotel hat man einen guten Blick.", ex_e:"From this hotel you have a good view.", hack:"BLICK = glance. Think of a camera's CLICK capturing the BLICK/view!"},
+  {g:"die Blume", e:"flower", cat:"nouns", art:"die", pron:"BLOO-meh", ex:"Gefallen dir die Blumen?", ex_e:"Do you like the flowers?", hack:"BLUME ≈ 'bloom'. A blooming flower = Blume!"},
+  {g:"böse", e:"angry / wicked / bad", cat:"adjectives", pron:"BER-zeh", ex:"Sie ist böse auf mich.", ex_e:"She is angry with me.", hack:"BÖSE ≈ 'bossy' — a BOSSY, angry person!"},
+  {g:"brauchen", e:"to need", cat:"verbs", pron:"BROW-khen", ex:"Brauchst du die Zeitung noch?", ex_e:"Do you still need the newspaper?", hack:"BRAUCHEN — think 'brew-ken'. You NEED to brew your morning coffee!"},
+  {g:"breit", e:"wide / broad", cat:"adjectives", pron:"BRYTE", ex:"Wie breit ist der Schrank?", ex_e:"How wide is the wardrobe?", hack:"BREIT = broad/wide. BROAD and BREIT both start with BR!"},
+  {g:"der Brief", e:"letter (post)", cat:"nouns", art:"der", pron:"BREEF", ex:"Haben Sie einen Brief für mich?", ex_e:"Do you have a letter for me?", hack:"BRIEF also means 'brief' in English. A letter is BRIEF communication!"},
+  {g:"die Briefmarke", e:"stamp (postage)", cat:"nouns", art:"die", pron:"BREEF-mar-keh", ex:"Kaufst du bitte Briefmarken?", ex_e:"Will you buy stamps please?", hack:"Brief (letter) + Marke (mark/brand). The MARK on the LETTER = stamp!"},
+  {g:"bringen", e:"to bring", cat:"verbs", pron:"BRING-en", ex:"Bringen Sie mir noch einen Kaffee!", ex_e:"Bring me another coffee!", hack:"BRINGEN = BRING. Almost identical to English!"},
+  {g:"das Brot", e:"bread", cat:"nouns", art:"das", pron:"BROHT", ex:"Haben Sie auch Weißbrot?", ex_e:"Do you also have white bread?", hack:"BROT = bread. Think of 'brot-her' sharing his BREAD with you!"},
+  {g:"das Brötchen", e:"bread roll", cat:"nouns", art:"das", pron:"BRET-khen", ex:"Möchtest du Brötchen zum Frühstück?", ex_e:"Would you like bread rolls for breakfast?", hack:"BRÖTCHEN = little bread (Brot + -chen = diminutive). Little BROT!"},
+  {g:"der Bruder", e:"brother", cat:"nouns", art:"der", pron:"BROO-der", ex:"Sein Bruder arbeitet auch hier.", ex_e:"His brother works here too.", hack:"BRUDER = brother. BROther → BRUder. BR- start, similar vowel!"},
+  {g:"das Buch", e:"book", cat:"nouns", art:"das", pron:"BOOKH", ex:"Gute Bücher sind oft sehr teuer.", ex_e:"Good books are often very expensive.", hack:"BUCH = BOOK. Nearly the same! BU-CH = BO-OK."},
+  {g:"buchstabieren", e:"to spell (out letters)", cat:"verbs", pron:"bookh-stah-BEE-ren", ex:"Bitte buchstabieren Sie Ihren Namen.", ex_e:"Please spell your name.", hack:"Buchstabe (letter) + ieren. BUCHSTABE = book-staff/symbol. To spell = to say each symbol."},
+  {g:"der Bus", e:"bus", cat:"nouns", art:"der", pron:"BOOS", ex:"Wann kommt der nächste Bus?", ex_e:"When does the next bus come?", hack:"BUS = bus. Same word!"},
+  {g:"die Butter", e:"butter", cat:"nouns", art:"die", pron:"BOOT-ter", ex:"Ein Brötchen mit Butter und Käse.", ex_e:"A roll with butter and cheese.", hack:"BUTTER = butter. Identical!"},
+
+  // ── C ──
+  {g:"das Café", e:"café", cat:"nouns", art:"das", pron:"kah-FAY", ex:"Sollen wir uns im Café treffen?", ex_e:"Shall we meet at the café?", hack:"CAFÉ = café. Identical!"},
+  {g:"die CD", e:"CD", cat:"nouns", art:"die", pron:"TSAY-day", ex:"Bring deine Lieblings-CD mit.", ex_e:"Bring your favourite CD.", hack:"CD = CD. Same thing!"},
+  {g:"der Chef", e:"boss / manager", cat:"nouns", art:"der", pron:"SHEF", ex:"Wir haben eine neue Chefin.", ex_e:"We have a new boss (female).", hack:"CHEF = boss/chief. Same as English CHEF (chief)!"},
+  {g:"circa/ca.", e:"approximately / about", cat:"other", pron:"TSEER-ka", ex:"Circa fünfzig Kilometer.", ex_e:"Approximately fifty kilometres.", hack:"'Circa' = same as English 'circa' or 'ca.' — about/approximately."},
+  {g:"der Computer", e:"computer", cat:"nouns", art:"der", pron:"kom-PYOO-ter", ex:"Wann bekommst du deinen neuen Computer?", ex_e:"When are you getting your new computer?", hack:"COMPUTER = computer. Identical!"},
+
+  // ── D ──
+  {g:"da", e:"there / here / as (since)", cat:"other", pron:"DAH", ex:"Da hinten ist er ja.", ex_e:"There he is at the back.", hack:"DA = there. 'Da' points to something: DA it is!"},
+  {g:"die Dame", e:"lady / madam", cat:"nouns", art:"die", pron:"DAH-meh", ex:"Sehr geehrte Damen und Herren!", ex_e:"Dear Ladies and Gentlemen!", hack:"DAME = dame/lady. Same as English 'dame'!"},
+  {g:"danken", e:"to thank", cat:"verbs", pron:"DAHNK-en", ex:"Ich danke Ihnen für die Einladung.", ex_e:"I thank you for the invitation.", hack:"DANKEN — DANKE (thanks) comes from this! Thank-en."},
+  {g:"der Dank", e:"thanks / gratitude", cat:"nouns", art:"der", pron:"DAHNK", ex:"Vielen Dank! Herzlichen Dank!", ex_e:"Many thanks! Heartfelt thanks!", hack:"DANK = thanks/gratitude. Think: 'dankfulness' = thankfulness."},
+  {g:"danke", e:"thank you", cat:"phrases", pron:"DAHN-keh", ex:"Nein, danke!", ex_e:"No, thank you!", hack:"DANKE = thank you. One of the FIRST German words anyone learns!"},
+  {g:"dann", e:"then / afterwards", cat:"other", pron:"DAHN", ex:"Dann komme ich.", ex_e:"Then I'll come.", hack:"DANN = then. 'THEN' in German sounds like 'DAHN'. D-then!"},
+  {g:"das Datum", e:"date (calendar)", cat:"nouns", art:"das", pron:"DAH-toom", ex:"Schreiben Sie das Datum auf das Formular.", ex_e:"Write the date on the form.", hack:"DATUM = date. Same as English 'datum'!"},
+  {g:"dauern", e:"to last / take (time)", cat:"verbs", pron:"DOW-ern", ex:"Wie lange dauert der Film?", ex_e:"How long does the film last?", hack:"DAUERN — think 'endure'. Something that ENDURES = lasts = dauert."},
+  {g:"denn", e:"because / then (particle)", cat:"other", pron:"DEN", ex:"Ich kann nicht kommen, denn ich bin krank.", ex_e:"I can't come because I'm ill.", hack:"DENN = because/for. Think of 'for THEN' — explaining why."},
+  {g:"die Disco", e:"disco / nightclub", cat:"nouns", art:"die", pron:"DIS-ko", ex:"Heute Abend gehen wir in die Disco.", ex_e:"Tonight we're going to the disco.", hack:"DISCO = disco. Same!"},
+  {g:"der Doktor", e:"doctor (title)", cat:"nouns", art:"der", pron:"DOK-tor", ex:"Wir gehen zum Doktor.", ex_e:"We're going to the doctor.", hack:"DOKTOR = doctor. Same!"},
+  {g:"das Doppelzimmer", e:"double room", cat:"nouns", art:"das", pron:"DOP-el-tsim-er", ex:"Wollen Sie ein Doppelzimmer?", ex_e:"Would you like a double room?", hack:"Doppel (double) + Zimmer (room). Double room!"},
+  {g:"das Dorf", e:"village", cat:"nouns", art:"das", pron:"DORF", ex:"Meine Familie lebt in einem Dorf.", ex_e:"My family lives in a village.", hack:"DORF ≈ 'thorp' (old English for village). Old English 'thorp/dorp' = village!"},
+  {g:"drucken", e:"to print", cat:"verbs", pron:"DROOK-en", ex:"Bitte drucke das Formular für mich.", ex_e:"Please print the form for me.", hack:"DRUCKEN = to print. DRUCK = pressure/print. Printing presses PRESS (drücken)!"},
+  {g:"der Drucker", e:"printer", cat:"nouns", art:"der", pron:"DROOK-er", ex:"Mein Drucker ist kaputt.", ex_e:"My printer is broken.", hack:"DRUCKER = printer. From drucken (to print)."},
+  {g:"drücken", e:"to press / push", cat:"verbs", pron:"DREW-ken", ex:"Drück hier, dann geht der Computer an.", ex_e:"Press here, then the computer turns on.", hack:"DRÜCKEN = press/push. DRUCK = pressure. Apply PRESSURE = press."},
+  {g:"durch", e:"through / by means of", cat:"other", pron:"DOORKH", ex:"Gehen Sie durch die Breite Straße.", ex_e:"Go through the Breite Strasse.", hack:"DURCH = through. Think 'D-ARCH' = through an arch!"},
+  {g:"die Durchsage", e:"announcement (PA system)", cat:"nouns", art:"die", pron:"DOORKH-zah-geh", ex:"Ich habe die Durchsage nicht verstanden.", ex_e:"I didn't understand the announcement.", hack:"Durch (through) + Sage (say). Something SAID THROUGH the speakers."},
+  {g:"dürfen", e:"to be allowed to / may", cat:"verbs", pron:"DEW-fen", ex:"Sie dürfen hier nicht rauchen.", ex_e:"You are not allowed to smoke here.", hack:"DÜRFEN = may/allowed. 'Darf ich?' = 'May I?' Learn this for permissions!"},
+  {g:"der Durst", e:"thirst", cat:"nouns", art:"der", pron:"DOORST", ex:"Ich habe großen Durst.", ex_e:"I am very thirsty.", hack:"DURST = thirst. Think 'the WORST kind of THIRST'!"},
+  {g:"(sich) duschen", e:"to shower", cat:"verbs", pron:"DOOSH-en", ex:"Ich dusche lieber.", ex_e:"I prefer to shower.", hack:"DUSCHEN = to shower. Think 'DOUCHE' (French origin) — shower!"},
+  {g:"die Dusche", e:"shower", cat:"nouns", art:"die", pron:"DOOSH-eh", ex:"Unsere Wohnung hat nur eine Dusche.", ex_e:"Our apartment only has a shower.", hack:"DUSCHE = shower. Same French/German root as 'douche'."},
+
+  // ── E ──
+  {g:"die Ecke", e:"corner", cat:"nouns", art:"die", pron:"EK-eh", ex:"An der nächsten Ecke links.", ex_e:"At the next corner, turn left.", hack:"ECKE = corner. 'ECK-e' — like a sharp edgy ANGLE at the corner."},
+  {g:"die Ehefrau", e:"wife", cat:"nouns", art:"die", pron:"AY-eh-frow", ex:"Das ist meine Ehefrau.", ex_e:"This is my wife.", hack:"Ehe (marriage) + Frau (woman). The MARRIED WOMAN = wife!"},
+  {g:"der Ehemann", e:"husband", cat:"nouns", art:"der", pron:"AY-eh-mahn", ex:"Das ist mein Ehemann.", ex_e:"This is my husband.", hack:"Ehe (marriage) + Mann (man). The MARRIED MAN = husband!"},
+  {g:"das Ei", e:"egg", cat:"nouns", art:"das", pron:"EYE", ex:"Möchtest du ein Ei zum Frühstück?", ex_e:"Would you like an egg for breakfast?", hack:"EI = egg. Shaped like an I, and sounds like 'eye'!"},
+  {g:"eilig", e:"urgent / in a hurry", cat:"adjectives", pron:"EYE-likh", ex:"Hast du es eilig?", ex_e:"Are you in a hurry?", hack:"EILIG — think 'I-lick-it quickly' because you're in a hurry!"},
+  {g:"einfach", e:"simple / one-way (ticket)", cat:"adjectives", pron:"EYN-fakh", ex:"Die Prüfung ist ganz einfach.", ex_e:"The exam is quite simple.", hack:"Ein (one) + fach (fold/way). ONE WAY = simple! Einfach = simple."},
+  {g:"der Eingang", e:"entrance", cat:"nouns", art:"der", pron:"EYN-gang", ex:"Der Eingang ist um die Ecke.", ex_e:"The entrance is around the corner.", hack:"Ein (in) + Gang (path/corridor). The IN-path = entrance!"},
+  {g:"einkaufen", e:"to go shopping", cat:"verbs", pron:"EYN-kow-fen", ex:"Ich muss noch einkaufen.", ex_e:"I still have to go shopping.", hack:"Ein (in) + kaufen (buy). Go IN and BUY = go shopping!"},
+  {g:"einladen", e:"to invite", cat:"verbs", pron:"EYN-lah-den", ex:"Darf ich Sie zu einem Kaffee einladen?", ex_e:"May I invite you for a coffee?", hack:"Ein (in) + laden (to load/invite). LOAD someone IN = invite them in!"},
+  {g:"die Einladung", e:"invitation", cat:"nouns", art:"die", pron:"EYN-lah-doong", ex:"Danke für die Einladung!", ex_e:"Thank you for the invitation!", hack:"From einladen. The act of loading someone in = invitation."},
+  {g:"einmal", e:"once / one time", cat:"other", pron:"EYN-mahl", ex:"Diese Prüfung mache ich nicht noch einmal.", ex_e:"I won't take this exam again.", hack:"Ein (one) + mal (time). ONE TIME = once = einmal."},
+  {g:"einsteigen", e:"to get in / board (vehicle)", cat:"verbs", pron:"EYN-shty-gen", ex:"Steig ein, der Zug fährt gleich!", ex_e:"Get in, the train leaves soon!", hack:"Ein (in) + steigen (climb). Climb IN to the vehicle."},
+  {g:"der Eintritt", e:"admission / entry", cat:"nouns", art:"der", pron:"EYN-trit", ex:"Der Preis für den Eintritt ist 5 Euro.", ex_e:"The admission price is 5 euros.", hack:"Ein (in) + Tritt (step). The IN-STEP = entry/admission."},
+  {g:"das Einzelzimmer", e:"single room", cat:"nouns", art:"das", pron:"EYN-tsel-tsim-er", ex:"Haben Sie noch ein Einzelzimmer?", ex_e:"Do you still have a single room?", hack:"Einzel (single/individual) + Zimmer (room). Single room!"},
+  {g:"die Eltern", e:"parents", cat:"nouns", art:"die", pron:"EL-tern", ex:"Meine Eltern leben in Spanien.", ex_e:"My parents live in Spain.", hack:"ELTERN = parents. 'EL' like 'elder' — the ELDERS of the family!"},
+  {g:"die E-Mail", e:"email", cat:"nouns", art:"die", pron:"EE-mail", ex:"Ich habe Ihre E-Mail nicht bekommen.", ex_e:"I didn't receive your email.", hack:"E-Mail = email. Identical!"},
+  {g:"der Empfänger", e:"recipient / receiver", cat:"nouns", art:"der", pron:"em-PFENG-er", ex:"Du bist der Empfänger.", ex_e:"You are the recipient.", hack:"Emp-FÄNGER — the one who CATCHES/RECEIVES (fangen = catch)!"},
+  {g:"empfehlen", e:"to recommend", cat:"verbs", pron:"em-PFAY-len", ex:"Welchen Wein können Sie empfehlen?", ex_e:"Which wine can you recommend?", hack:"Emp-FEHLEN — when something is MISSING (fehlt), you feel recommended!"},
+  {g:"enden", e:"to end / finish", cat:"verbs", pron:"EN-den", ex:"Die Straße endet hier.", ex_e:"The street ends here.", hack:"ENDEN = end. 'End-en' — to reach the END!"},
+  {g:"das Ende", e:"end / finish", cat:"nouns", art:"das", pron:"EN-deh", ex:"Sie wohnt am Ende der Straße.", ex_e:"She lives at the end of the street.", hack:"ENDE = end. Same as English 'end'!"},
+  {g:"entschuldigen", e:"to excuse / apologize", cat:"verbs", pron:"ent-SHOOL-di-gen", ex:"Entschuldigen Sie bitte!", ex_e:"Excuse me please!", hack:"Ent-SCHULD-igen. SCHULD = guilt/fault. To remove the FAULT = excuse."},
+  {g:"die Entschuldigung", e:"excuse me / apology", cat:"phrases", pron:"ent-SHOOL-di-goong", ex:"Entschuldigung! – Bitte.", ex_e:"Excuse me! – No problem.", hack:"From entschuldigen. The key phrase for 'sorry/excuse me' in German!"},
+  {g:"erzählen", e:"to tell / narrate", cat:"verbs", pron:"er-TSAY-len", ex:"Wir müssen euch etwas erzählen!", ex_e:"We have to tell you something!", hack:"Er-ZÄHLEN. 'Zählen' = to count/tell. To TELL a story = erzählen."},
+  {g:"essen", e:"to eat", cat:"verbs", pron:"ES-en", ex:"Was gibt es zu essen?", ex_e:"What is there to eat?", hack:"ESSEN = eat. 'Essen' sounds like you're HISSING with hunger!"},
+  {g:"das Essen", e:"food / meal", cat:"nouns", art:"das", pron:"ES-en", ex:"Das Essen ist heute sehr gut.", ex_e:"The food is very good today.", hack:"Same as the verb ESSEN. Essen = eating = food/meal."},
+
+  // ── F ──
+  {g:"fahren", e:"to drive / travel", cat:"verbs", pron:"FAH-ren", ex:"Ich fahre mit dem Auto zur Arbeit.", ex_e:"I drive to work by car.", hack:"FAHREN — think 'FARE' (journey). To FARE forward = to travel!"},
+  {g:"der Fahrer", e:"driver", cat:"nouns", art:"der", pron:"FAH-rer", ex:"Bitte nicht mit dem Fahrer sprechen!", ex_e:"Please do not speak to the driver!", hack:"FAHRER = driver. From fahren + -er (person who does it)."},
+  {g:"die Fahrkarte", e:"ticket (travel)", cat:"nouns", art:"die", pron:"FAR-kar-teh", ex:"Hast du schon eine Fahrkarte?", ex_e:"Do you already have a ticket?", hack:"Fahr (travel) + Karte (card). The TRAVEL CARD = ticket!"},
+  {g:"das Fahrrad", e:"bicycle", cat:"nouns", art:"das", pron:"FAR-raht", ex:"Fährst du mit dem Fahrrad?", ex_e:"Are you cycling?", hack:"Fahr (travel) + Rad (wheel). The TRAVEL WHEEL = bicycle!"},
+  {g:"falsch", e:"wrong / false / incorrect", cat:"adjectives", pron:"FAHLSH", ex:"Das ist falsch.", ex_e:"That is wrong.", hack:"FALSCH ≈ 'false'. False = wrong = falsch!"},
+  {g:"die Familie", e:"family", cat:"nouns", art:"die", pron:"fah-MEE-lee-eh", ex:"Meine Familie lebt in Spanien.", ex_e:"My family lives in Spain.", hack:"FAMILIE = family. Nearly identical!"},
+  {g:"der Familienname", e:"surname / family name", cat:"nouns", art:"der", pron:"fah-MEE-leen-nah-meh", ex:"Mein Familienname ist García.", ex_e:"My family name is García.", hack:"Familie (family) + Name (name). FAMILY NAME = surname!"},
+  {g:"der Familienstand", e:"marital status", cat:"nouns", art:"der", pron:"fah-MEE-leen-shtant", ex:"Bei 'Familienstand' musst du 'ledig' ankreuzen.", ex_e:"For 'marital status' you must tick 'single'.", hack:"Familie + Stand (status/position). Your FAMILY STATUS = marital status!"},
+  {g:"die Farbe", e:"colour", cat:"nouns", art:"die", pron:"FAR-beh", ex:"Die Farbe gefällt mir gut.", ex_e:"I like the colour.", hack:"FARBE = colour. Think 'FARBULOUS colours'!"},
+  {g:"das Fax", e:"fax", cat:"nouns", art:"das", pron:"FAHKS", ex:"Schicken Sie uns ein Fax!", ex_e:"Send us a fax!", hack:"FAX = fax. Same!"},
+  {g:"feiern", e:"to celebrate / party", cat:"verbs", pron:"FY-ern", ex:"Wir feiern heute meinen Geburtstag.", ex_e:"We're celebrating my birthday today.", hack:"FEIERN = celebrate. FEIER-abend (end of work) = time to celebrate/relax!"},
+  {g:"fehlen", e:"to be missing / absent / wrong", cat:"verbs", pron:"FAY-len", ex:"Was fehlt Ihnen?", ex_e:"What is wrong/missing?", hack:"FEHLEN = to be missing. FEHLER = error/mistake. When something FAILS = fehlt."},
+  {g:"der Fehler", e:"mistake / error", cat:"nouns", art:"der", pron:"FAY-ler", ex:"Diesen Fehler mache ich immer.", ex_e:"I always make this mistake.", hack:"FEHLER = error. FAIL-er → FEHLER. When you FAIL = you make a Fehler!"},
+  {g:"fernsehen", e:"to watch TV", cat:"verbs", pron:"FERN-zay-en", ex:"Wollen wir heute Abend fernsehen?", ex_e:"Shall we watch TV tonight?", hack:"Fern (far/distant) + sehen (see). To SEE from FAR AWAY = TV!"},
+  {g:"fertig", e:"ready / finished / done", cat:"adjectives", pron:"FER-tikh", ex:"Bist du fertig?", ex_e:"Are you ready?", hack:"FERTIG = finished/ready. Think 'FERTILE ground is READY to grow'."},
+  {g:"das Feuer", e:"fire", cat:"nouns", art:"das", pron:"FOY-er", ex:"Haben Sie Feuer?", ex_e:"Do you have a light? (fire/lighter)", hack:"FEUER = fire. FEU = fire in French. Think 'fever = fire in the body'!"},
+  {g:"das Fieber", e:"fever / temperature", cat:"nouns", art:"das", pron:"FEE-ber", ex:"Mein Mann hat noch immer Fieber.", ex_e:"My husband still has a fever.", hack:"FIEBER = fever. Sounds like FEVER with a German twist!"},
+  {g:"der Film", e:"film / movie", cat:"nouns", art:"der", pron:"FILM", ex:"Ich möchte gern diesen Film sehen.", ex_e:"I'd like to see this film.", hack:"FILM = film. Identical!"},
+  {g:"finden", e:"to find / think (opinion)", cat:"verbs", pron:"FIN-den", ex:"Wir müssen den Schlüssel finden.", ex_e:"We must find the key.", hack:"FINDEN = find. FIN-den → FIND-en. Nearly identical!"},
+  {g:"die Firma", e:"company / firm", cat:"nouns", art:"die", pron:"FEER-mah", ex:"Er arbeitet bei einer anderen Firma.", ex_e:"He works at a different company.", hack:"FIRMA = firm/company. Same as English 'firm'!"},
+  {g:"der Fisch", e:"fish", cat:"nouns", art:"der", pron:"FISH", ex:"Ich esse gern Fisch.", ex_e:"I like eating fish.", hack:"FISCH = fish. Almost identical!"},
+  {g:"die Flasche", e:"bottle", cat:"nouns", art:"die", pron:"FLAH-sheh", ex:"Eine Flasche Bier, bitte.", ex_e:"A bottle of beer, please.", hack:"FLASCHE = bottle. Think 'FLASK' — a FLASK is a bottle!"},
+  {g:"das Fleisch", e:"meat / flesh", cat:"nouns", art:"das", pron:"FLYSH", ex:"Fleisch mag ich nicht.", ex_e:"I don't like meat.", hack:"FLEISCH = flesh/meat. FLESH → FLEISCH. Same root!"},
+  {g:"fliegen", e:"to fly", cat:"verbs", pron:"FLEE-gen", ex:"Ich fliege nicht gern.", ex_e:"I don't like flying.", hack:"FLIEGEN = fly. FLIT/FLEE/FLY — all the same FL- flight family!"},
+  {g:"der Flughafen", e:"airport", cat:"nouns", art:"der", pron:"FLOOG-hah-fen", ex:"Kannst du mich zum Flughafen bringen?", ex_e:"Can you take me to the airport?", hack:"Flug (flight) + Hafen (harbour). The FLIGHT HARBOUR = airport!"},
+  {g:"das Flugzeug", e:"airplane", cat:"nouns", art:"das", pron:"FLOOG-tsoig", ex:"Das Flugzeug aus Berlin kommt später an.", ex_e:"The plane from Berlin arrives later.", hack:"Flug (flight) + Zeug (stuff/device). The FLYING DEVICE = airplane!"},
+  {g:"das Formular", e:"form (document)", cat:"nouns", art:"das", pron:"for-moo-LAR", ex:"Sie müssen dieses Formular ausfüllen.", ex_e:"You must fill out this form.", hack:"FORMULAR = form. Same root as English 'formula/form'!"},
+  {g:"das Foto", e:"photo", cat:"nouns", art:"das", pron:"FOH-to", ex:"Darf ich ein Foto machen?", ex_e:"May I take a photo?", hack:"FOTO = photo. Same!"},
+  {g:"fragen", e:"to ask", cat:"verbs", pron:"FRAH-gen", ex:"Er möchte Sie etwas fragen.", ex_e:"He would like to ask you something.", hack:"FRAGEN = ask. Think 'FRAGMENT of a question = fragen'!"},
+  {g:"die Frage", e:"question", cat:"nouns", art:"die", pron:"FRAH-geh", ex:"Ich habe eine Frage.", ex_e:"I have a question.", hack:"FRAGE = question. From fragen. A QUESTION = Frage."},
+  {g:"die Frau", e:"woman / wife / Mrs", cat:"nouns", art:"die", pron:"FROW", ex:"Guten Tag, Frau Schmitt!", ex_e:"Good day, Mrs Schmitt!", hack:"FRAU = woman/wife. Think 'FROW-sy' lady. Frau = Mrs!"},
+  {g:"frei", e:"free / vacant / available", cat:"adjectives", pron:"FRY", ex:"Ist der Platz noch frei?", ex_e:"Is the seat still free?", hack:"FREI = free. Think 'FREE-dom = Freiheit'. Frei = free!"},
+  {g:"die Freizeit", e:"free time / leisure", cat:"nouns", art:"die", pron:"FRY-tsyt", ex:"In meiner Freizeit spiele ich Fußball.", ex_e:"In my free time I play football.", hack:"Frei (free) + Zeit (time). FREE TIME = leisure!"},
+  {g:"fremd", e:"foreign / strange / unfamiliar", cat:"adjectives", pron:"FREMT", ex:"Ich bin fremd hier.", ex_e:"I'm a stranger here.", hack:"FREMD = foreign/strange. Think 'FOREIGN and STRANGE = fremd'."},
+  {g:"(sich) freuen", e:"to be happy / look forward to", cat:"verbs", pron:"FROY-en", ex:"Ich freue mich auf den Urlaub.", ex_e:"I'm looking forward to the holiday.", hack:"FREUEN = rejoice. From 'Freude' (joy). Freude schöner Götterfunken!"},
+  {g:"der Freund", e:"friend / boyfriend", cat:"nouns", art:"der", pron:"FROYNT", ex:"Das ist ein Freund von mir.", ex_e:"That is a friend of mine.", hack:"FREUND = friend. FREUND → FRIEND. So similar!"},
+  {g:"früher", e:"earlier / before / in the past", cat:"other", pron:"FREW-er", ex:"Früher waren wir oft zusammen im Kino.", ex_e:"In the past we often went to the cinema together.", hack:"FRÜHER = earlier/formerly. From 'früh' (early). Earlier = früher."},
+  {g:"frühstücken", e:"to have breakfast", cat:"verbs", pron:"FREW-shtew-ken", ex:"Ich frühstücke gern im Bett.", ex_e:"I like having breakfast in bed.", hack:"FRÜHSTÜCKEN. Früh (early) + Stück (piece). The early PIECE of the day!"},
+  {g:"das Frühstück", e:"breakfast", cat:"nouns", art:"das", pron:"FREW-shtewk", ex:"Möchtest du ein Ei zum Frühstück?", ex_e:"Would you like an egg for breakfast?", hack:"Früh (early) + Stück (piece). The EARLY PIECE of the day = breakfast!"},
+  {g:"die Führung", e:"guided tour", cat:"nouns", art:"die", pron:"FEW-roong", ex:"Die Führung beginnt in 3 Minuten.", ex_e:"The guided tour begins in 3 minutes.", hack:"FÜHRUNG from 'führen' (to lead). The act of LEADING people around = tour."},
+  {g:"für", e:"for", cat:"other", pron:"FEWR", ex:"Das ist für Sie.", ex_e:"That is for you.", hack:"FÜR = for. FÜR and FOR — both short, both mean 'for'!"},
+  {g:"der Fuß", e:"foot", cat:"nouns", art:"der", pron:"FOOS", ex:"Der linke Fuß tut mir weh.", ex_e:"My left foot hurts.", hack:"FUSS = foot. Think of making a FUSS about your FOOT!"},
+  {g:"der Fußball", e:"football / soccer", cat:"nouns", art:"der", pron:"FOOS-bal", ex:"Spielt ihr gerne Fußball?", ex_e:"Do you like playing football?", hack:"Fuß (foot) + Ball. FOOT + BALL = football!"},
+
+  // ── G ──
+  {g:"der Garten", e:"garden", cat:"nouns", art:"der", pron:"GAR-ten", ex:"Wir haben leider keinen Garten.", ex_e:"Unfortunately we don't have a garden.", hack:"GARTEN = garden. GARTEN → GARDEN. Same root!"},
+  {g:"der Gast", e:"guest", cat:"nouns", art:"der", pron:"GAHST", ex:"Am Wochenende haben wir mehrere Gäste.", ex_e:"At the weekend we have several guests.", hack:"GAST = guest. Same root as English 'guest' and 'host'!"},
+  {g:"geben", e:"to give", cat:"verbs", pron:"GAY-ben", ex:"Kannst du mir deinen Kugelschreiber geben?", ex_e:"Can you give me your pen?", hack:"GEBEN = give. G-G: GIVE → GEBEN."},
+  {g:"geboren", e:"born", cat:"adjectives", pron:"ge-BOR-en", ex:"Ich bin in Zagreb geboren.", ex_e:"I was born in Zagreb.", hack:"GEBOREN = born. Think 'GE-BORN-en'. Born in German!"},
+  {g:"das Geburtsjahr", e:"year of birth", cat:"nouns", art:"das", pron:"ge-BURTS-yar", ex:"Das Geburtsjahr Ihres Sohnes, bitte?", ex_e:"Your son's year of birth, please?", hack:"Geburt (birth) + Jahr (year). BIRTH YEAR."},
+  {g:"der Geburtsort", e:"place of birth", cat:"nouns", art:"der", pron:"ge-BURTS-ort", ex:"Bitte schreiben Sie Ihren Geburtsort.", ex_e:"Please write your place of birth.", hack:"Geburt (birth) + Ort (place). BIRTHPLACE."},
+  {g:"der Geburtstag", e:"birthday", cat:"nouns", art:"der", pron:"ge-BURTS-tahg", ex:"Herzlichen Glückwunsch zum Geburtstag!", ex_e:"Happy birthday!", hack:"Geburt (birth) + Tag (day). BIRTH DAY = birthday!"},
+  {g:"gefallen", e:"to like / please (someone)", cat:"verbs", pron:"ge-FAL-en", ex:"Das gefällt mir.", ex_e:"I like that.", hack:"GEFALLEN = to please/fall for. 'Mir gefällt' = 'it pleases me' = I like it."},
+  {g:"gegen", e:"against / around (time)", cat:"other", pron:"GAY-gen", ex:"Fahr nicht gegen den Baum!", ex_e:"Don't drive into the tree!", hack:"GEGEN = against. Like 'go AGAINST' something."},
+  {g:"gehen", e:"to go / walk / work", cat:"verbs", pron:"GAY-en", ex:"Jetzt muss ich gehen.", ex_e:"Now I have to go.", hack:"GEHEN = go. GAY-en → GO. The G in GO = G in GEHEN!"},
+  {g:"gehören", e:"to belong to", cat:"verbs", pron:"ge-HER-en", ex:"Wem gehört das?", ex_e:"Who does this belong to?", hack:"Ge-HÖREN. 'Hören' = hear. When something BELONGS to you, it 'listens' to you."},
+  {g:"das Geld", e:"money", cat:"nouns", art:"das", pron:"GELT", ex:"Hast du noch Geld?", ex_e:"Do you still have money?", hack:"GELD = money. GOLD → GELD. Money used to be GOLD!"},
+  {g:"das Gemüse", e:"vegetables", cat:"nouns", art:"das", pron:"ge-MEW-zeh", ex:"Gemüse brauchen wir auch noch.", ex_e:"We still need vegetables.", hack:"GEMÜSE — the MÜ in the middle sounds like 'mew' (a cat sound). Garden cat eats veggies!"},
+  {g:"das Gepäck", e:"luggage / baggage", cat:"nouns", art:"das", pron:"ge-PECK", ex:"Wollen Sie Ihr Gepäck mitnehmen?", ex_e:"Do you want to take your luggage?", hack:"GEPÄCK = luggage. Think 'GEPACK-aged luggage'!"},
+  {g:"gerade", e:"just now / straight / just", cat:"other", pron:"ge-RAH-deh", ex:"Da kommt er ja gerade.", ex_e:"There he comes right now.", hack:"GERADE = straight/just. GRADE = level/straight in English. Just/straight!"},
+  {g:"geradeaus", e:"straight ahead", cat:"other", pron:"ge-RAH-deh-ows", ex:"Gehen Sie immer geradeaus!", ex_e:"Always go straight ahead!", hack:"Gerade (straight) + aus (out). Go STRAIGHT OUT = straight ahead!"},
+  {g:"gern(e)", e:"gladly / like to", cat:"other", pron:"GERN(eh)", ex:"Ich gehe gerne einkaufen.", ex_e:"I like going shopping.", hack:"GERNE = gladly/with pleasure. 'Ich gerne' = 'I like to'. Short word, big use!"},
+  {g:"das Geschäft", e:"shop / business", cat:"nouns", art:"das", pron:"ge-SHEFT", ex:"Die Geschäfte schließen um 18.30 Uhr.", ex_e:"The shops close at 18:30.", hack:"GESCHÄFT = business/shop. 'SCHÄFT' = shaft/deal. The DEAL place!"},
+  {g:"das Geschenk", e:"present / gift", cat:"nouns", art:"das", pron:"ge-SHENK", ex:"Danke für das schöne Geschenk.", ex_e:"Thank you for the lovely gift.", hack:"GESCHENK = gift. Think 'she SHENK (shrunk) the gift in the box'!"},
+  {g:"die Geschwister", e:"siblings", cat:"nouns", art:"die", pron:"ge-SHVIS-ter", ex:"Ich habe leider keine Geschwister.", ex_e:"Unfortunately I have no siblings.", hack:"GESCHWISTER = siblings (brothers & sisters). The SWISTER group!"},
+  {g:"das Gespräch", e:"conversation / talk", cat:"nouns", art:"das", pron:"ge-SHPREKH", ex:"Das Gespräch ist um 14 Uhr.", ex_e:"The conversation is at 2pm.", hack:"GESPRÄCH from 'sprechen' (to speak). The SPEAKING = conversation."},
+  {g:"gestern", e:"yesterday", cat:"other", pron:"GES-tern", ex:"Gestern war ich krank.", ex_e:"Yesterday I was ill.", hack:"GESTERN = yesterday. YESTER-n → GESTERN. Yester-day = Gestern!"},
+  {g:"das Getränk", e:"drink / beverage", cat:"nouns", art:"das", pron:"ge-TRENK", ex:"Mein Lieblingsgetränk ist Tomatensaft.", ex_e:"My favourite drink is tomato juice.", hack:"GETRÄNK from 'trinken' (drink). GE-TRÄNK = the drink!"},
+  {g:"das Gewicht", e:"weight", cat:"nouns", art:"das", pron:"ge-VIKHT", ex:"Sein Gewicht ist normal.", ex_e:"His weight is normal.", hack:"GEWICHT = weight. WEIGHt → GEWICHT. Same root!"},
+  {g:"gewinnen", e:"to win", cat:"verbs", pron:"ge-VIN-en", ex:"Wer gewinnt das Spiel?", ex_e:"Who wins the game?", hack:"GEWINNEN = win. GAIN → GEWINNEN. To GAIN/WIN!"},
+  {g:"das Glas", e:"glass", cat:"nouns", art:"das", pron:"GLAHS", ex:"Bitte noch ein Glas Wein!", ex_e:"One more glass of wine please!", hack:"GLAS = glass. Same word!"},
+  {g:"glauben", e:"to believe / think", cat:"verbs", pron:"GLOW-ben", ex:"Ich glaube, er kommt gleich.", ex_e:"I think he's coming soon.", hack:"GLAUBEN = believe. GLOW with belief? GLAUBen = believe!"},
+  {g:"gleich", e:"same / equal / immediately", cat:"other", pron:"GLYSH", ex:"Ich komme gleich.", ex_e:"I'm coming right away.", hack:"GLEICH = same/equal. 'GLEICHARTIG' = alike. Equal = same = immediately (right away)!"},
+  {g:"das Gleis", e:"railway track / platform number", cat:"nouns", art:"das", pron:"GLYS", ex:"Der ICE hält heute an Gleis 12.", ex_e:"The ICE stops at platform 12 today.", hack:"GLEIS = track. Think GLEAM of metal rails = Gleis!"},
+  {g:"das Glück", e:"luck / happiness", cat:"nouns", art:"das", pron:"GLEWK", ex:"Viel Glück!", ex_e:"Good luck!", hack:"GLÜCK = luck. 'GLUCK-gluck' like a lucky coin dropping!"},
+  {g:"glücklich", e:"happy / lucky", cat:"adjectives", pron:"GLEWK-likh", ex:"Meine Kinder sind glücklich.", ex_e:"My children are happy.", hack:"GLÜCKLICH = happy. From GLÜCK (luck/happiness)."},
+  {g:"der Glückwunsch", e:"congratulations", cat:"nouns", art:"der", pron:"GLEWK-voonsh", ex:"Herzlichen Glückwunsch zum Geburtstag.", ex_e:"Heartfelt congratulations on your birthday.", hack:"Glück (luck) + Wunsch (wish). A LUCKY WISH = congratulations!"},
+  {g:"gratulieren", e:"to congratulate", cat:"verbs", pron:"gra-too-LEER-en", ex:"Ich gratuliere dir!", ex_e:"I congratulate you!", hack:"GRATULIEREN = congratulate. Same as English/French 'congratulate'!"},
+  {g:"groß", e:"big / tall / great", cat:"adjectives", pron:"GROHS", ex:"Frankfurt ist eine große Stadt.", ex_e:"Frankfurt is a large city.", hack:"GROSS = big. 'GROSS' in English = big/disgusting. In German it just means BIG!"},
+  {g:"die Größe", e:"size / height", cat:"nouns", art:"die", pron:"GRER-seh", ex:"Haben Sie das auch in Größe 40?", ex_e:"Do you have this in size 40?", hack:"GRÖSSE from GROSS (big). Your SIZE = how BIG you are."},
+  {g:"die Großeltern", e:"grandparents", cat:"nouns", art:"die", pron:"GROHS-el-tern", ex:"Meine Großeltern leben in Japan.", ex_e:"My grandparents live in Japan.", hack:"Groß (great/grand) + Eltern (parents). GRAND PARENTS!"},
+  {g:"die Großmutter", e:"grandmother", cat:"nouns", art:"die", pron:"GROHS-moot-er", ex:"Meine Großmutter heißt Eva.", ex_e:"My grandmother is called Eva.", hack:"Groß + Mutter (mother). GRAND MOTHER!"},
+  {g:"der Großvater", e:"grandfather", cat:"nouns", art:"der", pron:"GROHS-fah-ter", ex:"Mein Großvater ist schon 80.", ex_e:"My grandfather is already 80.", hack:"Groß + Vater (father). GRAND FATHER!"},
+  {g:"die Gruppe", e:"group", cat:"nouns", art:"die", pron:"GROO-peh", ex:"Die erste Gruppe beginnt um 16 Uhr.", ex_e:"The first group starts at 4pm.", hack:"GRUPPE = group. Same!"},
+  {g:"der Gruß", e:"greeting", cat:"nouns", art:"der", pron:"GROOS", ex:"Viele Grüße an Ihre Frau.", ex_e:"Many greetings to your wife.", hack:"GRUSS = greeting. 'GREET' → GRUSS. The G-R root!"},
+  {g:"gültig", e:"valid", cat:"adjectives", pron:"GEWL-tikh", ex:"Der Pass ist nicht mehr gültig.", ex_e:"The passport is no longer valid.", hack:"GÜLTIG = valid. Think 'GILT' (covered in gold = official = valid)!"},
+  {g:"günstig", e:"favourable / cheap / convenient", cat:"adjectives", pron:"GEWN-stikh", ex:"Dort gibt es günstige Angebote.", ex_e:"There are favourable offers there.", hack:"GÜNSTIG = affordable/favourable. Think GÜNTER got a great GÜNSTIGdeals!"},
+  {g:"gut", e:"good", cat:"adjectives", pron:"GOOT", ex:"Das finde ich gut.", ex_e:"I find that good.", hack:"GUT = good. GOOt sound. 'GOOD' → GUT!"},
+
+  // ── H ──
+  {g:"das Haar", e:"hair", cat:"nouns", art:"das", pron:"HAR", ex:"Sie hat lange Haare.", ex_e:"She has long hair.", hack:"HAAR = hair. HAAR and HAIR — same sound, same meaning!"},
+  {g:"haben", e:"to have", cat:"verbs", pron:"HAH-ben", ex:"Ich habe ein neues Auto.", ex_e:"I have a new car.", hack:"HABEN = have. HA-ben → HAVE. Same root!"},
+  {g:"das Hähnchen", e:"chicken", cat:"nouns", art:"das", pron:"HEN-khen", ex:"Ein Hähnchen mit Pommes bitte!", ex_e:"Chicken with chips please!", hack:"HÄHNCHEN = chicken. HAHN = rooster. HÄHNchen = little rooster = chicken!"},
+  {g:"die Halbpension", e:"half board", cat:"nouns", art:"die", pron:"HALP-pen-zee-on", ex:"Möchten Sie Vollpension oder Halbpension?", ex_e:"Would you like full or half board?", hack:"Halb (half) + Pension (board/lodging). HALF BOARD."},
+  {g:"hallo", e:"hello / hi", cat:"phrases", pron:"HA-loh", ex:"Hallo Inge! Wie geht's?", ex_e:"Hello Inge! How are you?", hack:"HALLO = hello. Same!"},
+  {g:"halten", e:"to stop / hold", cat:"verbs", pron:"HAL-ten", ex:"Dieser Zug hält nicht in Rüdesheim.", ex_e:"This train doesn't stop in Rüdesheim.", hack:"HALTEN = hold/stop. HALT (stop!) is a German loanword in English!"},
+  {g:"die Haltestelle", e:"stop (bus/tram)", cat:"nouns", art:"die", pron:"HAL-teh-shtel-eh", ex:"An der nächsten Haltestelle aussteigen.", ex_e:"Get off at the next stop.", hack:"Halte (stop) + Stelle (place). The STOPPING PLACE = bus stop!"},
+  {g:"die Hand", e:"hand", cat:"nouns", art:"die", pron:"HAHNT", ex:"Er gibt mir die Hand.", ex_e:"He shakes my hand.", hack:"HAND = hand. Same!"},
+  {g:"das Handy", e:"mobile phone", cat:"nouns", art:"das", pron:"HEN-dee", ex:"In der Schule bitte die Handys ausmachen!", ex_e:"Please turn off mobile phones in school!", hack:"HANDY = mobile phone. Germans borrowed 'handy' from English as it's handy to carry!"},
+  {g:"das Haus", e:"house", cat:"nouns", art:"das", pron:"HOWS", ex:"In welchem Haus wohnst du?", ex_e:"Which house do you live in?", hack:"HAUS = house. Same sound! HOUSE → HAUS."},
+  {g:"die Hausaufgabe", e:"homework", cat:"nouns", art:"die", pron:"HOWS-owf-gah-beh", ex:"Kannst du mir bei den Hausaufgaben helfen?", ex_e:"Can you help me with homework?", hack:"Haus (house) + Aufgabe (task). HOUSE TASK = homework!"},
+  {g:"die Hausfrau", e:"housewife", cat:"nouns", art:"die", pron:"HOWS-frow", ex:"Die Hausfrau wäscht, kocht und kauft ein.", ex_e:"The housewife washes, cooks and shops.", hack:"Haus (house) + Frau (woman). HOUSEWIFE!"},
+  {g:"die Heimat", e:"homeland / home", cat:"nouns", art:"die", pron:"HY-maht", ex:"Das ist meine Heimat.", ex_e:"This is my homeland.", hack:"HEIMAT = homeland. HEIM = home. Your HEIM-land = Heimat."},
+  {g:"heiraten", e:"to get married", cat:"verbs", pron:"HY-rah-ten", ex:"Meine Schwester heiratet einen Japaner.", ex_e:"My sister is marrying a Japanese man.", hack:"HEIRATEN — HEIR + aten. You become someone's HEIR when you marry? Remember: Heirat = marriage."},
+  {g:"heißen", e:"to be called / named", cat:"verbs", pron:"HY-sen", ex:"Ich heiße Charlotte Meier.", ex_e:"My name is Charlotte Meier.", hack:"HEISSEN = to be called. 'ICH HEISSE' = 'I am called'. The heat of your name!"},
+  {g:"helfen", e:"to help", cat:"verbs", pron:"HEL-fen", ex:"Können Sie mir helfen, bitte?", ex_e:"Can you help me, please?", hack:"HELFEN = help. HELP → HELFEN. Same root!"},
+  {g:"hell", e:"bright / light (colour)", cat:"adjectives", pron:"HEL", ex:"Im Sommer ist es bis 21 Uhr hell.", ex_e:"In summer it's light until 9pm.", hack:"HELL = bright/light. Think HELL as the colour HELL could be: bright!"},
+  {g:"der Herd", e:"cooker / stove", cat:"nouns", art:"der", pron:"HERD", ex:"In der neuen Küche fehlt noch der Herd.", ex_e:"The new kitchen still lacks a stove.", hack:"HERD = stove. Think HERD of animals gathered around a FIRE/stove!"},
+  {g:"der Herr", e:"Mr / gentleman / sir", cat:"nouns", art:"der", pron:"HER", ex:"Guten Tag, Herr Sommer!", ex_e:"Good day, Mr Sommer!", hack:"HERR = Mr/Lord. Think 'HERR-itage' = lordly lineage."},
+  {g:"herzlich", e:"heartfelt / warm", cat:"adjectives", pron:"HERTS-likh", ex:"Herzlichen Glückwunsch!", ex_e:"Heartfelt congratulations!", hack:"HERZLICH from HERZ (heart). HEARTFELT = HERZLICH!"},
+  {g:"heute", e:"today", cat:"other", pron:"HOY-teh", ex:"Heute ist ein schöner Tag.", ex_e:"Today is a beautiful day.", hack:"HEUTE = today. HOY = today in old Norse/English dialectal. Hoy = heute!"},
+  {g:"hier", e:"here", cat:"other", pron:"HEER", ex:"Hier wohne ich.", ex_e:"I live here.", hack:"HIER = here. HERE → HIER. Same sound!"},
+  {g:"die Hilfe", e:"help", cat:"nouns", art:"die", pron:"HIL-feh", ex:"Brauchen Sie meine Hilfe?", ex_e:"Do you need my help?", hack:"HILFE = help. HELP → HILFE. HELP is the cry, Hilfe is the German cry!"},
+  {g:"das Hobby", e:"hobby", cat:"nouns", art:"das", pron:"HOB-ee", ex:"Meine Hobbys sind Wandern und Schwimmen.", ex_e:"My hobbies are hiking and swimming.", hack:"HOBBY = hobby. Same!"},
+  {g:"hoch", e:"high / tall", cat:"adjectives", pron:"HOKH", ex:"Der Mount Everest ist 8.880 Meter hoch.", ex_e:"Mount Everest is 8,880 metres high.", hack:"HOCH = high. HOCHup = HIGH up!"},
+  {g:"die Hochzeit", e:"wedding", cat:"nouns", art:"die", pron:"HOKH-tsyt", ex:"Zur Hochzeit kommen mehr als fünfzig Gäste.", ex_e:"More than fifty guests come to the wedding.", hack:"Hoch (high) + Zeit (time). The HIGH TIME = wedding day!"},
+  {g:"holen", e:"to get / fetch", cat:"verbs", pron:"HOH-len", ex:"Ich hole zwei Flaschen Wasser.", ex_e:"I'll get two bottles of water.", hack:"HOLEN = fetch. Think 'HAUL it back here' = holen!"},
+  {g:"hören", e:"to hear / listen", cat:"verbs", pron:"HER-en", ex:"Hör mal! Was ist das?", ex_e:"Listen! What is that?", hack:"HÖREN = hear. HEAR → HÖR-en. Same root!"},
+  {g:"das Hotel", e:"hotel", cat:"nouns", art:"das", pron:"ho-TEL", ex:"Im Urlaub sind wir in einem Hotel am Meer.", ex_e:"On holiday we're in a hotel by the sea.", hack:"HOTEL = hotel. Same!"},
+  {g:"der Hund", e:"dog", cat:"nouns", art:"der", pron:"HOONT", ex:"Der Hund ist noch jung.", ex_e:"The dog is still young.", hack:"HUND = dog. HOUND → HUND. A HOUND is a dog!"},
+  {g:"der Hunger", e:"hunger", cat:"nouns", art:"der", pron:"HOONG-er", ex:"Ich habe Hunger!", ex_e:"I'm hungry!", hack:"HUNGER = hunger. Same word!"},
+
+  // ── I ──
+  {g:"immer", e:"always", cat:"other", pron:"IM-er", ex:"Frau Bast kommt immer zu spät.", ex_e:"Mrs Bast always comes too late.", hack:"IMMER = always. Think 'IMMERSE yourself in ALWAYS doing it!'"},
+  {g:"in", e:"in / into", cat:"other", pron:"IN", ex:"Ich wohne in Wiesbaden.", ex_e:"I live in Wiesbaden.", hack:"IN = in. Same!"},
+  {g:"die Information", e:"information", cat:"nouns", art:"die", pron:"in-for-mah-TSYOHN", ex:"Wir haben wichtige Informationen für Sie.", ex_e:"We have important information for you.", hack:"INFORMATION = information. Same!"},
+  {g:"international", e:"international", cat:"adjectives", pron:"in-ter-nah-tsyo-NAHL", ex:"Unser Deutschkurs ist international.", ex_e:"Our German course is international.", hack:"INTERNATIONAL = international. Same!"},
+  {g:"das Internet", e:"internet", cat:"nouns", art:"das", pron:"IN-ter-net", ex:"Das findest du im Internet.", ex_e:"You'll find that on the internet.", hack:"INTERNET = internet. Same!"},
+
+  // ── J ──
+  {g:"ja", e:"yes", cat:"other", pron:"YAH", ex:"Sind Sie Herr Watanabe? – Ja.", ex_e:"Are you Mr Watanabe? – Yes.", hack:"JA = yes. 'Ya/Yeah' = yes in informal English. JA!"},
+  {g:"die Jacke", e:"jacket", cat:"nouns", art:"die", pron:"YAK-eh", ex:"Zieh dir eine Jacke an.", ex_e:"Put on a jacket.", hack:"JACKE = jacket. Same word!"},
+  {g:"jed-", e:"every / each", cat:"other", pron:"YAY-des", ex:"Blumen kannst du an jedem Bahnhof kaufen.", ex_e:"You can buy flowers at every station.", hack:"JEDE(S/R) = every/each. Think 'EVERY-jede thing everywhere'."},
+  {g:"jetzt", e:"now", cat:"other", pron:"YETST", ex:"Jetzt machen wir eine Pause.", ex_e:"Now we're taking a break.", hack:"JETZT = now. JET-Set go NOW! Jetzt!"},
+  {g:"der Job", e:"job", cat:"nouns", art:"der", pron:"DJOB", ex:"Jenny hat einen neuen Job bei der Post.", ex_e:"Jenny has a new job at the post office.", hack:"JOB = job. Same!"},
+  {g:"der Jugendliche", e:"young person / adolescent", cat:"nouns", art:"der", pron:"YOO-gent-likh-eh", ex:"Viele Jugendliche kaufen gern ein.", ex_e:"Many young people like shopping.", hack:"JUGEND = youth (think YOUNG). JUGENDlich = youthful."},
+  {g:"jung", e:"young", cat:"adjectives", pron:"YOONG", ex:"Claudia ist 21. – Noch so jung?", ex_e:"Claudia is 21. – Still so young?", hack:"JUNG = young. YOUNG → JUNG. Same root!"},
+  {g:"der Junge", e:"boy", cat:"nouns", art:"der", pron:"YOONG-eh", ex:"Ich habe einen Jungen und ein Mädchen.", ex_e:"I have a boy and a girl.", hack:"JUNGE = boy. From JUNG (young). The YOUNG one (male)!"},
+
+  // ── K ──
+  {g:"der Kaffee", e:"coffee", cat:"nouns", art:"der", pron:"KAH-fay", ex:"Zum Frühstück trinke ich immer Kaffee.", ex_e:"I always drink coffee for breakfast.", hack:"KAFFEE = coffee. Same!"},
+  {g:"kaputt", e:"broken / bust", cat:"adjectives", pron:"kah-POOT", ex:"Das Glas geht leicht kaputt.", ex_e:"The glass breaks easily.", hack:"KAPUTT = broken. 'CAPUT' (Latin) = destroyed/done for!"},
+  {g:"die Karte", e:"card / menu / map / ticket", cat:"nouns", art:"die", pron:"KAR-teh", ex:"Können wir die Karte sehen?", ex_e:"Can we see the menu?", hack:"KARTE = card/map. CARD → KARTE. Same root!"},
+  {g:"die Kartoffel", e:"potato", cat:"nouns", art:"die", pron:"kar-TOF-el", ex:"Für Pommes braucht man Kartoffeln.", ex_e:"You need potatoes for chips.", hack:"KARTOFFEL = potato. Think 'CAR-TOP-full of potatoes'!"},
+  {g:"die Kasse", e:"cash register / checkout", cat:"nouns", art:"die", pron:"KAS-eh", ex:"Zahlen Sie bitte an der Kasse.", ex_e:"Please pay at the checkout.", hack:"KASSE = cash desk. CASH → KASSE. Money box!"},
+  {g:"kaufen", e:"to buy", cat:"verbs", pron:"KOW-fen", ex:"Tim kauft sich ein neues Auto.", ex_e:"Tim is buying himself a new car.", hack:"KAUFEN = buy. 'COMMERCE' = 'KAUFman' (merchant). KAUFen = to trade/buy!"},
+  {g:"kennen", e:"to know (a person/place)", cat:"verbs", pron:"KEN-en", ex:"Kennen Sie diese Frau?", ex_e:"Do you know this woman?", hack:"KENNEN = to know (personally). KEN = range of knowledge in English!"},
+  {g:"kennenlernen", e:"to get to know / meet", cat:"verbs", pron:"KEN-en-ler-nen", ex:"Wir möchten Sie kennenlernen.", ex_e:"We would like to get to know you.", hack:"Kennen (know) + lernen (learn). LEARN to KNOW someone = meet them!"},
+  {g:"das Kind", e:"child", cat:"nouns", art:"das", pron:"KINT", ex:"Wie viele Kinder haben Sie?", ex_e:"How many children do you have?", hack:"KIND = child. Think 'KIND-hearted children'. Kind = child!"},
+  {g:"der Kindergarten", e:"kindergarten / nursery", cat:"nouns", art:"der", pron:"KIN-der-gar-ten", ex:"Laura geht in den Kindergarten.", ex_e:"Laura goes to kindergarten.", hack:"Kinder (children) + Garten (garden). The CHILDREN'S GARDEN = kindergarten!"},
+  {g:"das Kino", e:"cinema", cat:"nouns", art:"das", pron:"KEE-no", ex:"Wir sehen heute Abend im Kino einen Film.", ex_e:"Tonight we're watching a film at the cinema.", hack:"KINO = cinema. From 'kinetoscope'. KINEMA = cinema!"},
+  {g:"der Kiosk", e:"kiosk / newsstand", cat:"nouns", art:"der", pron:"KEE-osk", ex:"Am Kiosk bekommen Sie Getränke.", ex_e:"At the kiosk you can get drinks.", hack:"KIOSK = kiosk. Same!"},
+  {g:"klar", e:"clear / of course", cat:"other", pron:"KLAR", ex:"Kommst du mit? – Klar!", ex_e:"Are you coming? – Of course!", hack:"KLAR = clear. CLEAR → KLAR. 'Klar!' = 'Clearly! / Sure!'"},
+  {g:"die Klasse", e:"class / grade", cat:"nouns", art:"die", pron:"KLAS-eh", ex:"In unserer Klasse sind 25 Schüler.", ex_e:"In our class there are 25 pupils.", hack:"KLASSE = class. Same!"},
+  {g:"die Kleidung", e:"clothing", cat:"nouns", art:"die", pron:"KLY-doong", ex:"Wo finde ich Kleidung?", ex_e:"Where can I find clothing?", hack:"KLEIDUNG = clothing. KLEID = dress. KLEIDung = the wearing of clothes."},
+  {g:"klein", e:"small / little", cat:"adjectives", pron:"KLINE", ex:"Eltville ist eine kleine Stadt.", ex_e:"Eltville is a small town.", hack:"KLEIN = small. Think 'KLEIN bottle' = tiny mathematical shape!"},
+  {g:"kochen", e:"to cook / boil", cat:"verbs", pron:"KOH-khen", ex:"Herr Georgi kann gut kochen.", ex_e:"Mr Georgi can cook well.", hack:"KOCHEN = cook. COOK → KOCHen. Same root!"},
+  {g:"der Koffer", e:"suitcase", cat:"nouns", art:"der", pron:"KOF-er", ex:"Ist das Ihr Koffer?", ex_e:"Is that your suitcase?", hack:"KOFFER = suitcase. Think of a big COFFER (chest) you travel with!"},
+  {g:"der Kollege", e:"colleague", cat:"nouns", art:"der", pron:"ko-LAY-geh", ex:"Wie heißt die neue Kollegin?", ex_e:"What is the new colleague (female) called?", hack:"KOLLEGE = colleague. Same!"},
+  {g:"kommen", e:"to come", cat:"verbs", pron:"KOM-en", ex:"Woher kommen Sie?", ex_e:"Where do you come from?", hack:"KOMMEN = come. COME → KOM-men. Same root!"},
+  {g:"können", e:"to be able to / can", cat:"verbs", pron:"KEN-en", ex:"Können Sie mir helfen?", ex_e:"Can you help me?", hack:"KÖNNEN = can/be able. CAN → KAN-nen → KÖNNEN!"},
+  {g:"das Konto", e:"bank account", cat:"nouns", art:"das", pron:"KON-to", ex:"Das Geld überweisen wir auf Ihr Konto.", ex_e:"We'll transfer the money to your account.", hack:"KONTO = account. ACCOUNT → KONTO. Same root!"},
+  {g:"der Kopf", e:"head", cat:"nouns", art:"der", pron:"KOPF", ex:"Mein Kopf tut weh!", ex_e:"My head hurts!", hack:"KOPF = head. 'CUP-shaped top of the body'. KOPF!"},
+  {g:"kosten", e:"to cost", cat:"verbs", pron:"KOS-ten", ex:"Wie viel kostet das?", ex_e:"How much does that cost?", hack:"KOSTEN = cost. COST → KOST-en. Same root!"},
+  {g:"krank", e:"ill / sick", cat:"adjectives", pron:"KRAHNK", ex:"Ich bin krank und liege im Bett.", ex_e:"I'm ill and lying in bed.", hack:"KRANK = sick. Think 'CRANK-y when sick'!"},
+  {g:"kriegen", e:"to get / receive (informal)", cat:"verbs", pron:"KREE-gen", ex:"Ich kriege 15 Euro in der Stunde.", ex_e:"I get 15 euros an hour.", hack:"KRIEGEN = get. Think 'CRAVING to get something'. To CRAVE it = to KRIEGEN it!"},
+  {g:"die Küche", e:"kitchen / cuisine", cat:"nouns", art:"die", pron:"KEW-kheh", ex:"Der neue Herd kommt in die Küche.", ex_e:"The new stove goes in the kitchen.", hack:"KÜCHE = kitchen. Think 'COOKING (Küchen) happens in the kitchen'!"},
+  {g:"der Kuchen", e:"cake", cat:"nouns", art:"der", pron:"KOO-khen", ex:"Ich nehme ein Stück Kuchen.", ex_e:"I'll have a piece of cake.", hack:"KUCHEN = cake. COOK-en = to bake. The baked thing = Kuchen!"},
+  {g:"der Kugelschreiber", e:"ballpoint pen / biro", cat:"nouns", art:"der", pron:"KOO-gel-shry-ber", ex:"Hast du einen Kugelschreiber?", ex_e:"Do you have a biro?", hack:"Kugel (ball/sphere) + Schreiber (writer). The BALL WRITER = ballpoint pen!"},
+  {g:"der Kühlschrank", e:"fridge / refrigerator", cat:"nouns", art:"der", pron:"KEWL-shrank", ex:"Die Milch steht im Kühlschrank.", ex_e:"The milk is in the fridge.", hack:"Kühl (cool) + Schrank (cupboard). The COOL CUPBOARD = fridge!"},
+  {g:"kulturell", e:"cultural", cat:"adjectives", pron:"kool-too-REL", ex:"Ich bin kulturell interessiert.", ex_e:"I am culturally interested.", hack:"KULTURELL = cultural. CULTURE → KULTUR → KULTURELL."},
+  {g:"sich kümmern", e:"to take care of / look after", cat:"verbs", pron:"KEWM-ern", ex:"Jede Mutter kümmert sich um ihre Kinder.", ex_e:"Every mother takes care of her children.", hack:"KÜMMERN = care for. Think 'COME-ER-in to help'. To come and help!"},
+  {g:"der Kunde", e:"customer / client", cat:"nouns", art:"der", pron:"KOON-deh", ex:"Ich habe eine Kundin.", ex_e:"I have a customer (female).", hack:"KUNDE = customer. CONNOISSEUR knows products. KUNDE = the knowing buyer!"},
+  {g:"der Kurs", e:"course / class / rate", cat:"nouns", art:"der", pron:"KOORS", ex:"Der Deutschkurs geht bis zum Sommer.", ex_e:"The German course runs until summer.", hack:"KURS = course. COURSE → KURS!"},
+  {g:"kurz", e:"short / brief", cat:"adjectives", pron:"KOORTS", ex:"Ricardo hat kurzes Haar.", ex_e:"Ricardo has short hair.", hack:"KURZ = short. Think of a CURTSY (bow quickly and briefly)!"},
+
+  // ── L ──
+  {g:"lachen", e:"to laugh", cat:"verbs", pron:"LAKH-en", ex:"Die Kinder lachen viel.", ex_e:"The children laugh a lot.", hack:"LACHEN = laugh. LAUGH → LACH-en. LAGHter!"},
+  {g:"der Laden", e:"shop / store", cat:"nouns", art:"der", pron:"LAH-den", ex:"Im Buchladen können Sie Bücher kaufen.", ex_e:"You can buy books in the bookshop.", hack:"LADEN = shop. Also = to load/charge. A LADEN shop (loaded with goods)!"},
+  {g:"das Land", e:"country / land", cat:"nouns", art:"das", pron:"LAHNT", ex:"Italien ist ein schönes Land.", ex_e:"Italy is a beautiful country.", hack:"LAND = land/country. Same!"},
+  {g:"lang", e:"long", cat:"adjectives", pron:"LAHNG", ex:"Die Jeans ist zu lang.", ex_e:"The jeans are too long.", hack:"LANG = long. LONG → LANG. Same!"},
+  {g:"lange", e:"for a long time / long", cat:"other", pron:"LAHNG-eh", ex:"Wie lange fährt der Zug?", ex_e:"How long does the train take?", hack:"LANGE = for a long time. From LANG (long). For LONG."},
+  {g:"langsam", e:"slow / slowly", cat:"adjectives", pron:"LAHNG-zahm", ex:"Könnten Sie langsamer sprechen?", ex_e:"Could you speak more slowly?", hack:"LANGSAM = slow. LANG (long) + SAM. It takes LONG = slow!"},
+  {g:"laufen", e:"to walk / run", cat:"verbs", pron:"LOW-fen", ex:"Ich möchte laufen, nicht Auto fahren.", ex_e:"I want to walk, not drive.", hack:"LAUFEN = run/walk. Think 'LOPE along' = laufen!"},
+  {g:"laut", e:"loud / noisy", cat:"adjectives", pron:"LOWT", ex:"Nicht so laut! Das Baby schläft.", ex_e:"Not so loud! The baby is sleeping.", hack:"LAUT = loud. LOUD → LAUT. Same!"},
+  {g:"leben", e:"to live", cat:"verbs", pron:"LAY-ben", ex:"Sie lebt bei ihrer Schwester.", ex_e:"She lives with her sister.", hack:"LEBEN = live. LIFE → LEBEN. Same L root!"},
+  {g:"das Leben", e:"life", cat:"nouns", art:"das", pron:"LAY-ben", ex:"Das Leben in diesem Land ist teuer.", ex_e:"Life in this country is expensive.", hack:"LEBEN = life. LIVE → LEBEN → LIFE!"},
+  {g:"die Lebensmittel", e:"food / groceries", cat:"nouns", art:"die", pron:"LAY-bens-mit-el", ex:"Lebensmittel bekommen Sie im Supermarkt.", ex_e:"You can get groceries in the supermarket.", hack:"Leben (life) + Mittel (means). The MEANS TO LIFE = food!"},
+  {g:"ledig", e:"single / unmarried", cat:"adjectives", pron:"LAY-dikh", ex:"Ledig.", ex_e:"Single (unmarried).", hack:"LEDIG = single/free. Think 'LEAD yourself alone — ledig!"},
+  {g:"legen", e:"to lay / place (flat)", cat:"verbs", pron:"LAY-gen", ex:"Legen Sie das Buch auf den Tisch.", ex_e:"Put the book on the table.", hack:"LEGEN = lay. LAY → LEGEN. Lay it down!"},
+  {g:"der Lehrer", e:"teacher", cat:"nouns", art:"der", pron:"LAY-rer", ex:"Unsere Deutschlehrerin heißt Frau Müller.", ex_e:"Our German teacher is called Mrs Müller.", hack:"LEHRER from LERNEN (learn). The one who helps you LEARN = teacher!"},
+  {g:"leicht", e:"easy / light (weight)", cat:"adjectives", pron:"LYKHT", ex:"Der Koffer ist leicht.", ex_e:"The suitcase is light.", hack:"LEICHT = light/easy. LIGHT = easy to lift. Light = leicht!"},
+  {g:"leider", e:"unfortunately", cat:"other", pron:"LY-der", ex:"Leider kann ich nicht kommen.", ex_e:"Unfortunately I can't come.", hack:"LEIDER = unfortunately. Think 'LIED to you — leider' (sadly I lied)!"},
+  {g:"leise", e:"quiet / softly", cat:"adjectives", pron:"LY-zeh", ex:"Seid leise. Die anderen schlafen.", ex_e:"Be quiet. The others are sleeping.", hack:"LEISE = quiet. Think 'PLEASE be leise (quiet)'!"},
+  {g:"lernen", e:"to learn / study", cat:"verbs", pron:"LER-nen", ex:"Wie lange lernen Sie schon Deutsch?", ex_e:"How long have you been learning German?", hack:"LERNEN = learn. LEARN → LER-nen. Same root!"},
+  {g:"lesen", e:"to read", cat:"verbs", pron:"LAY-zen", ex:"Ich lese ein Buch.", ex_e:"I'm reading a book.", hack:"LESEN = read. Think 'LESSON from LESEN — reading is learning'!"},
+  {g:"letzt-", e:"last / most recent", cat:"other", pron:"LETST", ex:"Morgen ist der letzte Kurstag.", ex_e:"Tomorrow is the last course day.", hack:"LETZT = last. LATEST → LETZTE. The LAST one!"},
+  {g:"die Leute", e:"people", cat:"nouns", art:"die", pron:"LOY-teh", ex:"In der Disko sind viele Leute.", ex_e:"In the disco there are many people.", hack:"LEUTE = people. Think 'LUTE players = the people who play music'!"},
+  {g:"das Licht", e:"light", cat:"nouns", art:"das", pron:"LIKHT", ex:"Wo macht man hier das Licht an?", ex_e:"Where does one turn on the light here?", hack:"LICHT = light. LIGHT → LICHT. Same!"},
+  {g:"lieben", e:"to love", cat:"verbs", pron:"LEE-ben", ex:"Ich liebe dich!", ex_e:"I love you!", hack:"LIEBEN = love. LIEBE = love. The 'LIEB'-ling (favourite)!"},
+  {g:"lieber", e:"rather / prefer to", cat:"other", pron:"LEE-ber", ex:"Sie fährt lieber mit der Bahn.", ex_e:"She prefers to travel by train.", hack:"LIEBER = rather. From LIEB (dear/love). RATHER prefer the dearer option!"},
+  {g:"Lieblings-", e:"favourite", cat:"other", pron:"LEEP-lings", ex:"Mein Lieblingsfilm ist 'Schwarze Augen'.", ex_e:"My favourite film is 'Black Eyes'.", hack:"LIEBLINGS- = favourite. LIEB (love/dear) + lings. The DEAREST = favourite!"},
+  {g:"das Lied", e:"song", cat:"nouns", art:"das", pron:"LEED", ex:"Welches ist dein Lieblingslied?", ex_e:"Which is your favourite song?", hack:"LIED = song. A LIED is also a formal art-song in English! Borrowed word!"},
+  {g:"liegen", e:"to lie / be situated", cat:"verbs", pron:"LEE-gen", ex:"Frankfurt liegt am Main.", ex_e:"Frankfurt is situated on the Main.", hack:"LIEGEN = lie/be situated. LIE-gen = to LIE somewhere!"},
+  {g:"links", e:"left", cat:"other", pron:"LINKS", ex:"Die nächste Straße links.", ex_e:"The next street on the left.", hack:"LINKS = left. Sinister (Latin left) = LINKS in German!"},
+  {g:"der Lkw", e:"lorry / truck", cat:"nouns", art:"der", pron:"EL-kah-VAY", ex:"Dieser Lastkraftwagen ist sehr groß.", ex_e:"This lorry is very big.", hack:"LKW = Lastkraftwagen = LOAD-POWER-VEHICLE = lorry/truck!"},
+  {g:"das Lokal", e:"pub / restaurant / venue", cat:"nouns", art:"das", pron:"lo-KAHL", ex:"In unserer Straße gibt es ein neues Lokal.", ex_e:"There's a new venue in our street.", hack:"LOKAL = local pub/restaurant. A LOCAL establishment!"},
+  {g:"die Lösung", e:"solution", cat:"nouns", art:"die", pron:"LER-zoong", ex:"Die Lösung ist ganz einfach.", ex_e:"The solution is quite simple.", hack:"LÖSUNG = solution. From lösen (to solve/loosen). The LOOSENING of the problem = solution!"},
+  {g:"lustig", e:"funny / amusing", cat:"adjectives", pron:"LOOS-tikh", ex:"Frau Mertens ist lustig.", ex_e:"Mrs Mertens is funny.", hack:"LUSTIG = funny. Think 'LUST for laughter = lustig'!"},
+
+  // ── M ──
+  {g:"machen", e:"to make / do", cat:"verbs", pron:"MAKH-en", ex:"Was machst du heute Abend?", ex_e:"What are you doing tonight?", hack:"MACHEN = make/do. MAKE → MACHEN. Same root!"},
+  {g:"das Mädchen", e:"girl", cat:"nouns", art:"das", pron:"MAYT-khen", ex:"Junge oder Mädchen?", ex_e:"Boy or girl?", hack:"MÄDCHEN = girl. MAID = girl (old English). MÄD-chen = little MAID = girl!"},
+  {g:"man", e:"one / you (impersonal)", cat:"other", pron:"MAHN", ex:"Hier darf man nicht rauchen.", ex_e:"One is not allowed to smoke here.", hack:"MAN = one/you (general). Just like English 'one' — you use MAN in German!"},
+  {g:"der Mann", e:"man / husband", cat:"nouns", art:"der", pron:"MAHN", ex:"Mein Mann arbeitet bei der Polizei.", ex_e:"My husband works with the police.", hack:"MANN = man. Same!"},
+  {g:"männlich", e:"male / masculine", cat:"adjectives", pron:"MEN-likh", ex:"Kreuzen Sie an: 'weiblich' oder 'männlich'.", ex_e:"Tick: 'female' or 'male'.", hack:"MÄNNLICH = male/masculine. MANN (man) + lich (-ly). MAN-ly = male."},
+  {g:"die Maschine", e:"machine", cat:"nouns", art:"die", pron:"mah-SHEE-neh", ex:"Die Waschmaschine ist günstig.", ex_e:"The washing machine is affordable.", hack:"MASCHINE = machine. Same!"},
+  {g:"das Meer", e:"sea / ocean", cat:"nouns", art:"das", pron:"MAYR", ex:"Wir machen Urlaub am Meer.", ex_e:"We're holidaying by the sea.", hack:"MEER = sea. MARE (Latin sea) → MEER. The SEA = das Meer!"},
+  {g:"mehr", e:"more", cat:"other", pron:"MAYR", ex:"Dieses Auto kostet 1.000 Euro mehr.", ex_e:"This car costs 1,000 euros more.", hack:"MEHR = more. MORE → MEHR. Same root!"},
+  {g:"mein-", e:"my", cat:"other", pron:"MINE", ex:"Mein Vater ist Arzt.", ex_e:"My father is a doctor.", hack:"MEIN = my/mine. MINE → MEIN. Same!"},
+  {g:"meist-", e:"most", cat:"other", pron:"MYST", ex:"Die meisten Norddeutschen sind groß.", ex_e:"Most northern Germans are tall.", hack:"MEIST = most. MOST → MEIST. Same root!"},
+  {g:"der Mensch", e:"person / human being", cat:"nouns", art:"der", pron:"MENSH", ex:"Die Menschen sind hier anders.", ex_e:"People are different here.", hack:"MENSCH = person. MAN → MENSCH. Human being!"},
+  {g:"mieten", e:"to rent", cat:"verbs", pron:"MEE-ten", ex:"Ich möchte ein Auto mieten.", ex_e:"I'd like to rent a car.", hack:"MIETEN = rent. Think 'MEET the landlord to MIETEN'!"},
+  {g:"die Miete", e:"rent", cat:"nouns", art:"die", pron:"MEE-teh", ex:"Die Miete ist 600 Euro.", ex_e:"The rent is 600 euros.", hack:"MIETE = rent. From mieten (to rent)."},
+  {g:"die Milch", e:"milk", cat:"nouns", art:"die", pron:"MILKH", ex:"Die Milch steht im Kühlschrank.", ex_e:"The milk is in the fridge.", hack:"MILCH = milk. MILK → MILCH. Same!"},
+  {g:"mit", e:"with", cat:"other", pron:"MIT", ex:"Trinken Sie den Kaffee mit Milch?", ex_e:"Do you take coffee with milk?", hack:"MIT = with. Think 'MEET with someone'!"},
+  {g:"mitbringen", e:"to bring along", cat:"verbs", pron:"MIT-bring-en", ex:"Soll ich dir was mitbringen?", ex_e:"Shall I bring you something?", hack:"Mit (with) + bringen (bring). BRING ALONG = mitbringen!"},
+  {g:"mitkommen", e:"to come along", cat:"verbs", pron:"MIT-kom-en", ex:"Ich gehe ins Kino. Kommst du mit?", ex_e:"I'm going to the cinema. Are you coming along?", hack:"Mit (with) + kommen (come). Come ALONG = mitkommen!"},
+  {g:"mitmachen", e:"to participate / join in", cat:"verbs", pron:"MIT-makh-en", ex:"Warum macht ihr nicht mit?", ex_e:"Why don't you join in?", hack:"Mit (with) + machen (do). DO ALONG WITH = participate!"},
+  {g:"mitnehmen", e:"to take along", cat:"verbs", pron:"MIT-nay-men", ex:"Nehmen wir meine Schwester mit?", ex_e:"Shall we take my sister along?", hack:"Mit (with) + nehmen (take). TAKE ALONG = mitnehmen!"},
+  {g:"die Mitte", e:"middle / centre", cat:"nouns", art:"die", pron:"MIT-eh", ex:"Der Lehrer steht in der Mitte.", ex_e:"The teacher stands in the middle.", hack:"MITTE = middle. MIDDLE → MITTE. Same root!"},
+  {g:"die Möbel", e:"furniture", cat:"nouns", art:"die", pron:"MER-bel", ex:"Sind die Möbel neu?", ex_e:"Is the furniture new?", hack:"MÖBEL = furniture. MOBILE (moveable) → MÖBEL. Moveable things = furniture!"},
+  {g:"möchten", e:"would like to", cat:"verbs", pron:"MERKH-ten", ex:"Was möchten Sie trinken?", ex_e:"What would you like to drink?", hack:"MÖCHTEN = would like. The polite German 'want'. More polite than 'wollen'!"},
+  {g:"mögen", e:"to like", cat:"verbs", pron:"MER-gen", ex:"Magst du Kaffee oder Tee?", ex_e:"Do you like coffee or tea?", hack:"MÖGEN = like. MAY I like it? Mögen = to like!"},
+  {g:"möglich", e:"possible", cat:"adjectives", pron:"MERK-likh", ex:"Die Fahrt ist ab 9 Uhr möglich.", ex_e:"Travel is possible from 9am.", hack:"MÖGLICH = possible. Think 'MAYBE → MOEGElich → MÖGLICH'!"},
+  {g:"der Moment", e:"moment", cat:"nouns", art:"der", pron:"mo-MENT", ex:"Einen Moment bitte.", ex_e:"One moment please.", hack:"MOMENT = moment. Same!"},
+  {g:"morgen", e:"tomorrow / morning", cat:"other", pron:"MOR-gen", ex:"Morgen beginnt die Schule um 10 Uhr.", ex_e:"Tomorrow school starts at 10.", hack:"MORGEN = morning/tomorrow. MORNING → MORGEN!"},
+  {g:"müde", e:"tired", cat:"adjectives", pron:"MEW-deh", ex:"Ich bin müde. Ich gehe schlafen.", ex_e:"I'm tired. I'm going to sleep.", hack:"MÜDE = tired. Think 'MUD — I'm so tired I could sit in mud'!"},
+  {g:"der Mund", e:"mouth", cat:"nouns", art:"der", pron:"MOONT", ex:"Öffnen Sie den Mund.", ex_e:"Open your mouth.", hack:"MUND = mouth. MOUTH → MUND. Same root!"},
+  {g:"müssen", e:"must / have to", cat:"verbs", pron:"MEWS-en", ex:"Ich muss jeden Tag arbeiten.", ex_e:"I have to work every day.", hack:"MÜSSEN = must. MUST → MÜSS-en. Same root!"},
+  {g:"die Mutter", e:"mother", cat:"nouns", art:"die", pron:"MOOT-er", ex:"Frau Berghäuser ist die Mutter von Michaela.", ex_e:"Mrs Berghäuser is Michaela's mother.", hack:"MUTTER = mother. MOTHER → MUTTER. Same root!"},
+
+  // ── N ──
+  {g:"nach", e:"to / after / according to", cat:"other", pron:"NAKH", ex:"Ich gehe jetzt nach Hause.", ex_e:"I'm going home now.", hack:"NACH = after/to. Think 'KNOCK on the door to go NACH home'!"},
+  {g:"nächst-", e:"next", cat:"other", pron:"NAKHST", ex:"Sehen wir uns nächste Woche?", ex_e:"Shall we see each other next week?", hack:"NÄCHST = next. NEAREST → NÄCHST. The NEAREST in time = next!"},
+  {g:"der Name", e:"name", cat:"nouns", art:"der", pron:"NAH-meh", ex:"Mein Name ist Thomas Schmidt.", ex_e:"My name is Thomas Schmidt.", hack:"NAME = name. Same!"},
+  {g:"nehmen", e:"to take", cat:"verbs", pron:"NAY-men", ex:"Heute gibt es Hähnchen. Das nehme ich.", ex_e:"Today there's chicken. I'll have that.", hack:"NEHMEN = take. NIM (old English) = to take. NEHMEN!"},
+  {g:"nein", e:"no", cat:"other", pron:"NINE", ex:"Fährst du nach München? – Nein.", ex_e:"Are you going to Munich? – No.", hack:"NEIN = no. NEIN sounds like NINE. 'No nine, no!'"},
+  {g:"neu", e:"new", cat:"adjectives", pron:"NOY", ex:"Wir haben eine neue Wohnung.", ex_e:"We have a new apartment.", hack:"NEU = new. NEW → NEU. Same root!"},
+  {g:"nicht", e:"not", cat:"other", pron:"NIKHT", ex:"Das stimmt nicht.", ex_e:"That is not right.", hack:"NICHT = not. 'Nicht' sounds like you're sneezing: 'NICHT!'"},
+  {g:"nichts", e:"nothing", cat:"other", pron:"NIKHTS", ex:"Das macht nichts.", ex_e:"That doesn't matter.", hack:"NICHTS = nothing. NICHT (not) + S = nothing at all!"},
+  {g:"nie", e:"never", cat:"other", pron:"NEE", ex:"Er kommt nie pünktlich.", ex_e:"He never comes on time.", hack:"NIE = never. 'NEE I'll NEVER do it!' NIE!"},
+  {g:"noch", e:"still / yet / another", cat:"other", pron:"NOKH", ex:"Vielleicht kommt er noch.", ex_e:"Perhaps he'll still come.", hack:"NOCH = still/yet. Think 'KNOCK knock, are you STILL there?'"},
+  {g:"normal", e:"normal", cat:"adjectives", pron:"nor-MAHL", ex:"Sein Gewicht ist normal.", ex_e:"His weight is normal.", hack:"NORMAL = normal. Same!"},
+  {g:"die Nummer", e:"number", cat:"nouns", art:"die", pron:"NOOM-er", ex:"Zimmer Nummer zwölf.", ex_e:"Room number twelve.", hack:"NUMMER = number. Same!"},
+  {g:"nur", e:"only / just", cat:"other", pron:"NOOR", ex:"Ich möchte nur ein Glas Wasser.", ex_e:"I'd like just a glass of water.", hack:"NUR = only. Think 'PURE = nur one thing only'!"},
+
+  // ── O ──
+  {g:"oben", e:"up / upstairs / above", cat:"other", pron:"OH-ben", ex:"Ich wohne oben.", ex_e:"I live upstairs.", hack:"OBEN = above/up. OVER → OBEN. UP-OVER = oben!"},
+  {g:"das Obst", e:"fruit", cat:"nouns", art:"das", pron:"OHPST", ex:"Im Sommer ist das Obst billig.", ex_e:"In summer fruit is cheap.", hack:"OBST = fruit. Think 'OBSTACLE course for picking fruit from trees'!"},
+  {g:"oder", e:"or", cat:"other", pron:"OH-der", ex:"Heute oder morgen?", ex_e:"Today or tomorrow?", hack:"ODER = or. OR → ODER. Same!"},
+  {g:"öffnen", e:"to open", cat:"verbs", pron:"EF-nen", ex:"Ich öffne die Tür.", ex_e:"I open the door.", hack:"ÖFFNEN = open. Think 'OPEN-nen'. Same root!"},
+  {g:"oft", e:"often", cat:"other", pron:"OFT", ex:"Petra treffe ich oft.", ex_e:"I meet Petra often.", hack:"OFT = often. OFTEN → OFT. Same root (old English 'oft')!"},
+  {g:"ohne", e:"without", cat:"other", pron:"OH-neh", ex:"Ohne Geld kann er nichts kaufen.", ex_e:"Without money he can't buy anything.", hack:"OHNE = without. Think 'ALONE without = ohne'!"},
+  {g:"das Öl", e:"oil", cat:"nouns", art:"das", pron:"ERL", ex:"Den Salat machen wir ohne Öl.", ex_e:"We make the salad without oil.", hack:"ÖL = oil. Same!"},
+  {g:"die Oma", e:"granny / grandma", cat:"nouns", art:"die", pron:"OH-mah", ex:"Meine Oma ist schon tot.", ex_e:"My grandma has already passed away.", hack:"OMA = grandma. Universal baby-talk word across languages!"},
+  {g:"der Opa", e:"grandpa / granddad", cat:"nouns", art:"der", pron:"OH-pah", ex:"Mein Opa heißt Hans.", ex_e:"My grandpa is called Hans.", hack:"OPA = grandpa. Same as 'grandpa' baby-talk!"},
+  {g:"die Ordnung", e:"order / tidiness", cat:"nouns", art:"die", pron:"ORD-noong", ex:"Das ist in Ordnung.", ex_e:"That is fine/in order.", hack:"ORDNUNG = order. ORDER → ORDNUNG. ORDERLY = in Ordnung!"},
+  {g:"der Ort", e:"place / town / location", cat:"nouns", art:"der", pron:"ORT", ex:"Der Ort liegt am Meer.", ex_e:"The town is situated by the sea.", hack:"ORT = place. Think 'ORT-igin of a place'. Location!"},
+
+  // ── P ──
+  {g:"das Papier", e:"paper", cat:"nouns", art:"das", pron:"pah-PEER", ex:"Hier sind Papier und Bleistift.", ex_e:"Here are paper and pencil.", hack:"PAPIER = paper. PAPER → PAPIER. Same!"},
+  {g:"die Papiere", e:"documents / papers (ID)", cat:"nouns", art:"die", pron:"pah-PEER-eh", ex:"Haben Sie Ihre Papiere dabei?", ex_e:"Do you have your documents with you?", hack:"PAPIERE = papers/documents. Your official PAPERS!"},
+  {g:"der Partner", e:"partner", cat:"nouns", art:"der", pron:"PART-ner", ex:"Sie ist meine Partnerin.", ex_e:"She is my partner.", hack:"PARTNER = partner. Same!"},
+  {g:"die Party", e:"party", cat:"nouns", art:"die", pron:"PAR-tee", ex:"Heute Abend machen wir eine Party.", ex_e:"Tonight we're having a party.", hack:"PARTY = party. Same!"},
+  {g:"der Pass", e:"passport", cat:"nouns", art:"der", pron:"PAHS", ex:"Im Hotel brauchst du deinen Pass.", ex_e:"At the hotel you need your passport.", hack:"PASS = passport/pass. To PASS the border = PASS!"},
+  {g:"die Pause", e:"break / pause", cat:"nouns", art:"die", pron:"POW-zeh", ex:"Von 12 bis 12.30 Uhr Mittagspause.", ex_e:"Lunch break from 12 to 12:30.", hack:"PAUSE = pause/break. Same!"},
+  {g:"der Plan", e:"plan / map", cat:"nouns", art:"der", pron:"PLAHN", ex:"Ich kaufe mir einen Stadtplan.", ex_e:"I'm buying myself a city map.", hack:"PLAN = plan/map. Same!"},
+  {g:"der Platz", e:"seat / place / square", cat:"nouns", art:"der", pron:"PLAHTS", ex:"Der Platz ist besetzt.", ex_e:"The seat is taken.", hack:"PLATZ = place/plaza. PLAZA → PLATZ. Same root!"},
+  {g:"die Polizei", e:"police", cat:"nouns", art:"die", pron:"po-li-TSYE", ex:"Holen Sie die Polizei!", ex_e:"Get the police!", hack:"POLIZEI = police. POLICE → POLIZEI. Same root!"},
+  {g:"die Pommes frites", e:"chips / French fries", cat:"nouns", art:"die", pron:"POM-freet", ex:"Hähnchen mit Pommes frites.", ex_e:"Chicken with chips.", hack:"POMMES FRITES = chips/fries. French word used in German too!"},
+  {g:"die Post", e:"post / post office", cat:"nouns", art:"die", pron:"POST", ex:"Wo ist die Post, bitte?", ex_e:"Where is the post office, please?", hack:"POST = post. Same!"},
+  {g:"die Postleitzahl", e:"postcode / zip code", cat:"nouns", art:"die", pron:"POST-lyt-tsahl", ex:"Wie ist Ihre Postleitzahl?", ex_e:"What is your postcode?", hack:"Post + Leit (guide) + Zahl (number). The GUIDING NUMBER for POST = postcode!"},
+  {g:"das Praktikum", e:"internship / work placement", cat:"nouns", art:"das", pron:"PRAK-ti-koom", ex:"Ich mache ein Praktikum bei Siemens.", ex_e:"I'm doing an internship at Siemens.", hack:"PRAKTIKUM = practical placement. PRACTICAL → PRAKTIKUM!"},
+  {g:"die Praxis", e:"doctor's surgery / practice", cat:"nouns", art:"die", pron:"PRAK-sis", ex:"Die Praxis ist ab acht Uhr geöffnet.", ex_e:"The surgery is open from eight o'clock.", hack:"PRAXIS = practice/surgery. Same root as English PRACTICE!"},
+  {g:"der Preis", e:"price / prize", cat:"nouns", art:"der", pron:"PRYCE", ex:"Die Preise sind hoch.", ex_e:"The prices are high.", hack:"PREIS = price/prize. PRICE → PREIS. Same!"},
+  {g:"das Problem", e:"problem", cat:"nouns", art:"das", pron:"pro-BLAYM", ex:"Mein Problem ist die Sprache.", ex_e:"My problem is the language.", hack:"PROBLEM = problem. Same!"},
+  {g:"der Prospekt", e:"brochure / leaflet", cat:"nouns", art:"der", pron:"pro-SPEKT", ex:"Bitte schicken Sie mir einen Prospekt.", ex_e:"Please send me a brochure.", hack:"PROSPEKT = prospectus/brochure. PROSPECT → PROSPEKT!"},
+  {g:"die Prüfung", e:"exam / test", cat:"nouns", art:"die", pron:"PREW-foong", ex:"Die Prüfung ist am Montag.", ex_e:"The exam is on Monday.", hack:"PRÜFUNG from prüfen (to check/test). The CHECKING = exam!"},
+  {g:"pünktlich", e:"punctual / on time", cat:"adjectives", pron:"PEWNKT-likh", ex:"Der Bus fährt pünktlich um acht.", ex_e:"The bus departs punctually at eight.", hack:"PÜNKTLICH = punctual. PUNKT = point/dot. On the DOT = punctual!"},
+
+  // ── R ──
+  {g:"Rad fahren", e:"to cycle", cat:"verbs", pron:"RAHT FAR-en", ex:"Das Kind kann schon Rad fahren.", ex_e:"The child can already cycle.", hack:"Rad (wheel) + fahren (drive). Drive on wheels = cycle!"},
+  {g:"rauchen", e:"to smoke", cat:"verbs", pron:"ROW-khen", ex:"Ich rauche nicht.", ex_e:"I don't smoke.", hack:"RAUCHEN = smoke. RAUCH = smoke. The smoking ROARING cloud!"},
+  {g:"der Raum", e:"room / space", cat:"nouns", art:"der", pron:"ROWM", ex:"Der Unterricht ist in Raum 332.", ex_e:"The lesson is in room 332.", hack:"RAUM = room/space. ROOM → RAUM. Same!"},
+  {g:"die Rechnung", e:"bill / invoice / account", cat:"nouns", art:"die", pron:"REKH-noong", ex:"Die Rechnung, bitte.", ex_e:"The bill, please.", hack:"RECHNUNG from rechnen (calculate). The CALCULATION = bill!"},
+  {g:"rechts", e:"right (direction)", cat:"other", pron:"REKHTS", ex:"Die Schillerstraße ist hier rechts.", ex_e:"Schillerstrasse is on the right here.", hack:"RECHTS = right. RIGHT → RECHT. RECHT is the correct/right side!"},
+  {g:"regnen", e:"to rain", cat:"verbs", pron:"REG-nen", ex:"Heute regnet es.", ex_e:"It is raining today.", hack:"REGNEN = rain. RAIN → REGEN. Same root!"},
+  {g:"der Regen", e:"rain", cat:"nouns", art:"der", pron:"RAY-gen", ex:"Bei diesem Regen gehe ich nicht raus.", ex_e:"I'm not going out in this rain.", hack:"REGEN = rain. RAIN → REGEN!"},
+  {g:"reisen", e:"to travel", cat:"verbs", pron:"RY-zen", ex:"Ich reise gern.", ex_e:"I like travelling.", hack:"REISEN = travel. RISE up and travel!"},
+  {g:"die Reise", e:"journey / trip", cat:"nouns", art:"die", pron:"RY-zeh", ex:"Wir machen eine Reise nach Österreich.", ex_e:"We're taking a trip to Austria.", hack:"REISE = journey. RISE for a journey!"},
+  {g:"das Reisebüro", e:"travel agency", cat:"nouns", art:"das", pron:"RY-zeh-bew-ro", ex:"Mein Mann arbeitet im Reisebüro.", ex_e:"My husband works at the travel agency.", hack:"Reise (journey) + Büro (office). TRAVEL OFFICE = travel agency!"},
+  {g:"der Reiseführer", e:"travel guide (book or person)", cat:"nouns", art:"der", pron:"RY-zeh-few-rer", ex:"Ich kaufe mir einen Reiseführer.", ex_e:"I'm buying myself a travel guide.", hack:"Reise (travel) + Führer (leader/guide). TRAVEL LEADER = guide!"},
+  {g:"reparieren", e:"to repair", cat:"verbs", pron:"reh-pah-REE-ren", ex:"Er hat das Fahrrad repariert.", ex_e:"He repaired the bicycle.", hack:"REPARIEREN = repair. REPAIR → REPARIEREN. Same!"},
+  {g:"die Reparatur", e:"repair", cat:"nouns", art:"die", pron:"reh-pah-rah-TOOR", ex:"Die Reparatur ist sehr teuer.", ex_e:"The repair is very expensive.", hack:"REPARATUR = repair. REPARATION → REPARATUR!"},
+  {g:"das Restaurant", e:"restaurant", cat:"nouns", art:"das", pron:"res-toh-RAHN", ex:"Wir essen heute in einem Restaurant.", ex_e:"We're eating at a restaurant today.", hack:"RESTAURANT = restaurant. Same!"},
+  {g:"die Rezeption", e:"reception (hotel)", cat:"nouns", art:"die", pron:"reh-tsep-TSYOHN", ex:"Fragen Sie bitte an der Rezeption.", ex_e:"Please ask at the reception.", hack:"REZEPTION = reception. Same!"},
+  {g:"richtig", e:"correct / right / proper", cat:"adjectives", pron:"RIKH-tikh", ex:"Das ist richtig.", ex_e:"That is correct.", hack:"RICHTIG = right/correct. RECHT (right) → RICHTIG. Rightly correct!"},
+  {g:"riechen", e:"to smell", cat:"verbs", pron:"REE-khen", ex:"Dieser Wein riecht gut.", ex_e:"This wine smells good.", hack:"RIECHEN = smell. Think 'REACH out and SMELL'!"},
+  {g:"ruhig", e:"quiet / calm / peaceful", cat:"adjectives", pron:"ROO-ikh", ex:"Ich möchte ein ruhiges Zimmer.", ex_e:"I'd like a quiet room.", hack:"RUHIG = quiet/calm. Think 'ROOHU = peaceful spirit'. Calm!"},
+
+  // ── S ──
+  {g:"der Saft", e:"juice", cat:"nouns", art:"der", pron:"ZAHFT", ex:"Möchtest du einen Apfelsaft?", ex_e:"Would you like an apple juice?", hack:"SAFT = juice/sap. SAP (tree juice) → SAFT. Full of SAP = juicy!"},
+  {g:"sagen", e:"to say / tell", cat:"verbs", pron:"ZAH-gen", ex:"Sag mal, wie geht es dir?", ex_e:"Tell me, how are you?", hack:"SAGEN = say. SAY → SAG-en. Same root!"},
+  {g:"der Salat", e:"salad", cat:"nouns", art:"der", pron:"zah-LAHT", ex:"Wie schmeckt dir der Salat?", ex_e:"How does the salad taste to you?", hack:"SALAT = salad. Same!"},
+  {g:"das Salz", e:"salt", cat:"nouns", art:"das", pron:"ZAHLT$S", ex:"Herr Ober, kann ich Salz haben?", ex_e:"Waiter, can I have salt?", hack:"SALZ = salt. SALT → SALZ. Same!"},
+  {g:"der Satz", e:"sentence / set / jump", cat:"nouns", art:"der", pron:"ZAHTS", ex:"Dieser Satz ist sehr einfach.", ex_e:"This sentence is very simple.", hack:"SATZ = sentence. Think 'SAID in a SATZ (sentence)'!"},
+  {g:"die S-Bahn", e:"suburban train / S-train", cat:"nouns", art:"die", pron:"ES-bahn", ex:"Ich nehme lieber die S-Bahn.", ex_e:"I prefer to take the S-Bahn.", hack:"S-Bahn = Schnell-Bahn (fast-train). The S stands for Schnell (fast)!"},
+  {g:"der Schalter", e:"counter / switch / ticket window", cat:"nouns", art:"der", pron:"SHAHL-ter", ex:"Gehen Sie bitte zum Schalter drei!", ex_e:"Please go to counter three!", hack:"SCHALTER = switch/counter. SCHALTEN = switch. The SWITCHING point = counter!"},
+  {g:"scheinen", e:"to shine / seem", cat:"verbs", pron:"SHY-nen", ex:"Die Sonne scheint.", ex_e:"The sun is shining.", hack:"SCHEINEN = shine. SHINE → SCHEIN-en. Same root!"},
+  {g:"schicken", e:"to send", cat:"verbs", pron:"SHIK-en", ex:"Bitte schicken Sie mir eine E-Mail.", ex_e:"Please send me an email.", hack:"SCHICKEN = send. Think 'CHIC-ken — send the chic chicken somewhere'!"},
+  {g:"das Schild", e:"sign / notice", cat:"nouns", art:"das", pron:"SHILT", ex:"Haben Sie nicht das Schild gesehen?", ex_e:"Didn't you see the sign?", hack:"SCHILD = sign. Think SHIELD (Schild) = a sign that protects/warns!"},
+  {g:"der Schinken", e:"ham", cat:"nouns", art:"der", pron:"SHINK-en", ex:"Ich möchte ein Schinkenbrot.", ex_e:"I'd like a ham sandwich.", hack:"SCHINKEN = ham. Think 'SHINKEN the ham bone shines'!"},
+  {g:"schlafen", e:"to sleep", cat:"verbs", pron:"SHLAH-fen", ex:"Ich schlafe meistens acht Stunden.", ex_e:"I usually sleep eight hours.", hack:"SCHLAFEN = sleep. SLEEP → SCHLAF-en. Same root!"},
+  {g:"schlecht", e:"bad / poor / unwell", cat:"adjectives", pron:"SHLEKHТ", ex:"Mir ist schlecht!", ex_e:"I feel ill!", hack:"SCHLECHT = bad. Think 'SLIGHT-est bad = schlecht'!"},
+  {g:"schließen", e:"to close / lock", cat:"verbs", pron:"SHLEE-sen", ex:"Bitte schließen Sie die Tür.", ex_e:"Please close the door.", hack:"SCHLIESSEN = close. Think 'CLOSE the SCHLOSS (castle) gate'!"},
+  {g:"der Schluss", e:"end / conclusion / finish", cat:"nouns", art:"der", pron:"SHLOOS", ex:"Ich muss jetzt Schluss machen.", ex_e:"I have to finish now.", hack:"SCHLUSS = end. Think 'I must CLOSE (schließen) → SCHLUSS'!"},
+  {g:"der Schlüssel", e:"key", cat:"nouns", art:"der", pron:"SHLEWS-el", ex:"Ich gebe Ihnen den Zimmerschlüssel.", ex_e:"I'll give you the room key.", hack:"SCHLÜSSEL = key. SCHLIESSEN (close) = the KEY closes things!"},
+  {g:"schmecken", e:"to taste", cat:"verbs", pron:"SHMEK-en", ex:"Schmeckt das gut?", ex_e:"Does that taste good?", hack:"SCHMECKEN = taste. Think 'SMACK your lips when it SCHMECKT (tastes good)'!"},
+  {g:"schnell", e:"fast / quick", cat:"adjectives", pron:"SHNEL", ex:"Er fährt schnell.", ex_e:"He drives fast.", hack:"SCHNELL = fast. SCHNELL sounds like 'SNELL' (sharp/quick in Scottish)!"},
+  {g:"schon", e:"already / even / quite", cat:"other", pron:"SHOHN", ex:"Ist das Essen schon fertig?", ex_e:"Is the food already ready?", hack:"SCHON = already. SHOWN = already shown/done. SCHON!"},
+  {g:"schön", e:"beautiful / nice / lovely", cat:"adjectives", pron:"SHERN", ex:"Das ist sehr schön.", ex_e:"That is very beautiful.", hack:"SCHÖN = beautiful. Think 'SHEEN of beauty = schön'!"},
+  {g:"der Schrank", e:"cupboard / wardrobe", cat:"nouns", art:"der", pron:"SHRAHNK", ex:"Die Gläser stehen im Schrank.", ex_e:"The glasses are in the cupboard.", hack:"SCHRANK = cupboard. SHRUNK = compressed into a box = cupboard!"},
+  {g:"schreiben", e:"to write", cat:"verbs", pron:"SHRY-ben", ex:"Er schreibt jeden Tag 50 E-Mails.", ex_e:"He writes 50 emails every day.", hack:"SCHREIBEN = write. SCRIBE → SCHREIB-en. A scribe WRITES!"},
+  {g:"der Schuh", e:"shoe", cat:"nouns", art:"der", pron:"SHOO", ex:"Zieh die Schuhe aus!", ex_e:"Take your shoes off!", hack:"SCHUH = shoe. SHOE → SCHUH. Same!"},
+  {g:"die Schule", e:"school", cat:"nouns", art:"die", pron:"SHOO-leh", ex:"Meine Tochter geht in die Schule.", ex_e:"My daughter goes to school.", hack:"SCHULE = school. SCHOOL → SCHULE. Same root!"},
+  {g:"der Schüler", e:"pupil / student", cat:"nouns", art:"der", pron:"SHEW-ler", ex:"In meinem Kurs sind acht Schülerinnen.", ex_e:"In my course there are eight female pupils.", hack:"SCHÜLER = pupil. From SCHULE (school). School student!"},
+  {g:"schwer", e:"heavy / difficult", cat:"adjectives", pron:"SHVAYR", ex:"Ist Ihr Gepäck sehr schwer?", ex_e:"Is your luggage very heavy?", hack:"SCHWER = heavy/difficult. SEVERE difficulty = SCHWER!"},
+  {g:"die Schwester", e:"sister", cat:"nouns", art:"die", pron:"SHVES-ter", ex:"Meine Schwester kommt am Dienstag.", ex_e:"My sister is coming on Tuesday.", hack:"SCHWESTER = sister. SISTER → SCHWESTER. Same root!"},
+  {g:"schwimmen", e:"to swim", cat:"verbs", pron:"SHVIM-en", ex:"Ich schwimme jeden Tag einen Kilometer.", ex_e:"I swim a kilometre every day.", hack:"SCHWIMMEN = swim. SWIM → SCHWIMM-en. Same root!"},
+  {g:"das Schwimmbad", e:"swimming pool", cat:"nouns", art:"das", pron:"SHVIM-baht", ex:"Kommst du mit ins Schwimmbad?", ex_e:"Are you coming to the swimming pool?", hack:"Schwimm (swim) + Bad (bath). The SWIMMING BATH = pool!"},
+  {g:"der See", e:"lake", cat:"nouns", art:"der", pron:"ZAY", ex:"Komm, wir fahren zum Starnberger See.", ex_e:"Come, let's go to Lake Starnberg.", hack:"SEE = lake (masculine), die See = sea (feminine). Same word, different gender!"},
+  {g:"sehen", e:"to see", cat:"verbs", pron:"ZAY-en", ex:"Ich kann dich nicht sehen.", ex_e:"I can't see you.", hack:"SEHEN = see. SEE → SEH-en. Same!"},
+  {g:"die Sehenswürdigkeit", e:"sight / tourist attraction", cat:"nouns", art:"die", pron:"ZAY-ens-vewr-dikh-kyt", ex:"Welche Sehenswürdigkeiten gibt es in Frankfurt?", ex_e:"What sights are there in Frankfurt?", hack:"Sehens (worth seeing) + Würdigkeit (worthiness). What is WORTH SEEING!"},
+  {g:"sehr", e:"very", cat:"other", pron:"ZAYR", ex:"Das ist sehr schwer.", ex_e:"That is very difficult.", hack:"SEHR = very. 'SAIR enough' = very much. Sehr!"},
+  {g:"sein", e:"to be", cat:"verbs", pron:"ZYNE", ex:"Ich bin dreiundzwanzig.", ex_e:"I am twenty-three.", hack:"SEIN = to be. SEIN/IST/WAR = be/is/was. The most important verb!"},
+  {g:"seit", e:"since / for (time)", cat:"other", pron:"ZYTE", ex:"Ich wohne seit drei Jahren in Köln.", ex_e:"I've been living in Cologne for three years.", hack:"SEIT = since. SEIT drei Jahren = FOR three years. SINCE = SEIT!"},
+  {g:"selbstständig", e:"self-employed / independent", cat:"adjectives", pron:"ZELPST-shten-dikh", ex:"Er ist selbstständig.", ex_e:"He is self-employed.", hack:"SELBST (self) + ständig (standing). SELF-STANDING = independent/self-employed!"},
+  {g:"sich", e:"himself/herself/themselves (reflexive)", cat:"other", pron:"ZIKH", ex:"Sie müssen sich erst anmelden.", ex_e:"You must first register yourself.", hack:"SICH = self (reflexive). 'Sich anmelden' = register yourself. Reflexive!"},
+  {g:"sie/Sie", e:"she/they/you (formal)", cat:"other", pron:"ZEE", ex:"Wie heißen Sie, bitte?", ex_e:"What is your name, please?", hack:"SIE = she/they/You (formal). Capital S = polite formal YOU. A German trick!"},
+  {g:"sitzen", e:"to sit", cat:"verbs", pron:"ZIT-sen", ex:"Wo sitzen Sie?", ex_e:"Where are you sitting?", hack:"SITZEN = sit. SIT → SITZ-en. Same!"},
+  {g:"so", e:"so / like this / thus", cat:"other", pron:"ZOH", ex:"Fahren Sie nicht so schnell!", ex_e:"Don't drive so fast!", hack:"SO = so. Same!"},
+  {g:"das Sofa", e:"sofa", cat:"nouns", art:"das", pron:"ZOH-fah", ex:"Das Sofa ist neu.", ex_e:"The sofa is new.", hack:"SOFA = sofa. Same!"},
+  {g:"sofort", e:"immediately / at once", cat:"other", pron:"zo-FORT", ex:"Bitte antworten Sie sofort.", ex_e:"Please reply immediately.", hack:"So (so/thus) + fort (away). Away right NOW = immediately!"},
+  {g:"der Sohn", e:"son", cat:"nouns", art:"der", pron:"ZOHN", ex:"Das ist Hans, mein Sohn.", ex_e:"This is Hans, my son.", hack:"SOHN = son. SON → SOHN. Same root!"},
+  {g:"sollen", e:"should / supposed to / shall", cat:"verbs", pron:"ZOL-en", ex:"Soll ich kommen?", ex_e:"Should I come?", hack:"SOLLEN = should/shall. 'SHALL' → 'SOLL'. Same root!"},
+  {g:"die Sonne", e:"sun", cat:"nouns", art:"die", pron:"ZON-eh", ex:"Die Sonne scheint.", ex_e:"The sun is shining.", hack:"SONNE = sun. SUN → SONN. Same root!"},
+  {g:"spät", e:"late", cat:"adjectives", pron:"SHPAYT", ex:"Es ist schon spät.", ex_e:"It's already late.", hack:"SPÄT = late. 'SPAN of time past = late'!"},
+  {g:"später", e:"later", cat:"other", pron:"SHPAY-ter", ex:"Das können wir später machen.", ex_e:"We can do that later.", hack:"SPÄTER = later. From SPÄT (late). MORE LATE = later!"},
+  {g:"die Speisekarte", e:"menu", cat:"nouns", art:"die", pron:"SHPY-zeh-kar-teh", ex:"Bringen Sie mir die Speisekarte.", ex_e:"Bring me the menu.", hack:"Speise (food) + Karte (card). The FOOD CARD = menu!"},
+  {g:"spielen", e:"to play", cat:"verbs", pron:"SHPEE-len", ex:"Die Kinder spielen draußen.", ex_e:"The children play outside.", hack:"SPIELEN = play. SPIEL = game. Think 'SPIELBERG'!"},
+  {g:"der Sport", e:"sport", cat:"nouns", art:"der", pron:"SHPORT", ex:"Ich mache viel Sport.", ex_e:"I do a lot of sport.", hack:"SPORT = sport. Same!"},
+  {g:"die Sprache", e:"language", cat:"nouns", art:"die", pron:"SHPRAH-kheh", ex:"Welche Sprachen sprichst du?", ex_e:"Which languages do you speak?", hack:"SPRACHE = language. SPEAK → SPRACH-e. Language = what you SPEAK!"},
+  {g:"sprechen", e:"to speak", cat:"verbs", pron:"SHPREKH-en", ex:"Kann ich mit Herrn Klein sprechen?", ex_e:"Can I speak to Mr Klein?", hack:"SPRECHEN = speak. SPEAK → SPRECH-en. Same root!"},
+  {g:"die Stadt", e:"city / town", cat:"nouns", art:"die", pron:"SHTAHT", ex:"Heidelberg ist eine alte Stadt.", ex_e:"Heidelberg is an old city.", hack:"STADT = city. STEAD (place) → STADT. A HOMESTEAD = Stadt!"},
+  {g:"stehen", e:"to stand / be (text)", cat:"verbs", pron:"SHTAY-en", ex:"Der Bus steht schon an der Haltestelle.", ex_e:"The bus is already at the stop.", hack:"STEHEN = stand. STAND → STEH-en. Same root!"},
+  {g:"die Stelle", e:"place / position / job", cat:"nouns", art:"die", pron:"SHTEL-eh", ex:"Ich habe eine neue Stelle.", ex_e:"I have a new position/job.", hack:"STELLE = place/position. STELLEN (place) → STELLE. The placed position!"},
+  {g:"stellen", e:"to place / put (upright)", cat:"verbs", pron:"SHTEL-en", ex:"Stell die Tasche rechts in die Ecke!", ex_e:"Put the bag on the right in the corner!", hack:"STELLEN = place upright. STALL → STELL-en. Stand it up!"},
+  {g:"der Stock", e:"floor / storey", cat:"nouns", art:"der", pron:"SHTOK", ex:"Unsere Wohnung liegt im ersten Stock.", ex_e:"Our apartment is on the first floor.", hack:"STOCK = floor/storey. Think 'going up the STALK/STOCK of the building'!"},
+  {g:"die Straße", e:"street / road", cat:"nouns", art:"die", pron:"SHTRAH-seh", ex:"In welcher Straße wohnen Sie?", ex_e:"Which street do you live in?", hack:"STRASSE = street. STREET → STRASSE. Same root (Latin strata)!"},
+  {g:"die Straßenbahn", e:"tram", cat:"nouns", art:"die", pron:"SHTRAH-sen-bahn", ex:"Wo fährt die Straßenbahn ab?", ex_e:"Where does the tram depart from?", hack:"Straßen (street) + Bahn (track). The STREET TRACK = tram!"},
+  {g:"studieren", e:"to study (at university)", cat:"verbs", pron:"shtoo-DEE-ren", ex:"Ich studiere in Mainz.", ex_e:"I'm studying in Mainz.", hack:"STUDIEREN = study. STUDY → STUDIER-en. Same!"},
+  {g:"das Studium", e:"university studies / degree", cat:"nouns", art:"das", pron:"SHTOO-dee-oom", ex:"Das Studium beginnt im Oktober.", ex_e:"University starts in October.", hack:"STUDIUM = studies. Same root as English STUDY!"},
+  {g:"der Student", e:"student (university)", cat:"nouns", art:"der", pron:"shtoo-DENT", ex:"Ich bin Studentin.", ex_e:"I am a student (female).", hack:"STUDENT = student. Same!"},
+  {g:"die Stunde", e:"hour / lesson", cat:"nouns", art:"die", pron:"SHTOON-deh", ex:"Ich bin in einer Stunde zurück.", ex_e:"I'll be back in an hour.", hack:"STUNDE = hour. Think 'STUNT — it takes an hour to do a stunt'!"},
+  {g:"suchen", e:"to look for / search", cat:"verbs", pron:"ZOO-khen", ex:"Suchst du etwas?", ex_e:"Are you looking for something?", hack:"SUCHEN = search. SEEK → SUCH-en. Same root!"},
+
+  // ── T ──
+  {g:"tanzen", e:"to dance", cat:"verbs", pron:"TAHN-tsen", ex:"Tanzen Sie gern?", ex_e:"Do you like dancing?", hack:"TANZEN = dance. DANCE → TANZ. Same root (from French)!"},
+  {g:"die Tasche", e:"bag / pocket", cat:"nouns", art:"die", pron:"TASH-eh", ex:"Ich habe die Schlüssel in der Tasche.", ex_e:"I have the keys in my bag.", hack:"TASCHE = bag/pocket. Think 'STASH it in your Tasche'!"},
+  {g:"das Taxi", e:"taxi", cat:"nouns", art:"das", pron:"TAK-see", ex:"Er fährt mit dem Taxi.", ex_e:"He takes a taxi.", hack:"TAXI = taxi. Same!"},
+  {g:"der Tee", e:"tea", cat:"nouns", art:"der", pron:"TAY", ex:"Ich trinke morgens immer Tee.", ex_e:"I always drink tea in the morning.", hack:"TEE = tea. Same!"},
+  {g:"der Teil", e:"part / section", cat:"nouns", art:"der", pron:"TILE", ex:"Lies bitte auch den zweiten Teil.", ex_e:"Please also read the second part.", hack:"TEIL = part. Think 'TILE — a PART of the floor'!"},
+  {g:"telefonieren", e:"to telephone / make a call", cat:"verbs", pron:"teh-leh-fo-NEE-ren", ex:"Darf ich mal telefonieren?", ex_e:"May I make a phone call?", hack:"TELEFONIEREN = telephone. Same root!"},
+  {g:"das Telefon", e:"telephone", cat:"nouns", art:"das", pron:"teh-leh-FOHN", ex:"Haben Sie Telefon?", ex_e:"Do you have a telephone?", hack:"TELEFON = telephone. Same!"},
+  {g:"der Termin", e:"appointment / date", cat:"nouns", art:"der", pron:"ter-MEEN", ex:"Am besten machen wir sofort einen Termin.", ex_e:"Best if we make an appointment right away.", hack:"TERMIN = appointment. TERM/TERMINUS = time point = appointment!"},
+  {g:"der Test", e:"test", cat:"nouns", art:"der", pron:"TEST", ex:"Der Test war einfach.", ex_e:"The test was easy.", hack:"TEST = test. Same!"},
+  {g:"teuer", e:"expensive", cat:"adjectives", pron:"TOY-er", ex:"Das ist mir zu teuer.", ex_e:"That is too expensive for me.", hack:"TEUER = expensive. 'TOY-er' — expensive TOYS cost a lot!"},
+  {g:"der Text", e:"text", cat:"nouns", art:"der", pron:"TEKST", ex:"Lesen Sie bitte diesen Text.", ex_e:"Please read this text.", hack:"TEXT = text. Same!"},
+  {g:"das Thema", e:"topic / theme", cat:"nouns", art:"das", pron:"TAY-mah", ex:"Wir sprechen über das Thema 'Essen'.", ex_e:"We're talking about the topic 'Food'.", hack:"THEMA = theme/topic. THEME → THEMA. Same!"},
+  {g:"das Ticket", e:"ticket", cat:"nouns", art:"das", pron:"TIK-et", ex:"Wie viel kostet das Ticket?", ex_e:"How much does the ticket cost?", hack:"TICKET = ticket. Same!"},
+  {g:"der Tisch", e:"table", cat:"nouns", art:"der", pron:"TISH", ex:"Die Fotos liegen auf dem Tisch.", ex_e:"The photos are on the table.", hack:"TISCH = table. Think 'DISH on the TABLE'!"},
+  {g:"die Tochter", e:"daughter", cat:"nouns", art:"die", pron:"TOKH-ter", ex:"Das ist meine Tochter Katharina.", ex_e:"This is my daughter Katharina.", hack:"TOCHTER = daughter. Same root (Indo-European)!"},
+  {g:"die Toilette", e:"toilet / bathroom", cat:"nouns", art:"die", pron:"twa-LET-eh", ex:"Wo ist die Toilette, bitte?", ex_e:"Where is the toilet, please?", hack:"TOILETTE = toilet. Same!"},
+  {g:"die Tomate", e:"tomato", cat:"nouns", art:"die", pron:"to-MAH-teh", ex:"Die Tomate ist noch grün.", ex_e:"The tomato is still green.", hack:"TOMATE = tomato. Same!"},
+  {g:"tot", e:"dead", cat:"adjectives", pron:"TOHT", ex:"Sein Vater ist schon lange tot.", ex_e:"His father has been dead for a long time.", hack:"TOT = dead. Think 'TOTAL silence = dead'!"},
+  {g:"(sich) treffen", e:"to meet", cat:"verbs", pron:"TREF-en", ex:"Wir treffen uns immer freitags.", ex_e:"We always meet on Fridays.", hack:"TREFFEN = meet. TREFF = meeting point. To TREAD the same path = meet!"},
+  {g:"die Treppe", e:"staircase / stairs", cat:"nouns", art:"die", pron:"TREP-eh", ex:"Die Toilette? Die Treppe hoch.", ex_e:"The toilet? Up the stairs.", hack:"TREPPE = stairs. TRIP up the TREPpe (stairs)!"},
+  {g:"trinken", e:"to drink", cat:"verbs", pron:"TRINK-en", ex:"Möchtest du etwas trinken?", ex_e:"Would you like something to drink?", hack:"TRINKEN = drink. DRINK → TRINK-en. Same!"},
+  {g:"tschüss", e:"bye / goodbye (informal)", cat:"phrases", pron:"CHEWS", ex:"Junge Leute sagen meistens 'tschüss!'.", ex_e:"Young people usually say 'bye!'.", hack:"TSCHÜSS = bye! Say 'CHEWS' quickly — that's tschüss!"},
+  {g:"tun", e:"to do", cat:"verbs", pron:"TOON", ex:"Ich habe noch etwas zu tun.", ex_e:"I still have something to do.", hack:"TUN = do. DO → TUN. Same root!"},
+
+  // ── U ──
+  {g:"über", e:"over / about / via", cat:"other", pron:"EW-ber", ex:"Gehen Sie hier über die Straße.", ex_e:"Go over the street here.", hack:"ÜBER = over/above. OVER → ÜBER. Same root! 'ÜBER' is even used in English now!"},
+  {g:"übernachten", e:"to stay overnight", cat:"verbs", pron:"ew-ber-NAKH-ten", ex:"Du kannst bei mir übernachten.", ex_e:"You can stay overnight at my place.", hack:"Über (over) + Nacht (night). To spend the night OVER = stay overnight!"},
+  {g:"überweisen", e:"to transfer (money)", cat:"verbs", pron:"ew-ber-VY-zen", ex:"Sie können das Geld auch überweisen.", ex_e:"You can also transfer the money.", hack:"Über (over) + weisen (direct/send). Send money OVER = transfer!"},
+  {g:"die Uhr", e:"clock / watch / o'clock", cat:"nouns", art:"die", pron:"OOR", ex:"Es ist vier Uhr.", ex_e:"It is four o'clock.", hack:"UHR = clock/hour. HOUR → UHR. Same root!"},
+  {g:"um", e:"at (time) / around / in order to", cat:"other", pron:"OOM", ex:"Er kommt um sieben Uhr.", ex_e:"He comes at seven o'clock.", hack:"UM = at/around. Think 'UM, it's around seven o'clock'!"},
+  {g:"umziehen", e:"to move house / change clothes", cat:"verbs", pron:"OOM-tsee-en", ex:"Nächsten Monat ziehen wir um.", ex_e:"Next month we're moving house.", hack:"Um (around) + ziehen (pull). Pull yourself AROUND = move!"},
+  {g:"und", e:"and", cat:"other", pron:"OONT", ex:"Peter und Helmut sind meine Söhne.", ex_e:"Peter and Helmut are my sons.", hack:"UND = and. Same!"},
+  {g:"unten", e:"below / downstairs", cat:"other", pron:"OON-ten", ex:"Er wohnt ganz unten im Haus.", ex_e:"He lives right at the bottom of the building.", hack:"UNTEN = under/below. UNDER → UNT-en. Same root!"},
+  {g:"unter", e:"under / below / among", cat:"other", pron:"OON-ter", ex:"Unter uns wohnt eine Familie.", ex_e:"Below us lives a family.", hack:"UNTER = under. UNDER → UNTER. Same!"},
+  {g:"der Unterricht", e:"lesson / instruction / class", cat:"nouns", art:"der", pron:"OON-ter-rikht", ex:"Wir haben Unterricht von 8 bis 12 Uhr.", ex_e:"We have class from 8 to 12.", hack:"Unter (under) + richten (direct/instruct). INSTRUCTION directed under you = lessons!"},
+  {g:"unterschreiben", e:"to sign", cat:"verbs", pron:"OON-ter-shry-ben", ex:"Wo muss ich unterschreiben?", ex_e:"Where must I sign?", hack:"Unter (under) + schreiben (write). WRITE UNDERNEATH = sign!"},
+  {g:"die Unterschrift", e:"signature", cat:"nouns", art:"die", pron:"OON-ter-shrift", ex:"Hier fehlt noch Ihre Unterschrift.", ex_e:"Your signature is still missing here.", hack:"Unter (under) + Schrift (writing). The WRITING UNDERNEATH = signature!"},
+  {g:"der Urlaub", e:"holiday / vacation", cat:"nouns", art:"der", pron:"OOR-lowp", ex:"Ich nehme im September Urlaub.", ex_e:"I'm taking a holiday in September.", hack:"URLAUB = holiday. 'UR-LEAVE' = leaving from work = holiday!"},
+
+  // ── V ──
+  {g:"der Vater", e:"father", cat:"nouns", art:"der", pron:"FAH-ter", ex:"Mein Vater ist Arbeiter.", ex_e:"My father is a worker.", hack:"VATER = father. FATHER → VATER. Same root!"},
+  {g:"verboten", e:"forbidden / prohibited", cat:"adjectives", pron:"fer-BOH-ten", ex:"Hier ist Rauchen verboten.", ex_e:"Smoking is prohibited here.", hack:"VERBOTEN = forbidden. 'VERBOTEN' is used in English! Forbidden!"},
+  {g:"verdienen", e:"to earn", cat:"verbs", pron:"fer-DEE-nen", ex:"Ich verdiene 1.500 Euro im Monat.", ex_e:"I earn 1,500 euros a month.", hack:"VERDIENEN = earn/deserve. Think 'VER-DINE on what you earn'!"},
+  {g:"der Verein", e:"club / association", cat:"nouns", art:"der", pron:"fer-INE", ex:"Es gibt einen neuen Sportverein.", ex_e:"There is a new sports club.", hack:"VEREIN = club/union. VEREIN-igung = unification. To be UNITED = club!"},
+  {g:"verheiratet", e:"married", cat:"adjectives", pron:"fer-HY-rah-tet", ex:"Ich bin verheiratet.", ex_e:"I am married.", hack:"VERHEIRATET from heiraten (marry). The state of HAVING MARRIED = verheiratet."},
+  {g:"verkaufen", e:"to sell", cat:"verbs", pron:"fer-KOW-fen", ex:"Er verkauft sein altes Auto.", ex_e:"He is selling his old car.", hack:"VER-kaufen. Kaufen = buy. VER- reverses it = SELL!"},
+  {g:"der Verkäufer", e:"salesperson / shop assistant", cat:"nouns", art:"der", pron:"fer-KOY-fer", ex:"Meine Mutter ist Verkäuferin.", ex_e:"My mother is a sales assistant.", hack:"VERKÄUFER from verkaufen (sell). The one who SELLS!"},
+  {g:"vermieten", e:"to rent out", cat:"verbs", pron:"fer-MEE-ten", ex:"Die Wohnung ist schon vermietet.", ex_e:"The apartment is already rented out.", hack:"VER-mieten. Mieten = rent. VER- makes it = rent OUT to someone!"},
+  {g:"der Vermieter", e:"landlord", cat:"nouns", art:"der", pron:"fer-MEE-ter", ex:"Unser Vermieter heißt Huber.", ex_e:"Our landlord is called Huber.", hack:"VERMIETER = landlord. From vermieten (rent out). The one who rents out!"},
+  {g:"verstehen", e:"to understand", cat:"verbs", pron:"fer-SHTAY-en", ex:"Können Sie mich verstehen?", ex_e:"Can you understand me?", hack:"VERSTEHEN = understand. Ver + stehen (stand). STAND something = understand it!"},
+  {g:"der Verwandte", e:"relative", cat:"nouns", art:"der", pron:"fer-VAHNT-eh", ex:"Peter besucht seine Verwandten.", ex_e:"Peter is visiting his relatives.", hack:"VERWANDTE = relative. VER-WANDT = transformed/related. To be RELATED."},
+  {g:"viel", e:"much / a lot", cat:"other", pron:"FEEL", ex:"Hier regnet es viel.", ex_e:"It rains a lot here.", hack:"VIEL = much/many. FEEL like a lot? VIEL!"},
+  {g:"vielleicht", e:"perhaps / maybe", cat:"other", pron:"fee-LYKHT", ex:"Ich komme vielleicht mit dem Bus.", ex_e:"Perhaps I'll come by bus.", hack:"Viel (much) + leicht (light/easy). PERHAPS = much-light possibility!"},
+  {g:"von", e:"from / of / by", cat:"other", pron:"FON", ex:"Das Auto von Felix ist kaputt.", ex_e:"Felix's car is broken.", hack:"VON = from/of. Think 'FROM = von' — the F-V switch!"},
+  {g:"vor", e:"before / in front of", cat:"other", pron:"FOR", ex:"Das Auto steht vor der Tür.", ex_e:"The car is in front of the door.", hack:"VOR = before/in front. FOR-ward = VOR. In FRONT before you = vor!"},
+  {g:"der Vorname", e:"first name / given name", cat:"nouns", art:"der", pron:"FOR-nah-meh", ex:"Mein Vorname ist Eva.", ex_e:"My first name is Eva.", hack:"Vor (before/front) + Name. The FRONT NAME = first name!"},
+  {g:"die Vorsicht", e:"caution / care / watch out", cat:"nouns", art:"die", pron:"FOR-zikht", ex:"Vorsicht! Da kommt ein Auto.", ex_e:"Watch out! A car is coming.", hack:"Vor (before) + Sicht (sight). Look BEFORE = CAUTION! Vorsicht!"},
+  {g:"(sich) vorstellen", e:"to introduce oneself", cat:"verbs", pron:"FOR-shtel-en", ex:"Können Sie sich bitte vorstellen?", ex_e:"Could you please introduce yourself?", hack:"Vor (before) + stellen (place). Place yourself BEFORE others = introduce yourself!"},
+  {g:"die Vorwahl", e:"area code / dialling code", cat:"nouns", art:"die", pron:"FOR-vahl", ex:"Wie ist die Vorwahl von München?", ex_e:"What is the area code for Munich?", hack:"Vor (before) + Wahl (choice/selection). The number you SELECT BEFORE = area code!"},
+
+  // ── W ──
+  {g:"wandern", e:"to hike / wander", cat:"verbs", pron:"VAHN-dern", ex:"Wir wandern um den Chiemsee.", ex_e:"We're hiking around the Chiemsee.", hack:"WANDERN = wander/hike. WANDER → WANDERN. Same!"},
+  {g:"wann", e:"when (question)", cat:"other", pron:"VAHN", ex:"Wann bist du fertig?", ex_e:"When are you finished?", hack:"WANN = when. WHEN → WANN. Same root!"},
+  {g:"warten", e:"to wait", cat:"verbs", pron:"VAR-ten", ex:"Können Sie ein paar Minuten warten?", ex_e:"Can you wait a few minutes?", hack:"WARTEN = wait. Think 'WARD-ten — the guard WAITS in the ward'!"},
+  {g:"warum", e:"why", cat:"other", pron:"vah-ROOM", ex:"Warum kommt er nicht?", ex_e:"Why isn't he coming?", hack:"WARUM = why. 'Why ARUMble?' — WARUM!"},
+  {g:"was", e:"what", cat:"other", pron:"VAHS", ex:"Was ist das?", ex_e:"What is that?", hack:"WAS = what. WHAT → WAS. Same!"},
+  {g:"was für ein", e:"what kind of / what sort of", cat:"other", pron:"vahs fewr ine", ex:"Was für eine Farbe?", ex_e:"What kind of colour?", hack:"Was (what) für (for) ein (a). WHAT FOR A = what kind of!"},
+  {g:"(sich) waschen", e:"to wash", cat:"verbs", pron:"VASH-en", ex:"Wo kann ich mir die Hände waschen?", ex_e:"Where can I wash my hands?", hack:"WASCHEN = wash. WASH → WASCH-en. Same!"},
+  {g:"das Wasser", e:"water", cat:"nouns", art:"das", pron:"VAS-er", ex:"Ein Glas Wasser, bitte.", ex_e:"A glass of water, please.", hack:"WASSER = water. WATER → WASSER. Same root!"},
+  {g:"weh tun", e:"to hurt / be painful", cat:"verbs", pron:"VAY toon", ex:"Mein Bein tut weh.", ex_e:"My leg hurts.", hack:"WEH tun = to do WOE. WOE → WEH. To do WOE = to hurt!"},
+  {g:"weiblich", e:"female / feminine", cat:"adjectives", pron:"VYPE-likh", ex:"'Weiblich' oder 'männlich'.", ex_e:"'Female' or 'male'.", hack:"WEIBLICH = female. WEIB (old word for woman) + lich. Like 'wife-ly'!"},
+  {g:"der Wein", e:"wine", cat:"nouns", art:"der", pron:"VINE", ex:"Nein danke, ich möchte keinen Wein.", ex_e:"No thanks, I don't want wine.", hack:"WEIN = wine. WINE → WEIN. Same!"},
+  {g:"weit", e:"far / wide / a long way", cat:"adjectives", pron:"VYTE", ex:"Zum Bahnhof ist es nicht weit.", ex_e:"It's not far to the station.", hack:"WEIT = far/wide. WIDE → WEIT. Same root!"},
+  {g:"weiter", e:"further / onwards / continue", cat:"other", pron:"VY-ter", ex:"Der Bus fährt nicht weiter.", ex_e:"The bus doesn't go further.", hack:"WEITER = further. From WEIT (far). Go FURTHER along!"},
+  {g:"welch-", e:"which / what", cat:"other", pron:"VELKH", ex:"Welches Buch möchtest du?", ex_e:"Which book would you like?", hack:"WELCH = which. WHICH → WELCH. Same root!"},
+  {g:"die Welt", e:"world", cat:"nouns", art:"die", pron:"VELT", ex:"Es gibt viele Probleme auf der Welt.", ex_e:"There are many problems in the world.", hack:"WELT = world. Think 'WELTANSCHAUUNG = world-view'. Same root as 'world'!"},
+  {g:"wenig", e:"little / few / not much", cat:"other", pron:"VAY-nikh", ex:"Ich habe nur wenig verstanden.", ex_e:"I understood only a little.", hack:"WENIG = little/few. FEW → 'VEW' → WENIG. Small amount!"},
+  {g:"wer", e:"who", cat:"other", pron:"VAYR", ex:"Wer ist das?", ex_e:"Who is that?", hack:"WER = who. WHO → WER. Same root!"},
+  {g:"werden", e:"to become / will (future)", cat:"verbs", pron:"VAYR-den", ex:"Mein Sohn will Arzt werden.", ex_e:"My son wants to become a doctor.", hack:"WERDEN = become. Think 'to VEER into becoming something'!"},
+  {g:"das Wetter", e:"weather", cat:"nouns", art:"das", pron:"VET-er", ex:"Wir hatten schlechtes Wetter.", ex_e:"We had bad weather.", hack:"WETTER = weather. WEATHER → WETTER. Same!"},
+  {g:"wichtig", e:"important", cat:"adjectives", pron:"VIKH-tikh", ex:"Dieses Formular ist sehr wichtig.", ex_e:"This form is very important.", hack:"WICHTIG = important. Think 'WEIGHT — heavy/weighty matters are important'!"},
+  {g:"wie", e:"how / like / as", cat:"other", pron:"VEE", ex:"Wie heißt du?", ex_e:"What is your name?", hack:"WIE = how/like. 'VEE-angle' — WIE starts with W-I-E like 'why'!"},
+  {g:"wiederholen", e:"to repeat", cat:"verbs", pron:"vee-der-HOH-len", ex:"Können Sie das bitte wiederholen?", ex_e:"Could you please repeat that?", hack:"Wieder (again) + holen (fetch/get). FETCH IT AGAIN = repeat!"},
+  {g:"das Wiederhören", e:"goodbye (on phone)", cat:"phrases", pron:"VEE-der-her-en", ex:"Auf Wiederhören!", ex_e:"Goodbye (on phone)!", hack:"Wieder (again) + hören (hear). Until we HEAR each other AGAIN = phone goodbye!"},
+  {g:"das Wiedersehen", e:"seeing again / goodbye", cat:"phrases", pron:"VEE-der-zay-en", ex:"Auf Wiedersehen!", ex_e:"Goodbye!", hack:"Wieder (again) + sehen (see). Until we SEE AGAIN = goodbye!"},
+  {g:"wie viel", e:"how much / how many", cat:"other", pron:"vee FEEL", ex:"Wie viel Milch nehmen Sie?", ex_e:"How much milk do you take?", hack:"Wie (how) + viel (much). How MUCH = wie viel!"},
+  {g:"willkommen", e:"welcome", cat:"phrases", pron:"vil-KOM-en", ex:"Herzlich willkommen!", ex_e:"Welcome!", hack:"WILLKOMMEN = welcome. WELCOME → WILLKOMMEN. Same!"},
+  {g:"der Wind", e:"wind", cat:"nouns", art:"der", pron:"VINT", ex:"Der Wind kommt aus Osten.", ex_e:"The wind comes from the east.", hack:"WIND = wind. Same!"},
+  {g:"wir", e:"we", cat:"other", pron:"VEER", ex:"Wir lernen Deutsch.", ex_e:"We are learning German.", hack:"WIR = we. WE → WIR. Same root!"},
+  {g:"wissen", e:"to know (a fact)", cat:"verbs", pron:"VIS-en", ex:"Weißt du, wie er heißt?", ex_e:"Do you know what he's called?", hack:"WISSEN = know (facts). WISE → WISSEN. Wise people KNOW things!"},
+  {g:"wo", e:"where", cat:"other", pron:"VOH", ex:"Wo ist die Post?", ex_e:"Where is the post office?", hack:"WO = where. WHERE → WO. Same root!"},
+  {g:"woher", e:"where from", cat:"other", pron:"vo-HAYR", ex:"Woher kommen Sie?", ex_e:"Where do you come from?", hack:"Wo (where) + her (from here). WHERE FROM = woher!"},
+  {g:"wohin", e:"where to", cat:"other", pron:"vo-HIN", ex:"Wohin fährt dieser Bus?", ex_e:"Where does this bus go to?", hack:"Wo (where) + hin (to there). WHERE TO = wohin!"},
+  {g:"wohnen", e:"to live / reside", cat:"verbs", pron:"VOH-nen", ex:"Ich wohne in München.", ex_e:"I live in Munich.", hack:"WOHNEN = live/reside. Think 'to ABIDE in a WOHN-ing = dwelling'!"},
+  {g:"die Wohnung", e:"apartment / flat", cat:"nouns", art:"die", pron:"VOH-noong", ex:"Seit wann haben Sie diese Wohnung?", ex_e:"How long have you had this apartment?", hack:"WOHNUNG from wohnen (to live). The place where you LIVE = flat/apartment!"},
+  {g:"wollen", e:"to want", cat:"verbs", pron:"VOL-en", ex:"Wollen Sie einen Kaffee trinken?", ex_e:"Would you like to drink a coffee?", hack:"WOLLEN = want/will. WILL → WOLL-en. Same root!"},
+  {g:"das Wort", e:"word", cat:"nouns", art:"das", pron:"VORT", ex:"Ich kenne das Wort nicht.", ex_e:"I don't know the word.", hack:"WORT = word. WORD → WORT. Same!"},
+  {g:"wunderbar", e:"wonderful / marvellous", cat:"adjectives", pron:"VOON-der-bar", ex:"Das Essen schmeckt wunderbar.", ex_e:"The food tastes wonderful.", hack:"WUNDERBAR = wonderful. WUNDER = wonder. Wonder-BAR = wonderful!"},
+
+  // ── Z ──
+  {g:"zahlen", e:"to pay", cat:"verbs", pron:"TSAH-len", ex:"Zahlen, bitte!", ex_e:"The bill please!", hack:"ZAHLEN = pay. Think 'TOLL — count the numbers (Zahlen) to pay'!"},
+  {g:"die Zeit", e:"time", cat:"nouns", art:"die", pron:"TSYTE", ex:"Ich habe heute keine Zeit.", ex_e:"I don't have time today.", hack:"ZEIT = time. Think 'ZEITGEIST = spirit of the TIME'!"},
+  {g:"die Zeitung", e:"newspaper", cat:"nouns", art:"die", pron:"TSYE-toong", ex:"Ich lese gern Zeitung.", ex_e:"I like reading the newspaper.", hack:"ZEITUNG = newspaper. ZEIT (time) = the newspaper of the TIMES!"},
+  {g:"die Zigarette", e:"cigarette", cat:"nouns", art:"die", pron:"tsig-ah-RET-eh", ex:"Wie teuer sind die Zigaretten?", ex_e:"How expensive are the cigarettes?", hack:"ZIGARETTE = cigarette. Same!"},
+  {g:"das Zimmer", e:"room", cat:"nouns", art:"das", pron:"TSIM-er", ex:"Das Zimmer ist groß.", ex_e:"The room is large.", hack:"ZIMMER = room. Think 'TIMBER room with wooden walls'!"},
+  {g:"der Zoll", e:"customs (border)", cat:"nouns", art:"der", pron:"TSOL", ex:"Wir müssen noch durch den Zoll.", ex_e:"We still have to go through customs.", hack:"ZOLL = customs/toll. TOLL → ZOLL. The TOLL you pay at the border!"},
+  {g:"zu", e:"to / too / closed", cat:"other", pron:"TSOO", ex:"Ich gehe zu Fuß.", ex_e:"I go on foot.", hack:"ZU = to/too/closed. Too many meanings! ZU viel = TOO much!"},
+  {g:"zufrieden", e:"satisfied / content", cat:"adjectives", pron:"tsoo-FREE-den", ex:"Ich bin mit der Wohnung zufrieden.", ex_e:"I'm satisfied with the apartment.", hack:"Zu (to) + Frieden (peace). At PEACE with something = satisfied!"},
+  {g:"der Zug", e:"train / pull", cat:"nouns", art:"der", pron:"TSOOG", ex:"Ich fahre gern mit dem Zug.", ex_e:"I like travelling by train.", hack:"ZUG = train. Think 'ZUG ZUGZWANG' — you're pulled along on the rails!"},
+  {g:"zurück", e:"back / return", cat:"other", pron:"tsoo-REWK", ex:"Einmal Frankfurt und zurück.", ex_e:"One return to Frankfurt.", hack:"ZURÜCK = back/return. Zu (to) + rück (back). Go BACK to = zurück!"},
+  {g:"zusammen", e:"together", cat:"other", pron:"tsoo-ZAHM-en", ex:"Sollen wir zusammen essen gehen?", ex_e:"Shall we go eat together?", hack:"ZUSAMMEN = together. Zu + sammen (same). At the SAME PLACE = together!"},
+  {g:"zwischen", e:"between", cat:"other", pron:"TSVIH-shen", ex:"Heidelberg liegt zwischen Frankfurt und Stuttgart.", ex_e:"Heidelberg is situated between Frankfurt and Stuttgart.", hack:"ZWISCHEN = between. Think 'SWISH-en between two things'!"},
+
+  // ── PHRASES & GREETINGS ──
+  {g:"Guten Morgen", e:"Good morning", cat:"phrases", pron:"GOO-ten MOR-gen", ex:"Guten Morgen!", ex_e:"Good morning!", hack:"Gut (good) + Morgen (morning). GOOD MORNING!"},
+  {g:"Guten Tag", e:"Good day / Hello", cat:"phrases", pron:"GOO-ten TAHG", ex:"Guten Tag, Frau Schmitt!", ex_e:"Good day, Mrs Schmitt!", hack:"Gut (good) + Tag (day). GOOD DAY!"},
+  {g:"Guten Abend", e:"Good evening", cat:"phrases", pron:"GOO-ten AH-bent", ex:"Guten Abend!", ex_e:"Good evening!", hack:"Gut (good) + Abend (evening). GOOD EVENING!"},
+  {g:"Gute Nacht", e:"Good night", cat:"phrases", pron:"GOO-teh NAKHT", ex:"Gute Nacht!", ex_e:"Good night!", hack:"Gut (good) + Nacht (night). GOOD NIGHT!"},
+  {g:"Wie geht es Ihnen?", e:"How are you? (formal)", cat:"phrases", pron:"vee GAYT es EE-nen", ex:"Wie geht es Ihnen?", ex_e:"How are you?", hack:"Wie (how) + geht (goes) + es (it) + Ihnen (to you). How does it go for you?"},
+  {g:"Wie geht's?", e:"How are you? (informal)", cat:"phrases", pron:"vee GAYTS", ex:"Hallo, wie geht's?", ex_e:"Hi, how are you?", hack:"Short form of 'Wie geht es dir?' = How's it going? Very common!"},
+  {g:"Auf Wiedersehen", e:"Goodbye (formal)", cat:"phrases", pron:"owf VEE-der-zay-en", ex:"Auf Wiedersehen!", ex_e:"Goodbye!", hack:"Auf (until) + Wieder (again) + sehen (see). Until we see each other again!"},
+  {g:"Guten Appetit", e:"Enjoy your meal", cat:"phrases", pron:"GOO-ten ah-peh-TEET", ex:"Guten Appetit!", ex_e:"Enjoy your meal!", hack:"Gut (good) + Appetit. Like French 'Bon appétit'!"},
+  {g:"Herzlichen Glückwunsch", e:"Congratulations / Happy birthday", cat:"phrases", pron:"HERTS-likh-en GLEWK-voonsh", ex:"Herzlichen Glückwunsch!", ex_e:"Congratulations!", hack:"Herzlich (heartfelt) + Glückwunsch (lucky wish). Heartfelt lucky wishes!"},
+  {g:"Entschuldigung", e:"Excuse me / Sorry", cat:"phrases", pron:"ent-SHOOL-di-goong", ex:"Entschuldigung!", ex_e:"Excuse me!", hack:"From entschuldigen (to excuse). Remove the guilt = Entschuldigung!"},
+  {g:"Bitte schön", e:"Here you are / You're welcome", cat:"phrases", pron:"BIT-eh SHERN", ex:"Danke! – Bitte schön.", ex_e:"Thanks! – You're welcome.", hack:"Bitte (please) + schön (nice/beautiful). Nicely please = you're welcome!"},
+  {g:"Vielen Dank", e:"Many thanks", cat:"phrases", pron:"FEE-len DAHNK", ex:"Vielen Dank!", ex_e:"Many thanks!", hack:"Viel (many/much) + Dank (thanks). MANY THANKS!"},
+  {g:"Alles Gute", e:"All the best", cat:"phrases", pron:"AH-les GOO-teh", ex:"Alles Gute!", ex_e:"All the best!", hack:"Alles (everything) + Gute (good). All GOOD things to you!"},
+  {g:"Kein Problem", e:"No problem", cat:"phrases", pron:"KINE pro-BLAYM", ex:"Kein Problem!", ex_e:"No problem!", hack:"Kein (no/none) + Problem. NO PROBLEM!"},
+  {g:"Viel Spaß", e:"Have fun", cat:"phrases", pron:"FEEL SHPAHS", ex:"Viel Spaß!", ex_e:"Have fun!", hack:"Viel (much) + Spaß (fun). Lots of FUN!"},
+];
+
+// Assign articles
+VOCAB.forEach(v => {
+  if (!v.art) v.art = "";
+});
+
+// State
+let statuses = {};
+try {
+  const saved = localStorage.getItem('a1_vocab_status');
+  if (saved) statuses = JSON.parse(saved);
+} catch(e) {}
+
+function saveStatuses() {
+  try { localStorage.setItem('a1_vocab_status', JSON.stringify(statuses)); } catch(e) {}
+}
+
+function getCategoryColor(cat) {
+  const colors = {
+    nouns: "#3b82f6",
+    verbs: "#22c55e",
+    adjectives: "#f59e0b",
+    phrases: "#ec4899",
+    other: "#8b5cf6"
+  };
+  return colors[cat] || "#6b7280";
+}
+
+function renderVocab() {
+  const search = document.getElementById('search').value.toLowerCase();
+  const catFilter = document.getElementById('filter-cat').value;
+  const statusFilter = document.getElementById('filter-status').value;
+
+  const container = document.getElementById('vocab-container');
+  container.innerHTML = '';
+
+  const filtered = VOCAB.filter(v => {
+    const matchSearch = !search ||
+      v.g.toLowerCase().includes(search) ||
+      v.e.toLowerCase().includes(search) ||
+      (v.hack || '').toLowerCase().includes(search);
+    const matchCat = catFilter === 'all' || v.cat === catFilter;
+    const st = statuses[v.g] || 'unstarted';
+    const matchStatus = statusFilter === 'all' || st === statusFilter;
+    return matchSearch && matchCat && matchStatus;
+  });
+
+  // Group by letter
+  const grouped = {};
+  filtered.forEach(v => {
+    const letter = v.g.replace(/^(das |der |die )/, '').charAt(0).toUpperCase();
+    if (!grouped[letter]) grouped[letter] = [];
+    grouped[letter].push(v);
+  });
+
+  Object.keys(grouped).sort().forEach(letter => {
+    const hdr = document.createElement('div');
+    hdr.className = 'section-header';
+    hdr.innerHTML = `<span>${letter}</span><span style="color:var(--muted);font-weight:400">${grouped[letter].length} words</span>`;
+    container.appendChild(hdr);
+
+    const grid = document.createElement('div');
+    grid.className = 'grid';
+    grouped[letter].forEach(v => {
+      grid.appendChild(createCard(v));
+    });
+    container.appendChild(grid);
+  });
+
+  document.getElementById('count-display').textContent = `Showing ${filtered.length} of ${VOCAB.length} words`;
+  updateStats();
+}
+
+function createCard(v) {
+  const st = statuses[v.g] || 'unstarted';
+  const div = document.createElement('div');
+  div.className = `card ${st === 'learned' ? 'learned' : st === 'learning' ? 'learning' : ''}`;
+
+  const color = getCategoryColor(v.cat);
+
+  div.innerHTML = `
+    <div class="card-top">
+      <div>
+        ${v.art ? `<div class="article">${v.art}</div>` : ''}
+        <div class="german">${v.g}</div>
+      </div>
+      <span class="category-badge" style="background:${color}22;color:${color}">${v.cat}</span>
+    </div>
+    <div class="english">🇬🇧 ${v.e}</div>
+    <div class="pronunciation">🔊 ${v.pron}</div>
+    <div class="example">${v.ex}<span>→ ${v.ex_e}</span></div>
+    ${v.hack ? `<div class="memory-hack">${v.hack}</div>` : ''}
+    <div class="card-footer">
+      <button class="mark-btn mark-review" onclick="setStatus('${v.g}', 'learning', event)" style="${st==='learning'?'background:#92400e;outline:2px solid #fbbf24':''}">
+        ${st === 'learning' ? '⭐ Reviewing' : '🔖 Mark Reviewing'}
+      </button>
+      <button class="mark-btn mark-learned" onclick="setStatus('${v.g}', st==='learned'?'unstarted':'learned', event)" style="${st==='learned'?'background:#14532d;outline:2px solid #4ade80':''}">
+        ${st === 'learned' ? '✓ Learned!' : '✓ Mark Learned'}
+      </button>
+    </div>
+  `;
+  // Fix the toggle logic
+  const learnBtn = div.querySelector('.mark-learned');
+  learnBtn.onclick = (e) => {
+    const cur = statuses[v.g] || 'unstarted';
+    setStatus(v.g, cur === 'learned' ? 'unstarted' : 'learned', e);
+  };
+  const reviewBtn = div.querySelector('.mark-review');
+  reviewBtn.onclick = (e) => {
+    const cur = statuses[v.g] || 'unstarted';
+    setStatus(v.g, cur === 'learning' ? 'unstarted' : 'learning', e);
+  };
+  return div;
+}
+
+function setStatus(word, status, e) {
+  if (e) e.stopPropagation();
+  statuses[word] = status;
+  saveStatuses();
+  renderVocab();
+}
+
+function updateStats() {
+  const learned = Object.values(statuses).filter(s => s === 'learned').length;
+  const reviewing = Object.values(statuses).filter(s => s === 'learning').length;
+  document.getElementById('total-count').textContent = VOCAB.length;
+  document.getElementById('learned-count').textContent = learned;
+  document.getElementById('review-count').textContent = reviewing;
+  document.getElementById('progress-pct').textContent = Math.round(learned / VOCAB.length * 100) + '%';
+}
+
+function resetAll() {
+  if (confirm('Reset all progress?')) {
+    statuses = {};
+    saveStatuses();
+    renderVocab();
+  }
+}
+
+// Quiz
+let quizWords = [], quizIndex = 0, quizScore = 0;
+
+function startQuiz() {
+  // Use all words or reviewing/unlearned
+  quizWords = [...VOCAB].sort(() => Math.random() - 0.5).slice(0, 10);
+  quizIndex = 0;
+  quizScore = 0;
+  document.getElementById('quiz-panel').classList.add('active');
+  showQuizQuestion();
+}
+
+function closeQuiz() {
+  document.getElementById('quiz-panel').classList.remove('active');
+}
+
+function showQuizQuestion() {
+  if (quizIndex >= quizWords.length) {
+    document.getElementById('quiz-q').textContent = `Quiz complete! 🎉`;
+    document.getElementById('quiz-hint').textContent = `You scored ${quizScore} / ${quizWords.length}`;
+    document.getElementById('quiz-opts').innerHTML = `<button class="btn btn-gold" onclick="startQuiz()" style="grid-column:span 2">Play Again</button>`;
+    document.getElementById('quiz-progress').style.width = '100%';
+    document.getElementById('quiz-score').textContent = `Final score: ${quizScore}/${quizWords.length}`;
+    return;
+  }
+
+  const w = quizWords[quizIndex];
+  document.getElementById('quiz-score').textContent = `Question ${quizIndex + 1} / ${quizWords.length} · Score: ${quizScore}`;
+  document.getElementById('quiz-progress').style.width = `${(quizIndex / quizWords.length) * 100}%`;
+  document.getElementById('quiz-q').textContent = w.g;
+  document.getElementById('quiz-hint').textContent = `What does this mean in English?`;
+
+  // 3 wrong answers
+  let wrong = VOCAB.filter(x => x.g !== w.g).sort(() => Math.random() - 0.5).slice(0, 3);
+  let opts = [w, ...wrong].sort(() => Math.random() - 0.5);
+
+  const optsDiv = document.getElementById('quiz-opts');
+  optsDiv.innerHTML = '';
+  opts.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'quiz-opt';
+    btn.textContent = opt.e;
+    btn.onclick = () => answerQuiz(btn, opt.g === w.g, optsDiv);
+    optsDiv.appendChild(btn);
+  });
+}
+
+function answerQuiz(btn, correct, optsDiv) {
+  Array.from(optsDiv.children).forEach(b => b.onclick = null);
+  if (correct) {
+    btn.classList.add('correct');
+    quizScore++;
+  } else {
+    btn.classList.add('wrong');
+    // Show correct
+    Array.from(optsDiv.children).forEach(b => {
+      if (b !== btn && b.textContent === quizWords[quizIndex].e) b.classList.add('correct');
+    });
+  }
+  quizIndex++;
+  setTimeout(showQuizQuestion, 1200);
+}
+
+// Event listeners
+document.getElementById('search').addEventListener('input', renderVocab);
+document.getElementById('filter-cat').addEventListener('change', renderVocab);
+document.getElementById('filter-status').addEventListener('change', renderVocab);
+
+// Init
+renderVocab();
+</script>
+</body>
+</html>

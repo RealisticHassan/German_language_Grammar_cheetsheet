@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🇩🇪 German Practice Workbook A1–A2</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --ink:#1a1a2e; --paper:#f5f0e8; --cream:#ede8d8; --rule:#d4cdb8;
+  --red:#c0392b; --blue:#1a5276; --green:#1e6b4a; --gold:#b7860b;
+  --accent:#c0392b; --mono:'DM Mono',monospace;
+}
+html { scroll-behavior:smooth; }
+body { font-family:'DM Sans',sans-serif; background:var(--paper); color:var(--ink); min-height:100vh; }
+
+/* HERO */
+.hero {
+  background:var(--ink);
+  padding:56px 40px 48px; text-align:center; position:relative; overflow:hidden;
+}
+.hero::before {
+  content:''; position:absolute; inset:0;
+  background:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,.04) 39px,rgba(255,255,255,.04) 40px),
+             repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,.04) 39px,rgba(255,255,255,.04) 40px);
+}
+.hero-flags { font-size:2.6rem; letter-spacing:12px; margin-bottom:18px; position:relative; }
+.hero h1 {
+  font-family:'Fraunces',serif; font-size:clamp(2.4rem,5vw,4rem); font-weight:900;
+  color:#f5f0e8; line-height:1; margin-bottom:12px; position:relative;
+  text-shadow:3px 3px 0 rgba(192,57,43,.4);
+}
+.hero h1 span { color:#e67e52; }
+.hero-sub { color:rgba(245,240,232,.55); font-size:.95rem; letter-spacing:.06em; position:relative; margin-bottom:28px; }
+.hero-stats { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; position:relative; }
+.hstat {
+  border:1px solid rgba(245,240,232,.2); border-radius:6px;
+  padding:8px 18px; font-size:.82rem; color:rgba(245,240,232,.7); font-weight:500;
+}
+.hstat b { color:#e8c87a; }
+
+/* TOOLBAR */
+.toolbar {
+  position:sticky; top:0; z-index:100; background:var(--ink);
+  border-bottom:3px solid var(--accent);
+  padding:10px 28px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+}
+.srch {
+  flex:1; min-width:180px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.15);
+  border-radius:6px; padding:9px 14px 9px 36px; color:#f5f0e8;
+  font-family:'DM Sans',sans-serif; font-size:.86rem; outline:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='rgba(245,240,232,.4)' stroke-width='2.5'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:11px center;
+  transition:border-color .2s;
+}
+.srch::placeholder { color:rgba(245,240,232,.35); }
+.srch:focus { border-color:rgba(192,57,43,.7); }
+.tbtn {
+  background:transparent; border:1px solid rgba(255,255,255,.2); border-radius:6px;
+  padding:9px 16px; color:rgba(245,240,232,.6); font-family:'DM Sans',sans-serif;
+  font-size:.82rem; font-weight:600; cursor:pointer; transition:all .2s; white-space:nowrap;
+  letter-spacing:.03em;
+}
+.tbtn:hover { border-color:var(--accent); color:#f5f0e8; }
+.tbtn.on { background:var(--accent); border-color:var(--accent); color:#fff; }
+
+/* LAYOUT */
+.layout { display:flex; max-width:1380px; margin:0 auto; }
+
+/* SIDEBAR */
+.sidebar {
+  width:238px; flex-shrink:0; padding:24px 14px;
+  border-right:1px solid var(--rule);
+  position:sticky; top:52px; height:calc(100vh - 52px); overflow-y:auto;
+  background:var(--cream);
+}
+.sidebar::-webkit-scrollbar { width:3px; }
+.sidebar::-webkit-scrollbar-thumb { background:var(--rule); border-radius:2px; }
+.sl {
+  font-size:.64rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
+  color:rgba(26,26,46,.4); padding:0 8px; margin:16px 0 8px;
+}
+.sitem {
+  display:flex; align-items:center; gap:8px; padding:9px 10px; border-radius:6px;
+  cursor:pointer; transition:all .18s; color:rgba(26,26,46,.6);
+  font-size:.83rem; font-weight:500; margin-bottom:2px; border:1px solid transparent;
+  text-decoration:none; background:none; width:100%; text-align:left;
+}
+.sitem:hover { background:rgba(192,57,43,.07); color:var(--ink); }
+.sitem.on { background:rgba(192,57,43,.1); color:var(--accent); border-color:rgba(192,57,43,.25); font-weight:600; }
+.sitem .ic { font-size:1.05rem; flex-shrink:0; }
+.sitem .nm { flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.sitem .ct {
+  font-size:.68rem; background:rgba(26,26,46,.08); padding:2px 7px;
+  border-radius:100px; color:rgba(26,26,46,.4);
+}
+.sitem.on .ct { background:rgba(192,57,43,.15); color:var(--accent); }
+
+/* CONTENT */
+.content { flex:1; padding:32px 36px; min-width:0; }
+
+/* CATEGORY HEADER */
+.cat-hd {
+  display:flex; align-items:flex-start; gap:20px; margin-bottom:24px;
+  background:#fff; border:1px solid var(--rule); border-top:4px solid var(--accent);
+  border-radius:0 0 10px 10px; padding:24px 28px;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);
+}
+.cat-em { font-size:2.8rem; flex-shrink:0; line-height:1; }
+.cat-title { font-family:'Fraunces',serif; font-size:1.7rem; font-weight:700; color:var(--ink); margin-bottom:5px; }
+.cat-mono { font-family:var(--mono); font-size:.8rem; color:var(--accent); font-weight:500; margin-bottom:10px; letter-spacing:.04em; }
+.cat-tip {
+  font-size:.84rem; color:#4a4a6a; line-height:1.65;
+  background:#fffdf7; border:1px solid #e8e0c8; border-left:3px solid var(--gold);
+  border-radius:0 6px 6px 0; padding:9px 14px;
+}
+
+/* PROGRESS */
+.prog-row { display:flex; align-items:center; gap:12px; margin-bottom:18px; }
+.prog-bar { flex:1; height:5px; background:var(--rule); border-radius:3px; overflow:hidden; }
+.prog-fill { height:100%; background:linear-gradient(90deg,var(--green),var(--blue)); border-radius:3px; transition:width .35s ease; }
+.prog-txt { font-family:var(--mono); font-size:.72rem; color:rgba(26,26,46,.45); white-space:nowrap; }
+
+/* SENTENCE CARDS */
+.grid { display:grid; gap:7px; }
+.card {
+  background:#fff; border:1px solid var(--rule); border-radius:8px;
+  padding:13px 16px; display:flex; align-items:center; gap:14px;
+  cursor:pointer; transition:all .18s; border-left:3px solid transparent;
+}
+.card:hover { border-color:var(--rule); border-left-color:var(--accent); box-shadow:0 2px 8px rgba(0,0,0,.07); transform:translateX(2px); }
+.card.open { border-left-color:var(--green); background:#f8fffa; }
+.cnum { font-family:var(--mono); font-size:.7rem; color:rgba(26,26,46,.3); min-width:36px; text-align:right; }
+.cbody { flex:1; }
+.cen { font-size:.9rem; font-weight:500; color:var(--ink); }
+.cde {
+  display:none; font-family:var(--mono); font-size:.87rem; color:var(--green);
+  background:#f0fff6; border:1px solid #c8e6d4; border-radius:5px;
+  padding:6px 10px; margin-top:6px;
+}
+.card.open .cde { display:block; }
+.ctog {
+  width:28px; height:28px; border-radius:6px; background:var(--cream);
+  border:1px solid var(--rule); display:flex; align-items:center; justify-content:center;
+  font-size:.85rem; flex-shrink:0; transition:all .18s; color:rgba(26,26,46,.35);
+}
+.card:hover .ctog { border-color:var(--accent); color:var(--accent); background:rgba(192,57,43,.07); }
+.card.open .ctog { background:rgba(30,107,74,.12); border-color:var(--green); color:var(--green); }
+
+/* FLASHCARD MODE */
+.fc-page { max-width:620px; margin:0 auto; }
+.fc-header { text-align:center; margin-bottom:20px; }
+.fc-header h2 { font-family:'Fraunces',serif; font-size:1.4rem; font-weight:700; margin-bottom:4px; }
+.fc-header p { font-size:.8rem; color:rgba(26,26,46,.45); }
+.fc-outer { perspective:1100px; height:220px; margin-bottom:22px; }
+.fc {
+  width:100%; height:100%; position:relative; transform-style:preserve-3d;
+  transition:transform .6s ease; cursor:pointer;
+}
+.fc.flip { transform:rotateY(180deg); }
+.fc-face {
+  position:absolute; width:100%; height:100%; backface-visibility:hidden;
+  border-radius:12px; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; padding:30px; text-align:center;
+  border:2px solid var(--rule); box-shadow:0 4px 24px rgba(0,0,0,.08);
+}
+.fc-front { background:#fff; }
+.fc-back {
+  background:var(--ink); transform:rotateY(180deg);
+  border-color:rgba(192,57,43,.5);
+}
+.fc-lang { font-size:.65rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; margin-bottom:12px; }
+.fc-front .fc-lang { color:rgba(26,26,46,.35); }
+.fc-back .fc-lang { color:rgba(245,240,232,.35); }
+.fc-txt { font-size:1.4rem; font-weight:600; line-height:1.4; }
+.fc-back .fc-txt { font-family:var(--mono); color:#e8c87a; font-size:1.25rem; }
+.fc-hint { font-size:.72rem; color:rgba(26,26,46,.3); margin-top:12px; }
+.fc-ctrls { display:flex; align-items:center; gap:12px; justify-content:center; margin-bottom:16px; }
+.fc-n { font-family:var(--mono); font-size:.85rem; color:rgba(26,26,46,.45); min-width:88px; text-align:center; }
+.fc-btns { display:flex; gap:10px; justify-content:center; }
+
+/* BUTTONS */
+.btn {
+  background:var(--cream); border:1px solid var(--rule); border-radius:7px;
+  padding:10px 20px; color:var(--ink); font-family:'DM Sans',sans-serif;
+  font-size:.85rem; font-weight:600; cursor:pointer; transition:all .18s;
+}
+.btn:hover { border-color:var(--accent); background:#fff; }
+.btn-primary {
+  background:var(--accent); border:none; border-radius:7px;
+  padding:11px 28px; color:#fff; font-family:'DM Sans',sans-serif;
+  font-size:.9rem; font-weight:700; cursor:pointer; transition:all .2s;
+}
+.btn-primary:hover { background:#a93226; transform:translateY(-1px); box-shadow:0 4px 12px rgba(192,57,43,.3); }
+
+/* QUIZ MODE */
+.quiz-page { max-width:640px; margin:0 auto; }
+.qcard {
+  background:#fff; border:1px solid var(--rule); border-top:4px solid var(--blue);
+  border-radius:0 0 12px 12px; padding:36px; text-align:center;
+  box-shadow:0 4px 20px rgba(0,0,0,.07); animation:fadeup .28s ease;
+}
+@keyframes fadeup { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+.q-meta { font-size:.75rem; color:rgba(26,26,46,.4); font-family:var(--mono); margin-bottom:18px; }
+.q-q { font-size:1.4rem; font-weight:700; line-height:1.4; margin-bottom:26px; color:var(--ink); }
+.q-in {
+  width:100%; background:var(--paper); border:2px solid var(--rule); border-radius:8px;
+  padding:14px 18px; color:var(--ink); font-family:var(--mono); font-size:1rem;
+  outline:none; text-align:center; transition:border-color .2s; margin-bottom:14px;
+}
+.q-in:focus { border-color:var(--blue); background:#fff; }
+.q-in.ok { border-color:var(--green); background:#f5fff8; color:var(--green); }
+.q-in.no { border-color:var(--red); background:#fff8f8; }
+.q-reveal {
+  font-family:var(--mono); font-size:.93rem; color:var(--green);
+  background:#f0fff6; border:1px solid #c8e6d4; border-radius:7px;
+  padding:10px 18px; margin-bottom:18px;
+}
+.q-btns { display:flex; gap:10px; justify-content:center; }
+.score-row { display:flex; gap:14px; justify-content:center; margin-bottom:22px; flex-wrap:wrap; }
+.sc { background:#fff; border:1px solid var(--rule); border-radius:9px; padding:12px 22px; text-align:center; min-width:80px; }
+.sc-n { font-family:'Fraunces',serif; font-size:2rem; font-weight:700; line-height:1; }
+.sc-l { font-size:.65rem; color:rgba(26,26,46,.4); text-transform:uppercase; letter-spacing:.12em; margin-top:3px; }
+.green-n { color:var(--green); }
+.red-n { color:var(--red); }
+.blue-n { color:var(--blue); }
+
+/* RESULT */
+.result-page {
+  background:#fff; border:1px solid var(--rule); border-top:5px solid var(--gold);
+  border-radius:0 0 14px 14px; padding:48px; text-align:center;
+  max-width:500px; margin:0 auto; box-shadow:0 4px 24px rgba(0,0,0,.08);
+}
+.result-emoji { font-size:4rem; display:block; margin-bottom:16px; }
+.result-page h2 { font-family:'Fraunces',serif; font-size:2.2rem; font-weight:900; margin-bottom:8px; }
+.result-page p { color:rgba(26,26,46,.55); margin-bottom:28px; }
+
+/* EMPTY STATE */
+.empty { text-align:center; padding:64px 20px; color:rgba(26,26,46,.4); }
+.empty-icon { font-size:3rem; margin-bottom:12px; display:block; }
+.empty h3 { font-family:'Fraunces',serif; font-size:1.3rem; color:var(--ink); margin-bottom:6px; }
+
+/* MISC */
+.res-count { font-family:var(--mono); font-size:.74rem; color:rgba(26,26,46,.4); margin-bottom:16px; }
+@media(max-width:720px){
+  .sidebar { display:none; }
+  .content { padding:18px; }
+  .cat-hd { flex-direction:column; padding:18px; }
+  .qcard,.fc-page,.quiz-page { max-width:100%; }
+  .qcard { padding:22px; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-flags">🇩🇪 🇦🇹 🇨🇭</div>
+  <h1>German Practice <span>Workbook</span></h1>
+  <p class="hero-sub">A1 → A2 · Structured Grammar · Fully Interactive</p>
+  <div class="hero-stats" id="hero-stats"></div>
+</header>
+
+<div class="toolbar">
+  <input class="srch" id="srch" placeholder="Search English or German…" oninput="doSearch()">
+  <button class="tbtn on" id="m-study" onclick="setMode('study')">📖 Study</button>
+  <button class="tbtn" id="m-flash" onclick="setMode('flash')">🃏 Flashcards</button>
+  <button class="tbtn" id="m-quiz"  onclick="setMode('quiz')">✏️ Quiz</button>
+  <button class="tbtn" onclick="revealAll()">👁 Show All</button>
+  <button class="tbtn" onclick="hideAll()">🔒 Hide</button>
+</div>
+
+<div class="layout">
+  <nav class="sidebar" id="sidebar"></nav>
+  <main class="content" id="content"></main>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════
+// ALL 1000 SENTENCES
+// ═══════════════════════════════════════════════════════════
+const CATS = [
+  { key:"basic", icon:"📝", title:"Basic Sentences", subtitle:"Subject + Verb + Object",
+    tip:"In German the verb is ALWAYS in position 2 in a normal sentence.",
+    data:[
+      ["I eat bread.","Ich esse Brot."],["She drinks water.","Sie trinkt Wasser."],
+      ["He reads a book.","Er liest ein Buch."],["We buy milk.","Wir kaufen Milch."],
+      ["They play football.","Sie spielen Fußball."],["I drink coffee.","Ich trinke Kaffee."],
+      ["She eats an apple.","Sie isst einen Apfel."],["He writes a letter.","Er schreibt einen Brief."],
+      ["We learn German.","Wir lernen Deutsch."],["They work in an office.","Sie arbeiten in einem Büro."],
+      ["I have a dog.","Ich habe einen Hund."],["She sees a cat.","Sie sieht eine Katze."],
+      ["He buys a car.","Er kauft ein Auto."],["We make dinner.","Wir machen Abendessen."],
+      ["They watch TV.","Sie sehen fern."],["I open the window.","Ich öffne das Fenster."],
+      ["She closes the door.","Sie schließt die Tür."],["He finds the key.","Er findet den Schlüssel."],
+      ["We cook soup.","Wir kochen Suppe."],["They sing a song.","Sie singen ein Lied."],
+      ["I wear a jacket.","Ich trage eine Jacke."],["She carries a bag.","Sie trägt eine Tasche."],
+      ["He drives a bus.","Er fährt einen Bus."],["We visit the museum.","Wir besuchen das Museum."],
+      ["They clean the house.","Sie putzen das Haus."],["I answer the phone.","Ich beantworte das Telefon."],
+      ["She paints a picture.","Sie malt ein Bild."],["He kicks the ball.","Er tritt den Ball."],
+      ["We walk to school.","Wir gehen zur Schule."],["They love animals.","Sie lieben Tiere."],
+      ["I need help.","Ich brauche Hilfe."],["She knows the answer.","Sie kennt die Antwort."],
+      ["He plays the piano.","Er spielt Klavier."],["We eat vegetables.","Wir essen Gemüse."],
+      ["They drink juice.","Sie trinken Saft."],["I take the train.","Ich nehme den Zug."],
+      ["She reads a newspaper.","Sie liest eine Zeitung."],["He wears glasses.","Er trägt eine Brille."],
+      ["We have a cat.","Wir haben eine Katze."],["They use the computer.","Sie benutzen den Computer."],
+      ["I buy bread at the bakery.","Ich kaufe Brot beim Bäcker."],["She cooks pasta.","Sie kocht Nudeln."],
+      ["He drinks tea.","Er trinkt Tee."],["We watch a film.","Wir schauen einen Film."],
+      ["They play a game.","Sie spielen ein Spiel."],["I write a word.","Ich schreibe ein Wort."],
+      ["She draws a house.","Sie zeichnet ein Haus."],["He eats rice.","Er isst Reis."],
+      ["We listen to music.","Wir hören Musik."],["They speak English.","Sie sprechen Englisch."],
+      ["I like chocolate.","Ich mag Schokolade."],["She loves her family.","Sie liebt ihre Familie."],
+      ["He helps his friend.","Er hilft seinem Freund."],["We visit our grandma.","Wir besuchen unsere Oma."],
+      ["They take the bus.","Sie nehmen den Bus."],["I eat a sandwich.","Ich esse ein Sandwich."],
+      ["She drinks orange juice.","Sie trinkt Orangensaft."],["He opens the box.","Er öffnet die Box."],
+      ["We find the book.","Wir finden das Buch."],["They start the car.","Sie starten das Auto."],
+      ["I wash the dishes.","Ich wasche das Geschirr."],["She sets the table.","Sie deckt den Tisch."],
+      ["He mops the floor.","Er wischt den Boden."],["We water the plants.","Wir gießen die Pflanzen."],
+      ["They walk the dog.","Sie gehen mit dem Hund spazieren."],["I call my mother.","Ich rufe meine Mutter an."],
+      ["He reads the menu.","Er liest die Speisekarte."],["We order pizza.","Wir bestellen Pizza."],
+      ["They pay the bill.","Sie bezahlen die Rechnung."],["I eat a banana.","Ich esse eine Banane."],
+      ["She wears a dress.","Sie trägt ein Kleid."],["He fixes the bike.","Er repariert das Fahrrad."],
+      ["We plant flowers.","Wir pflanzen Blumen."],["They build a house.","Sie bauen ein Haus."],
+      ["I drink a glass of milk.","Ich trinke ein Glas Milch."],["She eats yogurt.","Sie isst Joghurt."],
+      ["He wears a hat.","Er trägt einen Hut."],["We clean the kitchen.","Wir putzen die Küche."],
+      ["They bake a cake.","Sie backen einen Kuchen."],["I take a shower.","Ich nehme eine Dusche."],
+      ["She brushes her teeth.","Sie putzt ihre Zähne."],["He combs his hair.","Er kämmt sein Haar."],
+      ["We pack the bags.","Wir packen die Koffer."],["They book a hotel.","Sie buchen ein Hotel."],
+      ["I catch the train.","Ich erwische den Zug."],["She misses the bus.","Sie verpasst den Bus."],
+      ["He parks the car.","Er parkt das Auto."],["We visit the doctor.","Wir besuchen den Arzt."],
+      ["They buy a gift.","Sie kaufen ein Geschenk."],["I wrap the present.","Ich verpacke das Geschenk."],
+      ["She sends an email.","Sie schickt eine E-Mail."],["He prints the document.","Er druckt das Dokument."],
+      ["We save the file.","Wir speichern die Datei."],["They read the news.","Sie lesen die Nachrichten."],
+      ["I make a coffee.","Ich mache einen Kaffee."],["She pours the wine.","Sie gießt den Wein ein."],
+      ["He slices the bread.","Er schneidet das Brot."],["We carry the boxes.","Wir tragen die Kisten."],
+      ["They clean the car.","Sie putzen das Auto."]
+    ]
+  },
+  { key:"present", icon:"🔄", title:"Present Tense", subtitle:"E – ST – T – EN – T – EN",
+    tip:"Regular verbs: ich -e · du -st · er/sie/es -t · wir -en · ihr -t · sie/Sie -en",
+    data:[
+      ["I make breakfast.","Ich mache Frühstück."],["You make a mistake.","Du machst einen Fehler."],
+      ["He makes a plan.","Er macht einen Plan."],["We make music.","Wir machen Musik."],
+      ["You (pl) make noise.","Ihr macht Lärm."],["They make a party.","Sie machen eine Party."],
+      ["I go to school.","Ich gehe zur Schule."],["You go home.","Du gehst nach Hause."],
+      ["She goes shopping.","Sie geht einkaufen."],["We go for a walk.","Wir gehen spazieren."],
+      ["You (pl) go to the park.","Ihr geht in den Park."],["They go to the cinema.","Sie gehen ins Kino."],
+      ["I come from Germany.","Ich komme aus Deutschland."],["You come late.","Du kommst spät."],
+      ["He comes on time.","Er kommt pünktlich."],["We come together.","Wir kommen zusammen."],
+      ["You (pl) come tomorrow.","Ihr kommt morgen."],["They come by train.","Sie kommen mit dem Zug."],
+      ["I learn new words.","Ich lerne neue Wörter."],["You learn Spanish.","Du lernst Spanisch."],
+      ["She learns quickly.","Sie lernt schnell."],["We learn together.","Wir lernen zusammen."],
+      ["You (pl) learn at home.","Ihr lernt zu Hause."],["They learn from books.","Sie lernen aus Büchern."],
+      ["I read a novel.","Ich lese einen Roman."],["You read the newspaper.","Du liest die Zeitung."],
+      ["He reads a magazine.","Er liest ein Magazin."],["We read every day.","Wir lesen jeden Tag."],
+      ["You (pl) read stories.","Ihr lest Geschichten."],["They read in the library.","Sie lesen in der Bibliothek."],
+      ["I write an email.","Ich schreibe eine E-Mail."],["You write a list.","Du schreibst eine Liste."],
+      ["She writes a diary.","Sie schreibt ein Tagebuch."],["We write in German.","Wir schreiben auf Deutsch."],
+      ["You (pl) write sentences.","Ihr schreibt Sätze."],["They write songs.","Sie schreiben Lieder."],
+      ["I play chess.","Ich spiele Schach."],["You play the guitar.","Du spielst Gitarre."],
+      ["He plays football.","Er spielt Fußball."],["We play cards.","Wir spielen Karten."],
+      ["You (pl) play volleyball.","Ihr spielt Volleyball."],["They play video games.","Sie spielen Videospiele."],
+      ["I work at the hospital.","Ich arbeite im Krankenhaus."],["You work from home.","Du arbeitest von zu Hause."],
+      ["She works at the school.","Sie arbeitet in der Schule."],["We work every day.","Wir arbeiten jeden Tag."],
+      ["You (pl) work hard.","Ihr arbeitet hart."],["They work together.","Sie arbeiten zusammen."],
+      ["I drink tea in the evening.","Ich trinke abends Tee."],["You drink coffee in the morning.","Du trinkst morgens Kaffee."],
+      ["He drinks water after sport.","Er trinkt nach dem Sport Wasser."],["We drink juice at breakfast.","Wir trinken beim Frühstück Saft."],
+      ["You (pl) drink beer.","Ihr trinkt Bier."],["They drink wine.","Sie trinken Wein."],
+      ["I eat an egg for breakfast.","Ich esse zum Frühstück ein Ei."],["You eat a sandwich.","Du isst ein Sandwich."],
+      ["She eats a salad.","Sie isst einen Salat."],["We eat dinner at 7.","Wir essen um 7 Uhr Abendessen."],
+      ["You (pl) eat pizza.","Ihr esst Pizza."],["They eat at a restaurant.","Sie essen in einem Restaurant."],
+      ["I go to the gym.","Ich gehe ins Fitnessstudio."],["You go by bike.","Du gehst mit dem Fahrrad."],
+      ["She goes to work early.","Sie geht früh zur Arbeit."],["We go to the beach.","Wir gehen an den Strand."],
+      ["You (pl) go home at 5.","Ihr geht um 5 Uhr nach Hause."],["They go to a concert.","Sie gehen zu einem Konzert."],
+      ["I come to the party.","Ich komme zur Party."],["You come to the meeting.","Du kommst zum Meeting."],
+      ["He comes from Austria.","Er kommt aus Österreich."],["We come by car.","Wir kommen mit dem Auto."],
+      ["You (pl) come every Monday.","Ihr kommt jeden Montag."],["They come from Switzerland.","Sie kommen aus der Schweiz."],
+      ["I learn grammar rules.","Ich lerne Grammatikregeln."],["You learn vocabulary.","Du lernst Vokabeln."],
+      ["She learns piano.","Sie lernt Klavier."],["We learn from mistakes.","Wir lernen aus Fehlern."],
+      ["You (pl) learn French.","Ihr lernt Französisch."],["They learn cooking.","Sie lernen Kochen."],
+      ["I read before sleeping.","Ich lese vor dem Schlafen."],["You read a comic book.","Du liest ein Comicbuch."],
+      ["He reads a recipe.","Er liest ein Rezept."],["We read the instructions.","Wir lesen die Anleitung."],
+      ["You (pl) read poems.","Ihr lest Gedichte."],["They read aloud.","Sie lesen laut."],
+      ["I write my name.","Ich schreibe meinen Namen."],["You write a postcard.","Du schreibst eine Postkarte."],
+      ["She writes neatly.","Sie schreibt ordentlich."],["We write in pencil.","Wir schreiben mit Bleistift."],
+      ["You (pl) write reports.","Ihr schreibt Berichte."],["They write stories.","Sie schreiben Geschichten."],
+      ["I play basketball.","Ich spiele Basketball."],["You play tennis.","Du spielst Tennis."],
+      ["He plays drums.","Er spielt Schlagzeug."],["We play in the park.","Wir spielen im Park."],
+      ["You (pl) play board games.","Ihr spielt Brettspiele."],["They play in a band.","Sie spielen in einer Band."],
+      ["I work in a bank.","Ich arbeite in einer Bank."],["You work at night.","Du arbeitest nachts."],
+      ["She works as a nurse.","Sie arbeitet als Krankenschwester."],["We work well together.","Wir arbeiten gut zusammen."],
+      ["You (pl) work on the project.","Ihr arbeitet am Projekt."],["They work on weekdays.","Sie arbeiten unter der Woche."],
+      ["I drink hot chocolate.","Ich trinke heiße Schokolade."],["You drink sparkling water.","Du trinkst Sprudelwasser."],
+      ["He drinks lemonade.","Er trinkt Limonade."],["We drink herbal tea.","Wir trinken Kräutertee."],
+      ["You (pl) drink apple juice.","Ihr trinkt Apfelsaft."],["They drink milk.","Sie trinken Milch."]
+    ]
+  },
+  { key:"sein", icon:"⭐", title:"Verb: Sein (To Be)", subtitle:"bin – bist – ist – sind – seid – sind",
+    tip:"SEIN is irregular! ich bin · du bist · er/sie/es ist · wir sind · ihr seid · sie/Sie sind",
+    data:[
+      ["I am a student.","Ich bin ein Student."],["You are my friend.","Du bist mein Freund."],
+      ["He is a doctor.","Er ist ein Arzt."],["We are German.","Wir sind Deutsch."],
+      ["You (pl) are students.","Ihr seid Studenten."],["They are teachers.","Sie sind Lehrer."],
+      ["I am from Berlin.","Ich bin aus Berlin."],["You are tired.","Du bist müde."],
+      ["She is beautiful.","Sie ist schön."],["We are happy.","Wir sind glücklich."],
+      ["You (pl) are late.","Ihr seid spät."],["They are ready.","Sie sind bereit."],
+      ["I am at home.","Ich bin zu Hause."],["You are at work.","Du bist auf der Arbeit."],
+      ["He is in school.","Er ist in der Schule."],["We are in Germany.","Wir sind in Deutschland."],
+      ["You (pl) are in the park.","Ihr seid im Park."],["They are in the city.","Sie sind in der Stadt."],
+      ["I am young.","Ich bin jung."],["You are tall.","Du bist groß."],
+      ["She is small.","Sie ist klein."],["We are old.","Wir sind alt."],
+      ["You (pl) are strong.","Ihr seid stark."],["They are clever.","Sie sind klug."],
+      ["I am hungry.","Ich bin hungrig."],["You are thirsty.","Du bist durstig."],
+      ["He is sick.","Er ist krank."],["We are healthy.","Wir sind gesund."],
+      ["You (pl) are busy.","Ihr seid beschäftigt."],["They are free.","Sie sind frei."],
+      ["I am a nurse.","Ich bin eine Krankenschwester."],["You are a policeman.","Du bist ein Polizist."],
+      ["She is a cook.","Sie ist eine Köchin."],["We are colleagues.","Wir sind Kollegen."],
+      ["You (pl) are neighbors.","Ihr seid Nachbarn."],["They are brothers.","Sie sind Brüder."],
+      ["I am 25 years old.","Ich bin 25 Jahre alt."],["You are friendly.","Du bist freundlich."],
+      ["He is smart.","Er ist schlau."],["We are serious.","Wir sind ernst."],
+      ["You (pl) are funny.","Ihr seid lustig."],["They are quiet.","Sie sind ruhig."],
+      ["I am Austrian.","Ich bin Österreicher."],["You are Swiss.","Du bist Schweizer."],
+      ["She is Italian.","Sie ist Italienerin."],["We are European.","Wir sind Europäer."],
+      ["The table is big.","Der Tisch ist groß."],["The chair is small.","Der Stuhl ist klein."],
+      ["The house is red.","Das Haus ist rot."],["The car is blue.","Das Auto ist blau."],
+      ["The cat is gray.","Die Katze ist grau."],["The book is thick.","Das Buch ist dick."],
+      ["The soup is hot.","Die Suppe ist heiß."],["The water is cold.","Das Wasser ist kalt."],
+      ["The coffee is strong.","Der Kaffee ist stark."],["The cake is sweet.","Der Kuchen ist süß."],
+      ["Today is Monday.","Heute ist Montag."],["The weather is nice.","Das Wetter ist schön."],
+      ["The film is boring.","Der Film ist langweilig."],["The music is loud.","Die Musik ist laut."],
+      ["The food is delicious.","Das Essen ist lecker."],["The city is big.","Die Stadt ist groß."],
+      ["The park is green.","Der Park ist grün."],["The sky is blue.","Der Himmel ist blau."],
+      ["The snow is white.","Der Schnee ist weiß."],["The night is dark.","Die Nacht ist dunkel."],
+      ["I am not tired.","Ich bin nicht müde."],["You are not alone.","Du bist nicht allein."],
+      ["He is not here.","Er ist nicht hier."],["We are not ready.","Wir sind nicht bereit."],
+      ["You (pl) are not late.","Ihr seid nicht spät."],["They are not happy.","Sie sind nicht glücklich."],
+      ["She is a good friend.","Sie ist eine gute Freundin."],["He is a bad driver.","Er ist ein schlechter Fahrer."],
+      ["The test is easy.","Der Test ist einfach."],["The homework is difficult.","Die Hausaufgaben sind schwierig."]
+    ]
+  },
+  { key:"haben", icon:"🤝", title:"Verb: Haben (To Have)", subtitle:"habe – hast – hat – haben – habt – haben",
+    tip:"HABEN is irregular! ich habe · du hast · er/sie/es hat · wir haben · ihr habt · sie/Sie haben",
+    data:[
+      ["I have a dog.","Ich habe einen Hund."],["You have a cat.","Du hast eine Katze."],
+      ["He has a car.","Er hat ein Auto."],["We have a house.","Wir haben ein Haus."],
+      ["You (pl) have a garden.","Ihr habt einen Garten."],["They have children.","Sie haben Kinder."],
+      ["I have time.","Ich habe Zeit."],["You have money.","Du hast Geld."],
+      ["She has a question.","Sie hat eine Frage."],["We have a problem.","Wir haben ein Problem."],
+      ["You (pl) have homework.","Ihr habt Hausaufgaben."],["They have a meeting.","Sie haben ein Meeting."],
+      ["I have hunger.","Ich habe Hunger."],["You have thirst.","Du hast Durst."],
+      ["He has a headache.","Er hat Kopfschmerzen."],["We have an appointment.","Wir haben einen Termin."],
+      ["You (pl) have a test.","Ihr habt einen Test."],["They have a party.","Sie haben eine Party."],
+      ["I have blue eyes.","Ich habe blaue Augen."],["You have brown hair.","Du hast braunes Haar."],
+      ["She has a sister.","Sie hat eine Schwester."],["We have two cats.","Wir haben zwei Katzen."],
+      ["You (pl) have a TV.","Ihr habt einen Fernseher."],["They have a big family.","Sie haben eine große Familie."],
+      ["I have a red jacket.","Ich habe eine rote Jacke."],["You have a new phone.","Du hast ein neues Handy."],
+      ["He has a good job.","Er hat einen guten Job."],["We have fresh bread.","Wir haben frisches Brot."],
+      ["You (pl) have tickets.","Ihr habt Tickets."],["They have keys.","Sie haben Schlüssel."],
+      ["I have no time today.","Ich habe heute keine Zeit."],["You have a fever.","Du hast Fieber."],
+      ["She has an idea.","Sie hat eine Idee."],["We have soup for lunch.","Wir haben Suppe zum Mittagessen."],
+      ["They have a reservation.","Sie haben eine Reservierung."],["I have a birthday in June.","Ich habe im Juni Geburtstag."],
+      ["You have a beautiful voice.","Du hast eine schöne Stimme."],["He has a black backpack.","Er hat einen schwarzen Rucksack."],
+      ["We have three rooms.","Wir haben drei Zimmer."],["You (pl) have a bicycle.","Ihr habt ein Fahrrad."],
+      ["They have no umbrella.","Sie haben keinen Regenschirm."],["I have a plan.","Ich habe einen Plan."],
+      ["You have patience.","Du hast Geduld."],["She has courage.","Sie hat Mut."],
+      ["We have luck.","Wir haben Glück."],["You (pl) have experience.","Ihr habt Erfahrung."],
+      ["They have strength.","Sie haben Kraft."],["I have bread and butter.","Ich habe Brot und Butter."],
+      ["You have salt and pepper.","Du hast Salz und Pfeffer."],["He has a fork and knife.","Er hat eine Gabel und ein Messer."],
+      ["We have cups and plates.","Wir haben Tassen und Teller."],["They have paper and pens.","Sie haben Papier und Stifte."],
+      ["I have a warm coat.","Ich habe einen warmen Mantel."],["You have white shoes.","Du hast weiße Schuhe."],
+      ["She has a long skirt.","Sie hat einen langen Rock."],["We have cotton shirts.","Wir haben Baumwollhemden."],
+      ["You (pl) have wool hats.","Ihr habt Wollmützen."],["They have leather bags.","Sie haben Ledertaschen."],
+      ["I have a small apartment.","Ich habe eine kleine Wohnung."],["You have a large kitchen.","Du hast eine große Küche."],
+      ["He has a comfortable sofa.","Er hat ein bequemes Sofa."],["We have a balcony.","Wir haben einen Balkon."],
+      ["You (pl) have a garage.","Ihr habt eine Garage."],["They have a swimming pool.","Sie haben ein Schwimmbecken."],
+      ["I have an appointment tomorrow.","Ich habe morgen einen Termin."],["You have a cold.","Du hast eine Erkältung."],
+      ["She has a toothache.","Sie hat Zahnschmerzen."],["We have a long journey.","Wir haben eine lange Reise."],
+      ["You (pl) have enough food.","Ihr habt genug Essen."],["They have good weather.","Sie haben gutes Wetter."],
+      ["He has three brothers.","Er hat drei Brüder."],["We have a meeting at 10.","Wir haben um 10 Uhr ein Meeting."],
+      ["You (pl) have English class.","Ihr habt Englischunterricht."],["They have homework every day.","Sie haben jeden Tag Hausaufgaben."],
+      ["I have a library card.","Ich habe einen Bibliotheksausweis."],["You have a travel pass.","Du hast eine Fahrkarte."],
+      ["She has a doctor's appointment.","Sie hat einen Arzttermin."],["We have a test on Friday.","Wir haben am Freitag einen Test."]
+    ]
+  },
+  { key:"modal", icon:"🎯", title:"Modal Verbs", subtitle:"können – müssen – wollen – sollen – dürfen",
+    tip:"Modal verb in position 2, main verb (infinitive) goes to the END: Ich kann Deutsch sprechen.",
+    data:[
+      ["I can speak German.","Ich kann Deutsch sprechen."],["You can swim.","Du kannst schwimmen."],
+      ["He can drive.","Er kann fahren."],["We can help.","Wir können helfen."],
+      ["You (pl) can come.","Ihr könnt kommen."],["They can cook.","Sie können kochen."],
+      ["I must go now.","Ich muss jetzt gehen."],["You must study.","Du musst lernen."],
+      ["She must work.","Sie muss arbeiten."],["We must eat.","Wir müssen essen."],
+      ["You (pl) must be quiet.","Ihr müsst ruhig sein."],["They must leave.","Sie müssen gehen."],
+      ["I want to travel.","Ich will reisen."],["You want to sleep.","Du willst schlafen."],
+      ["He wants to buy a car.","Er will ein Auto kaufen."],["We want to learn.","Wir wollen lernen."],
+      ["You (pl) want to play.","Ihr wollt spielen."],["They want to dance.","Sie wollen tanzen."],
+      ["I should call my mom.","Ich soll meine Mutter anrufen."],["You should rest.","Du sollst dich ausruhen."],
+      ["She should eat breakfast.","Sie soll Frühstück essen."],["We should study more.","Wir sollen mehr lernen."],
+      ["You (pl) should be on time.","Ihr sollt pünktlich sein."],["They should drink water.","Sie sollen Wasser trinken."],
+      ["I may sit here.","Ich darf hier sitzen."],["You may enter.","Du darfst eintreten."],
+      ["He may use the computer.","Er darf den Computer benutzen."],["We may go now.","Wir dürfen jetzt gehen."],
+      ["You (pl) may speak.","Ihr dürft sprechen."],["They may take a break.","Sie dürfen eine Pause machen."],
+      ["I can read fast.","Ich kann schnell lesen."],["You can write well.","Du kannst gut schreiben."],
+      ["She can sing beautifully.","Sie kann schön singen."],["We can start now.","Wir können jetzt anfangen."],
+      ["You (pl) can use the phone.","Ihr könnt das Telefon benutzen."],["They can play football.","Sie können Fußball spielen."],
+      ["I must wake up early.","Ich muss früh aufwachen."],["You must drink water.","Du musst Wasser trinken."],
+      ["He must finish the work.","Er muss die Arbeit beenden."],["We must buy groceries.","Wir müssen Lebensmittel kaufen."],
+      ["You (pl) must clean up.","Ihr müsst aufräumen."],["They must pay the bill.","Sie müssen die Rechnung bezahlen."],
+      ["I want to eat pizza.","Ich will Pizza essen."],["You want to drink coffee.","Du willst Kaffee trinken."],
+      ["She wants to visit Berlin.","Sie will Berlin besuchen."],["We want to see a film.","Wir wollen einen Film sehen."],
+      ["You (pl) want to play tennis.","Ihr wollt Tennis spielen."],["They want to go swimming.","Sie wollen schwimmen gehen."],
+      ["I should wear a jacket.","Ich soll eine Jacke tragen."],["You should sleep early.","Du sollst früh schlafen."],
+      ["He should visit the doctor.","Er soll den Arzt besuchen."],["We should save money.","Wir sollen Geld sparen."],
+      ["You (pl) should be careful.","Ihr sollt vorsichtig sein."],["They should wait here.","Sie sollen hier warten."],
+      ["I may not smoke here.","Ich darf hier nicht rauchen."],["You may park here.","Du darfst hier parken."],
+      ["She may not go outside.","Sie darf nicht nach draußen gehen."],["We may use the kitchen.","Wir dürfen die Küche benutzen."],
+      ["You (pl) may not shout.","Ihr dürft nicht schreien."],["They may open the window.","Sie dürfen das Fenster öffnen."],
+      ["I can play the guitar.","Ich kann Gitarre spielen."],["You can speak French.","Du kannst Französisch sprechen."],
+      ["He can fix the bike.","Er kann das Fahrrad reparieren."],["We can walk to the station.","Wir können zum Bahnhof laufen."],
+      ["Can you help me?","Kannst du mir helfen?"],["Must we wait?","Müssen wir warten?"],
+      ["Do you want to go?","Willst du gehen?"],["Should he come too?","Soll er auch kommen?"],
+      ["May I open the door?","Darf ich die Tür öffnen?"],["Can she cook?","Kann sie kochen?"],
+      ["I can count to ten.","Ich kann bis zehn zählen."],["She wants to learn piano.","Sie will Klavier lernen."],
+      ["We should help each other.","Wir sollen uns gegenseitig helfen."],["They can understand English.","Sie können Englisch verstehen."],
+      ["I must finish my homework.","Ich muss meine Hausaufgaben beenden."],["You want to eat something.","Du willst etwas essen."],
+      ["He should go to bed early.","Er soll früh ins Bett gehen."],["We can meet tomorrow.","Wir können uns morgen treffen."],
+      ["You (pl) must sign the form.","Ihr müsst das Formular unterschreiben."],["They want to visit their family.","Sie wollen ihre Familie besuchen."],
+      ["I cannot come today.","Ich kann heute nicht kommen."],["You should drink more water.","Du sollst mehr Wasser trinken."],
+      ["She can ride a bicycle.","Sie kann Fahrrad fahren."],["We want to eat out tonight.","Wir wollen heute Abend essen gehen."],
+      ["You (pl) may take a photo.","Ihr dürft ein Foto machen."],["They must book the tickets.","Sie müssen die Tickets buchen."],
+      ["I should not eat so much.","Ich soll nicht so viel essen."],["You should call your friend.","Du sollst deinen Freund anrufen."],
+      ["She should practice every day.","Sie soll jeden Tag üben."],["We should speak more German.","Wir sollen mehr Deutsch sprechen."],
+      ["You (pl) should come earlier.","Ihr sollt früher kommen."],["They should finish the project.","Sie sollen das Projekt beenden."],
+      ["I may not enter without a ticket.","Ich darf nicht ohne Ticket eintreten."],["You may sit down.","Du darfst dich setzen."],
+      ["He may use the bathroom.","Er darf die Toilette benutzen."],["We may speak now.","Wir dürfen jetzt sprechen."],
+      ["You (pl) may ask questions.","Ihr dürft Fragen stellen."],["They may leave early.","Sie dürfen früh gehen."]
+    ]
+  },
+  { key:"numbers", icon:"🔢", title:"Numbers & Counting", subtitle:"1–100 in real sentences",
+    tip:"Numbers: ein/1, zwei/2, drei/3, vier/4, fünf/5, sechs/6, sieben/7, acht/8, neun/9, zehn/10. Teens add -zehn. Tens: zwanzig, dreißig, vierzig…",
+    data:[
+      ["The week has seven days.","Die Woche hat sieben Tage."],["The year has twelve months.","Das Jahr hat zwölf Monate."],
+      ["I have two brothers.","Ich habe zwei Brüder."],["She is ten years old.","Sie ist zehn Jahre alt."],
+      ["He buys three apples.","Er kauft drei Äpfel."],["We have five cats.","Wir haben fünf Katzen."],
+      ["The class has twenty students.","Die Klasse hat zwanzig Schüler."],["I eat one sandwich.","Ich esse ein Sandwich."],
+      ["The table has four legs.","Der Tisch hat vier Beine."],["The book has one hundred pages.","Das Buch hat hundert Seiten."],
+      ["I am twenty years old.","Ich bin zwanzig Jahre alt."],["She is thirty-five years old.","Sie ist fünfunddreißig Jahre alt."],
+      ["He is sixteen years old.","Er ist sechzehn Jahre alt."],["We are forty years old.","Wir sind vierzig Jahre alt."],
+      ["They are sixty years old.","Sie sind sechzig Jahre alt."],["It is one o'clock.","Es ist ein Uhr."],
+      ["It is three o'clock.","Es ist drei Uhr."],["It is half past five.","Es ist halb sechs."],
+      ["It is quarter past two.","Es ist Viertel nach zwei."],["School starts at eight.","Die Schule beginnt um acht Uhr."],
+      ["I have two hands.","Ich habe zwei Hände."],["The cat has four paws.","Die Katze hat vier Pfoten."],
+      ["A spider has eight legs.","Eine Spinne hat acht Beine."],["We have ten fingers.","Wir haben zehn Finger."],
+      ["There are thirty days in September.","Im September gibt es dreißig Tage."],["I need six eggs.","Ich brauche sechs Eier."],
+      ["The recipe needs two liters.","Das Rezept braucht zwei Liter."],["I pay five euros.","Ich zahle fünf Euro."],
+      ["The bread costs two euros.","Das Brot kostet zwei Euro."],["Coffee costs three euros.","Kaffee kostet drei Euro."],
+      ["I live on the third floor.","Ich wohne im dritten Stock."],["He lives on the first floor.","Er wohnt im ersten Stock."],
+      ["She lives on the fifth floor.","Sie wohnt im fünften Stock."],["One plus one is two.","Eins plus eins ist zwei."],
+      ["Five minus three is two.","Fünf minus drei ist zwei."],["Two times four is eight.","Zwei mal vier ist acht."],
+      ["Ten divided by two is five.","Zehn geteilt durch zwei ist fünf."],["Three plus seven is ten.","Drei plus sieben ist zehn."],
+      ["There are fifty weeks in a year.","Es gibt fünfzig Wochen in einem Jahr."],["A minute has sixty seconds.","Eine Minute hat sechzig Sekunden."],
+      ["An hour has sixty minutes.","Eine Stunde hat sechzig Minuten."],["A day has twenty-four hours.","Ein Tag hat vierundzwanzig Stunden."],
+      ["I need nine books.","Ich brauche neun Bücher."],["She has seven dresses.","Sie hat sieben Kleider."],
+      ["He drinks four glasses of water.","Er trinkt vier Gläser Wasser."],["We order two pizzas.","Wir bestellen zwei Pizzen."],
+      ["They have three children.","Sie haben drei Kinder."],["I count to twenty.","Ich zähle bis zwanzig."],
+      ["The park is two kilometers away.","Der Park ist zwei Kilometer entfernt."],["I need forty minutes.","Ich brauche vierzig Minuten."],
+      ["The flight takes two hours.","Der Flug dauert zwei Stunden."],["I wake up at seven.","Ich wache um sieben Uhr auf."],
+      ["Lunch is at twelve.","Das Mittagessen ist um zwölf Uhr."],["Dinner is at seven.","Das Abendessen ist um sieben Uhr."],
+      ["I buy twelve roses.","Ich kaufe zwölf Rosen."],["There are eight planets.","Es gibt acht Planeten."],
+      ["A week has seven days.","Eine Woche hat sieben Tage."],["The month has thirty-one days.","Der Monat hat einunddreißig Tage."],
+      ["I am in group number three.","Ich bin in Gruppe Nummer drei."],["The temperature is twenty degrees.","Die Temperatur ist zwanzig Grad."],
+      ["I need two tickets.","Ich brauche zwei Tickets."],["The price is fifteen euros.","Der Preis ist fünfzehn Euro."],
+      ["I eat breakfast at seven thirty.","Ich esse um halb acht Frühstück."],["We meet at half past three.","Wir treffen uns um halb vier."],
+      ["The shop closes at six.","Das Geschäft schließt um sechs Uhr."],["The bank opens at nine.","Die Bank öffnet um neun Uhr."],
+      ["I need fifty grams of butter.","Ich brauche fünfzig Gramm Butter."],["He has eighty euros.","Er hat achtzig Euro."],
+      ["She is ninety years old.","Sie ist neunzig Jahre alt."],["We need one hundred plates.","Wir brauchen hundert Teller."],
+      ["There are eleven students today.","Heute gibt es elf Schüler."],["I have thirteen books.","Ich habe dreizehn Bücher."],
+      ["The box weighs two kilos.","Die Kiste wiegt zwei Kilo."],["She is nineteen years old.","Sie ist neunzehn Jahre alt."],
+      ["The train is four minutes late.","Der Zug hat vier Minuten Verspätung."],["I drink two cups of tea.","Ich trinke zwei Tassen Tee."]
+    ]
+  },
+  { key:"wfragen", icon:"❓", title:"W-Questions", subtitle:"wer – was – wann – wo – warum – wie",
+    tip:"W-questions: question word + VERB + subject. Example: Wo wohnst du? The verb comes right after the W-word!",
+    data:[
+      ["Where is the book?","Wo ist das Buch?"],["Who is that?","Wer ist das?"],
+      ["What do you eat?","Was isst du?"],["When does school start?","Wann beginnt die Schule?"],
+      ["Why are you tired?","Warum bist du müde?"],["How are you?","Wie geht es dir?"],
+      ["Where do you live?","Wo wohnst du?"],["Who is your teacher?","Wer ist dein Lehrer?"],
+      ["What do you drink?","Was trinkst du?"],["When does the bus come?","Wann kommt der Bus?"],
+      ["Why do you laugh?","Warum lachst du?"],["How old are you?","Wie alt bist du?"],
+      ["Where is the supermarket?","Wo ist der Supermarkt?"],["Who speaks German?","Wer spricht Deutsch?"],
+      ["What is your name?","Wie heißt du?"],["When do you sleep?","Wann schläfst du?"],
+      ["Why do you study German?","Warum lernst du Deutsch?"],["How do you go to work?","Wie fährst du zur Arbeit?"],
+      ["Where are my keys?","Wo sind meine Schlüssel?"],["Who lives here?","Wer wohnt hier?"],
+      ["What is on the table?","Was ist auf dem Tisch?"],["When is the exam?","Wann ist die Prüfung?"],
+      ["Why is the door closed?","Warum ist die Tür geschlossen?"],["How much does it cost?","Wie viel kostet es?"],
+      ["Where do you work?","Wo arbeitest du?"],["Who calls you?","Wer ruft dich an?"],
+      ["What do you want?","Was willst du?"],["When do you come home?","Wann kommst du nach Hause?"],
+      ["Why is she absent?","Warum fehlt sie?"],["How is the weather?","Wie ist das Wetter?"],
+      ["Where is the toilet?","Wo ist die Toilette?"],["Who makes breakfast?","Wer macht das Frühstück?"],
+      ["What do you read?","Was liest du?"],["When is the party?","Wann ist die Party?"],
+      ["Why do you cry?","Warum weinst du?"],["How do you spell your name?","Wie buchstabierst du deinen Namen?"],
+      ["Where is the nearest pharmacy?","Wo ist die nächste Apotheke?"],["Who teaches you?","Wer unterrichtet dich?"],
+      ["What do you wear today?","Was trägst du heute?"],["When does the film start?","Wann beginnt der Film?"],
+      ["Why do you walk?","Warum gehst du?"],["How long does it take?","Wie lange dauert es?"],
+      ["Where does she study?","Wo studiert sie?"],["Who brings the food?","Wer bringt das Essen?"],
+      ["What do you cook today?","Was kochst du heute?"],["When does summer start?","Wann beginnt der Sommer?"],
+      ["Why are you happy?","Warum bist du glücklich?"],["How do you say that?","Wie sagt man das?"],
+      ["Where is the train station?","Wo ist der Bahnhof?"],["Who is at the door?","Wer ist an der Tür?"],
+      ["What do you do on weekends?","Was machst du am Wochenende?"],["When does winter end?","Wann endet der Winter?"],
+      ["Why does he run?","Warum läuft er?"],["How far is it?","Wie weit ist es?"],
+      ["Who is your best friend?","Wer ist dein bester Freund?"],["What do you like?","Was magst du?"],
+      ["When do you wake up?","Wann wachst du auf?"],["Why does she work there?","Warum arbeitet sie dort?"],
+      ["How do you feel?","Wie fühlst du dich?"],["Where does he come from?","Woher kommt er?"],
+      ["Who cleans the house?","Wer putzt das Haus?"],["What do you buy?","Was kaufst du?"],
+      ["When is your birthday?","Wann hast du Geburtstag?"],["Why is the shop closed?","Warum ist das Geschäft geschlossen?"],
+      ["How do you know that?","Wie weißt du das?"],["Where is your school?","Wo ist deine Schule?"],
+      ["Who is at home?","Wer ist zu Hause?"],["What do you need?","Was brauchst du?"],
+      ["When do you eat lunch?","Wann isst du Mittagessen?"],["Why is he late?","Warum kommt er zu spät?"],
+      ["How do you like it?","Wie gefällt es dir?"],["Where can I buy bread?","Wo kann ich Brot kaufen?"],
+      ["Who helps you?","Wer hilft dir?"],["What are you doing now?","Was machst du jetzt?"],
+      ["When do you leave?","Wann gehst du?"],["Why is the baby crying?","Warum weint das Baby?"],
+      ["How do you get to school?","Wie kommst du zur Schule?"],["Where is the nearest bakery?","Wo ist die nächste Bäckerei?"],
+      ["Who do you visit?","Wen besuchst du?"],["What does she wear?","Was trägt sie?"],
+      ["When does the market open?","Wann öffnet der Markt?"],["Why do you eat so fast?","Warum isst du so schnell?"],
+      ["How many people are there?","Wie viele Menschen gibt es?"],["Where do you go on holiday?","Wohin fährst du im Urlaub?"],
+      ["Who cooks dinner tonight?","Wer kocht heute Abend Abendessen?"],["What time is it?","Wie spät ist es?"],
+      ["When do you go to bed?","Wann gehst du schlafen?"],["Why do you like this city?","Warum magst du diese Stadt?"],
+      ["How long do you study?","Wie lange lernst du?"],["Where is the post office?","Wo ist das Postamt?"],
+      ["Who plays music?","Wer macht Musik?"],["What sport do you like?","Welchen Sport magst du?"],
+      ["When do you exercise?","Wann machst du Sport?"],["Why do you smile?","Warum lächelst du?"],
+      ["How do you relax?","Wie entspannst du dich?"],["Where do you buy clothes?","Wo kaufst du Kleidung?"],
+      ["Who drives you to school?","Wer fährt dich zur Schule?"],["What music do you listen to?","Welche Musik hörst du?"],
+      ["When is New Year?","Wann ist Neujahr?"],["Why do you drink so much coffee?","Warum trinkst du so viel Kaffee?"],
+      ["How do you write this word?","Wie schreibt man dieses Wort?"],["Where can I park?","Wo kann ich parken?"],
+      ["Who is the best student?","Wer ist der beste Schüler?"],["What do you order?","Was bestellst du?"],
+      ["When do classes end?","Wann enden die Stunden?"],["Why is the weather bad?","Warum ist das Wetter schlecht?"],
+      ["How do you pronounce that?","Wie spricht man das aus?"],["Where is the gym?","Wo ist das Fitnessstudio?"],
+      ["Who lives with you?","Wer wohnt bei dir?"],["What do you study?","Was studierst du?"],
+      ["When is the next train?","Wann kommt der nächste Zug?"]
+    ]
+  },
+  { key:"yesno", icon:"✅", title:"Yes/No Questions", subtitle:"Verb comes FIRST — then subject!",
+    tip:"To form a yes/no question, move the verb to position 1! Du trinkst Kaffee. → Trinkst du Kaffee?",
+    data:[
+      ["Do you drink coffee?","Trinkst du Kaffee?"],["Do you eat meat?","Isst du Fleisch?"],
+      ["Does she speak German?","Spricht sie Deutsch?"],["Do they live in Berlin?","Wohnen sie in Berlin?"],
+      ["Is he a teacher?","Ist er ein Lehrer?"],["Are you tired?","Bist du müde?"],
+      ["Does she have a car?","Hat sie ein Auto?"],["Do we need help?","Brauchen wir Hilfe?"],
+      ["Can you swim?","Kannst du schwimmen?"],["Must I come tomorrow?","Muss ich morgen kommen?"],
+      ["Do you like music?","Magst du Musik?"],["Does he cook every day?","Kocht er jeden Tag?"],
+      ["Are they happy?","Sind sie glücklich?"],["Does she study at university?","Studiert sie an der Universität?"],
+      ["Is the shop open?","Ist das Geschäft offen?"],["Do you know the answer?","Kennst du die Antwort?"],
+      ["Does he play football?","Spielt er Fußball?"],["Are we late?","Sind wir zu spät?"],
+      ["Do you have money?","Hast du Geld?"],["Is the train on time?","Ist der Zug pünktlich?"],
+      ["Do you live alone?","Wohnst du allein?"],["Does she work here?","Arbeitet sie hier?"],
+      ["Do they have children?","Haben sie Kinder?"],["Is the food hot?","Ist das Essen heiß?"],
+      ["Can she drive?","Kann sie fahren?"],["Do you read books?","Liest du Bücher?"],
+      ["Does he need a doctor?","Braucht er einen Arzt?"],["Are you from Germany?","Bist du aus Deutschland?"],
+      ["Does she like cats?","Mag sie Katzen?"],["Is the window open?","Ist das Fenster offen?"],
+      ["Do you go to school?","Gehst du zur Schule?"],["Does he have a brother?","Hat er einen Bruder?"],
+      ["Are they students?","Sind sie Studenten?"],["Does she write every day?","Schreibt sie jeden Tag?"],
+      ["Is the café near here?","Ist das Café in der Nähe?"],["Do you take the bus?","Nimmst du den Bus?"],
+      ["Does he wear glasses?","Trägt er eine Brille?"],["Are you coming tonight?","Kommst du heute Abend?"],
+      ["Does she drink tea?","Trinkt sie Tee?"],["Is the hotel expensive?","Ist das Hotel teuer?"],
+      ["Do you like Germany?","Magst du Deutschland?"],["Does he go running?","Geht er laufen?"],
+      ["Are we in the right place?","Sind wir am richtigen Ort?"],["Does she have a job?","Hat sie einen Job?"],
+      ["Is today Monday?","Ist heute Montag?"],["Do you want pizza?","Willst du Pizza?"],
+      ["Does he know her?","Kennt er sie?"],["Are they hungry?","Haben sie Hunger?"],
+      ["Does she play piano?","Spielt sie Klavier?"],["Is the bus free?","Ist der Bus kostenlos?"],
+      ["Do you speak English?","Sprichst du Englisch?"],["Does he have a phone?","Hat er ein Handy?"],
+      ["Are you a doctor?","Bist du Arzt?"],["Does she like sports?","Mag sie Sport?"],
+      ["Is the park big?","Ist der Park groß?"],["Do they speak French?","Sprechen sie Französisch?"],
+      ["Does he live here?","Wohnt er hier?"],["Are you cold?","Bist du kalt?"],
+      ["Does she eat fish?","Isst sie Fisch?"],["Is the market open today?","Ist der Markt heute offen?"],
+      ["Do you walk to work?","Gehst du zu Fuß zur Arbeit?"],["Does he use the computer?","Benutzt er den Computer?"],
+      ["Are they from Austria?","Sind sie aus Österreich?"],["Does she have blue eyes?","Hat sie blaue Augen?"],
+      ["Is this the right road?","Ist das die richtige Straße?"],["Do you know German grammar?","Kennst du die deutsche Grammatik?"],
+      ["Does he cook well?","Kocht er gut?"],["Are you on holiday?","Bist du im Urlaub?"],
+      ["Does she visit her parents?","Besucht sie ihre Eltern?"],["Is the test tomorrow?","Ist der Test morgen?"],
+      ["Do you have a bicycle?","Hast du ein Fahrrad?"],["Does he take the train?","Nimmt er den Zug?"],
+      ["Are they at home?","Sind sie zu Hause?"],["Does she like chocolate?","Mag sie Schokolade?"],
+      ["Is it raining outside?","Regnet es draußen?"],["Do you need an umbrella?","Brauchst du einen Regenschirm?"],
+      ["Does he have a sister?","Hat er eine Schwester?"],["Are you vegetarian?","Bist du Vegetarier?"],
+      ["Does she clean the house?","Putzt sie das Haus?"],["Is the food ready?","Ist das Essen fertig?"],
+      ["Do you visit the gym?","Gehst du ins Fitnessstudio?"],["Does he teach children?","Unterrichtet er Kinder?"],
+      ["Are they married?","Sind sie verheiratet?"],["Does she have a dog?","Hat sie einen Hund?"],
+      ["Is this seat free?","Ist dieser Platz frei?"],["Do you buy organic food?","Kaufst du Bio-Lebensmittel?"],
+      ["Does he wear a tie?","Trägt er eine Krawatte?"],["Are you ready?","Bist du fertig?"],
+      ["Does she commute by train?","Fährt sie mit dem Zug?"],["Is the bank open on Saturday?","Ist die Bank am Samstag offen?"],
+      ["Do you like reading?","Liest du gerne?"],["Does he have a hobby?","Hat er ein Hobby?"],
+      ["Are they learning German?","Lernen sie Deutsch?"],["Does she want to travel?","Will sie reisen?"],
+      ["Is the coffee hot?","Ist der Kaffee heiß?"],["Do you go to bed late?","Gehst du spät ins Bett?"],
+      ["Does he play an instrument?","Spielt er ein Instrument?"],["Are you from Vienna?","Bist du aus Wien?"],
+      ["Does she study medicine?","Studiert sie Medizin?"],["Is the dog dangerous?","Ist der Hund gefährlich?"]
+    ]
+  },
+  { key:"polite", icon:"🙏", title:"Polite Requests", subtitle:"bitte – Können Sie – Kannst du – Darf ich",
+    tip:"Use Sie (formal) with strangers/elders, du (informal) with friends. 'Bitte' = please — always sounds nicer!",
+    data:[
+      ["Please open the door.","Bitte öffnen Sie die Tür."],["Please close the window.","Bitte schließen Sie das Fenster."],
+      ["Can you help me please?","Können Sie mir bitte helfen?"],["Could you speak slowly?","Können Sie bitte langsam sprechen?"],
+      ["May I sit here?","Darf ich hier sitzen?"],["Please give me the menu.","Bitte geben Sie mir die Speisekarte."],
+      ["Can you repeat that?","Können Sie das wiederholen?"],["Please call a taxi.","Bitte rufen Sie ein Taxi."],
+      ["May I ask a question?","Darf ich eine Frage stellen?"],["Can you write that down?","Können Sie das aufschreiben?"],
+      ["Please bring the bill.","Bitte bringen Sie die Rechnung."],["Could you open the bottle?","Können Sie die Flasche öffnen?"],
+      ["May I use the phone?","Darf ich das Telefon benutzen?"],["Please turn off the light.","Bitte schalten Sie das Licht aus."],
+      ["Can you show me the way?","Können Sie mir den Weg zeigen?"],["Please wait a moment.","Bitte warten Sie einen Moment."],
+      ["May I come in?","Darf ich hereinkommen?"],["Could you bring some water?","Können Sie bitte etwas Wasser bringen?"],
+      ["Please speak more clearly.","Bitte sprechen Sie deutlicher."],["Can you spell that?","Können Sie das buchstabieren?"],
+      ["Please take a seat.","Bitte nehmen Sie Platz."],["May I pay now?","Darf ich jetzt bezahlen?"],
+      ["Could you help me carry this?","Können Sie mir das tragen helfen?"],["Please pass the salt.","Bitte reichen Sie mir das Salz."],
+      ["Can you explain that again?","Können Sie das nochmal erklären?"],["Please don't smoke here.","Bitte rauchen Sie hier nicht."],
+      ["May I leave early?","Darf ich früher gehen?"],["Could you hold the door?","Können Sie die Tür halten?"],
+      ["Please be quiet.","Bitte seien Sie still."],["Can you lend me a pen?","Können Sie mir einen Stift leihen?"],
+      ["Please come in.","Bitte kommen Sie herein."],["May I have a glass of water?","Darf ich ein Glas Wasser haben?"],
+      ["Could you lower the music?","Können Sie die Musik leiser machen?"],["Please write your name here.","Bitte schreiben Sie Ihren Namen hier."],
+      ["Can you translate this?","Können Sie das übersetzen?"],["Please show me your passport.","Bitte zeigen Sie mir Ihren Reisepass."],
+      ["May I take this chair?","Darf ich diesen Stuhl nehmen?"],["Could you open the window?","Können Sie das Fenster öffnen?"],
+      ["Please fill in this form.","Bitte füllen Sie dieses Formular aus."],["Can you give me directions?","Können Sie mir eine Wegbeschreibung geben?"],
+      ["Please speak German with me.","Bitte sprechen Sie Deutsch mit mir."],["May I borrow your book?","Darf ich Ihr Buch ausleihen?"],
+      ["Could you pass the bread?","Können Sie das Brot weitergeben?"],["Please send me the information.","Bitte schicken Sie mir die Informationen."],
+      ["Can you check my homework?","Können Sie meine Hausaufgaben überprüfen?"],["Please smile for the photo.","Bitte lächeln Sie für das Foto."],
+      ["May I pay by card?","Darf ich mit Karte bezahlen?"],["Could you recommend a restaurant?","Können Sie ein Restaurant empfehlen?"],
+      ["Please don't park here.","Bitte parken Sie hier nicht."],["Can you call me tomorrow?","Können Sie mich morgen anrufen?"],
+      ["Please bring a coffee.","Bitte bringen Sie einen Kaffee."],["May I have the receipt?","Darf ich den Beleg haben?"],
+      ["Could you speak English?","Können Sie Englisch sprechen?"],["Please hold this for me.","Bitte halten Sie das für mich."],
+      ["Can you wake me at seven?","Können Sie mich um sieben Uhr wecken?"],["Please don't be late.","Bitte kommen Sie nicht zu spät."],
+      ["May I open the window?","Darf ich das Fenster öffnen?"],["Could you check my pronunciation?","Können Sie meine Aussprache überprüfen?"],
+      ["Please speak more slowly.","Bitte sprechen Sie langsamer."],["Can you help me with this bag?","Können Sie mir mit dieser Tasche helfen?"],
+      ["Please give me a receipt.","Bitte geben Sie mir eine Quittung."],["May I see the menu?","Darf ich die Speisekarte sehen?"],
+      ["Could you turn on the heating?","Können Sie die Heizung einschalten?"],["Please clean the table.","Bitte reinigen Sie den Tisch."],
+      ["Can you recommend a hotel?","Können Sie ein Hotel empfehlen?"],["Please turn down the volume.","Bitte drehen Sie die Lautstärke herunter."],
+      ["May I take a photo here?","Darf ich hier ein Foto machen?"],["Could you show me that again?","Können Sie mir das nochmal zeigen?"],
+      ["Please tell me your name.","Bitte nennen Sie mir Ihren Namen."],["Can you help me find my way?","Können Sie mir helfen, den Weg zu finden?"],
+      ["Please be patient.","Bitte haben Sie Geduld."],["May I leave my bag here?","Darf ich meine Tasche hier lassen?"],
+      ["Could you book a table?","Können Sie einen Tisch reservieren?"],["Please give me more time.","Bitte geben Sie mir mehr Zeit."],
+      ["Can you bring the check?","Können Sie die Rechnung bringen?"],["Please be careful.","Bitte seien Sie vorsichtig."],
+      ["May I ask where you are from?","Darf ich fragen, woher Sie kommen?"],["Could you write that down for me?","Können Sie das für mich aufschreiben?"],
+      ["Please stop talking.","Bitte hören Sie auf zu reden."],["Can you sing that song?","Können Sie dieses Lied singen?"]
+    ]
+  },
+  { key:"mixed", icon:"💬", title:"Mixed Conversation", subtitle:"All topics combined",
+    tip:"Real conversations use everything at once. You've learned all these patterns — now use them naturally!",
+    data:[
+      ["Good morning! How are you?","Guten Morgen! Wie geht es Ihnen?"],["Good evening! What would you like?","Guten Abend! Was möchten Sie?"],
+      ["My name is Anna. I am from Vienna.","Mein Name ist Anna. Ich komme aus Wien."],["I am a student and I study medicine.","Ich bin Student und studiere Medizin."],
+      ["I live in Berlin with my family.","Ich wohne in Berlin mit meiner Familie."],["My mother is a nurse and my father is a teacher.","Meine Mutter ist Krankenschwester und mein Vater ist Lehrer."],
+      ["I have a brother and two sisters.","Ich habe einen Bruder und zwei Schwestern."],["We eat breakfast together every morning.","Wir essen jeden Morgen zusammen Frühstück."],
+      ["My favorite food is pizza.","Mein Lieblingsessen ist Pizza."],["I can cook pasta, but not very well.","Ich kann Nudeln kochen, aber nicht sehr gut."],
+      ["Today is Tuesday and I have class at nine.","Heute ist Dienstag und ich habe um neun Uhr Unterricht."],["After class, I go to the supermarket.","Nach dem Unterricht gehe ich in den Supermarkt."],
+      ["I need milk, bread, and eggs.","Ich brauche Milch, Brot und Eier."],["The supermarket is near my house.","Der Supermarkt ist in der Nähe meines Hauses."],
+      ["I take the bus to school every day.","Ich nehme jeden Tag den Bus zur Schule."],["The bus comes at eight thirty.","Der Bus kommt um halb neun."],
+      ["I arrive at school at nine o'clock.","Ich komme um neun Uhr an der Schule an."],["My teacher speaks slowly and clearly.","Mein Lehrer spricht langsam und deutlich."],
+      ["I want to learn German because I love the language.","Ich will Deutsch lernen, weil ich die Sprache liebe."],["German is not easy, but it is interesting.","Deutsch ist nicht einfach, aber es ist interessant."],
+      ["My friend lives in Munich.","Mein Freund wohnt in München."],["He works as an engineer.","Er arbeitet als Ingenieur."],
+      ["He has a big apartment with a balcony.","Er hat eine große Wohnung mit einem Balkon."],["We meet every Saturday at the café.","Wir treffen uns jeden Samstag im Café."],
+      ["We drink coffee and talk for hours.","Wir trinken Kaffee und reden stundenlang."],["My sister studies in Hamburg.","Meine Schwester studiert in Hamburg."],
+      ["She is twenty-two years old.","Sie ist zweiundzwanzig Jahre alt."],["She wants to become a doctor.","Sie will Ärztin werden."],
+      ["She must study hard every day.","Sie muss jeden Tag hart lernen."],["I am very proud of her.","Ich bin sehr stolz auf sie."],
+      ["At the weekend, I go hiking.","Am Wochenende gehe ich wandern."],["I love nature and fresh air.","Ich liebe die Natur und frische Luft."],
+      ["Sometimes I take my dog with me.","Manchmal nehme ich meinen Hund mit."],["My dog is three years old.","Mein Hund ist drei Jahre alt."],
+      ["He is brown and very playful.","Er ist braun und sehr verspielt."],["In the evening, I read a book or watch TV.","Am Abend lese ich ein Buch oder sehe fern."],
+      ["I prefer books to television.","Ich bevorzuge Bücher gegenüber dem Fernsehen."],["I am reading a German novel right now.","Ich lese gerade einen deutschen Roman."],
+      ["It is very exciting.","Es ist sehr aufregend."],["I understand most of it now.","Ich verstehe jetzt das meiste davon."],
+      ["My birthday is in March.","Mein Geburtstag ist im März."],["I visited Rome and Florence.","Ich habe Rom und Florenz besucht."],
+      ["The food there was amazing.","Das Essen dort war unglaublich."],["I want to go back next summer.","Ich will nächsten Sommer wiederkommen."],
+      ["I work in a small office.","Ich arbeite in einem kleinen Büro."],["My boss is very kind.","Mein Chef ist sehr nett."],
+      ["I start work at nine and finish at five.","Ich beginne die Arbeit um neun und ende um fünf."],["I take a lunch break at twelve thirty.","Ich mache um halb eins Mittagspause."],
+      ["After work, I go to the gym.","Nach der Arbeit gehe ich ins Fitnessstudio."],["I go to the gym three times a week.","Ich gehe dreimal pro Woche ins Fitnessstudio."],
+      ["I like running and swimming.","Ich mag Laufen und Schwimmen."],["My favorite sport is tennis.","Mein Lieblingssport ist Tennis."],
+      ["I play tennis every Sunday morning.","Ich spiele jeden Sonntagmorgen Tennis."],["My partner also plays tennis.","Mein Partner spielt auch Tennis."],
+      ["We cook dinner together on Fridays.","Wir kochen freitags zusammen Abendessen."],["We like to try new recipes.","Wir probieren gerne neue Rezepte aus."],
+      ["Last week we made Japanese food.","Letzte Woche haben wir japanisches Essen gemacht."],["It was delicious!","Es war köstlich!"],
+      ["We want to travel to Japan next year.","Wir wollen nächstes Jahr nach Japan reisen."],["I am studying Japanese now.","Ich lerne jetzt Japanisch."],
+      ["It is harder than German!","Es ist schwieriger als Deutsch!"],["I like spring the most.","Ich mag den Frühling am liebsten."],
+      ["The flowers bloom and the birds sing.","Die Blumen blühen und die Vögel singen."],["In winter it is cold and dark.","Im Winter ist es kalt und dunkel."],
+      ["I must wear a warm coat.","Ich muss einen warmen Mantel tragen."],["My favorite color is green.","Meine Lieblingsfarbe ist Grün."],
+      ["My room has green walls.","Mein Zimmer hat grüne Wände."],["I have a white bookshelf.","Ich habe ein weißes Bücherregal."],
+      ["My desk is brown and wooden.","Mein Schreibtisch ist braun und aus Holz."],["I study at my desk every evening.","Ich lerne jeden Abend an meinem Schreibtisch."],
+      ["I usually study for two hours.","Normalerweise lerne ich zwei Stunden."],["I make vocabulary cards.","Ich mache Vokabelkarten."],
+      ["I review them every morning.","Ich überprüfe sie jeden Morgen."],["This method works very well.","Diese Methode funktioniert sehr gut."],
+      ["My German is improving every week.","Mein Deutsch verbessert sich jede Woche."],["Do you want some coffee?","Möchten Sie einen Kaffee?"],
+      ["Yes please, with milk and sugar.","Ja bitte, mit Milch und Zucker."],["How many sugars do you want?","Wie viele Stücke Zucker möchten Sie?"],
+      ["Just one please, thank you.","Nur eines bitte, danke."],["Here is your coffee. Enjoy!","Hier ist Ihr Kaffee. Guten Appetit!"],
+      ["This coffee is really good.","Dieser Kaffee ist wirklich gut."],["Where did you buy it?","Wo haben Sie ihn gekauft?"],
+      ["From the shop on the corner.","Vom Laden an der Ecke."],["Excuse me, is this seat taken?","Entschuldigung, ist dieser Platz belegt?"],
+      ["No, you can sit there.","Nein, Sie können dort sitzen."],["Thank you very much!","Vielen Dank!"],
+      ["You are welcome.","Bitte sehr."],["Is this your first time in Germany?","Ist das Ihr erster Besuch in Deutschland?"],
+      ["No, I come here every year.","Nein, ich komme jedes Jahr hierher."],["Which city do you like most?","Welche Stadt mögen Sie am liebsten?"],
+      ["I love Hamburg, the harbor is beautiful.","Ich liebe Hamburg, der Hafen ist wunderschön."],["Have you been to Munich?","Waren Sie in München?"],
+      ["Yes, I was there last October.","Ja, ich war letzten Oktober dort."],["The Oktoberfest was amazing!","Das Oktoberfest war unglaublich!"],
+      ["German food is very hearty.","Deutsches Essen ist sehr herzhaft."],["But also very delicious.","Aber auch sehr lecker."],
+      ["I should go. It was nice talking.","Ich muss gehen. Es war schön zu reden."],["Have a good day!","Haben Sie einen schönen Tag!"],
+      ["You too! See you soon.","Sie auch! Bis bald."],["Goodbye and good luck!","Auf Wiedersehen und viel Glück!"],
+      ["I am at the train station.","Ich bin am Bahnhof."],["The train to Munich leaves at ten.","Der Zug nach München fährt um zehn Uhr ab."],
+      ["I need to buy a ticket.","Ich muss ein Ticket kaufen."],["One ticket to Munich please.","Ein Ticket nach München bitte."],
+      ["Single or return?","Einfach oder Rückfahrt?"],["Return please.","Rückfahrt bitte."],
+      ["That is forty euros.","Das kostet vierzig Euro."],["Platform seven, track two.","Gleis sieben, Bahnsteig zwei."],
+      ["Thank you. Have a good journey!","Danke. Gute Reise!"],["My family has dinner at six o'clock.","Meine Familie isst um sechs Uhr Abendessen."],
+      ["We always eat together at the table.","Wir essen immer zusammen am Tisch."],["My father cooks on Sundays.","Mein Vater kocht sonntags."],
+      ["He makes excellent roast chicken.","Er macht ausgezeichnetes Brathähnchen."],["My mother bakes bread on Saturdays.","Meine Mutter backt samstags Brot."],
+      ["The whole house smells wonderful.","Das ganze Haus duftet wunderbar."],["I like helping in the kitchen.","Ich helfe gerne in der Küche."],
+      ["I can chop vegetables and wash dishes.","Ich kann Gemüse schneiden und Geschirr spülen."],["Dinner together is very important to us.","Das gemeinsame Abendessen ist uns sehr wichtig."],
+      ["After dinner, we talk about the day.","Nach dem Abendessen sprechen wir über den Tag."],["My sister tells funny stories.","Meine Schwester erzählt lustige Geschichten."],
+      ["I go to the doctor once a year.","Ich gehe einmal im Jahr zum Arzt."],["I usually feel healthy.","Normalerweise fühle ich mich gesund."],
+      ["But last month I had a bad cold.","Aber letzten Monat hatte ich eine schlimme Erkältung."],["I had to stay in bed for three days.","Ich musste drei Tage im Bett bleiben."],
+      ["I drank hot tea with honey.","Ich habe heißen Tee mit Honig getrunken."],["Now I feel much better.","Jetzt fühle ich mich viel besser."],
+      ["I go shopping every Saturday.","Ich gehe jeden Samstag einkaufen."],["The market is open from eight to two.","Der Markt ist von acht bis zwei Uhr offen."],
+      ["I buy fresh fruit and vegetables there.","Ich kaufe dort frisches Obst und Gemüse."],["The tomatoes cost one euro per kilo.","Die Tomaten kosten einen Euro pro Kilo."],
+      ["That is a good price!","Das ist ein guter Preis!"],["I want to bake a cake this afternoon.","Ich will heute Nachmittag einen Kuchen backen."],
+      ["It is my grandmother's birthday tomorrow.","Morgen ist der Geburtstag meiner Oma."],["She loves chocolate cake.","Sie liebt Schokoladenkuchen."],
+      ["I decorate the cake with cream.","Ich dekoriere den Kuchen mit Sahne."],["My grandmother will be very happy.","Meine Oma wird sehr glücklich sein."],
+      ["She is turning eighty years old.","Sie wird achtzig Jahre alt."],["We organize a big family party.","Wir organisieren eine große Familienparty."],
+      ["Twenty people come to the celebration.","Zwanzig Menschen kommen zur Feier."],["We sing, eat, and dance all evening.","Wir singen, essen und tanzen den ganzen Abend."],
+      ["My grandmother is the happiest person there.","Meine Oma ist die glücklichste Person dort."]
+    ]
+  }
+];
+
+// ═══════════════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════════════
+let mode = 'study';
+let activeCat = 'all';
+let openSet = new Set();
+let flashIdx = 0, flashFlipped = false, flashData = [];
+let quiz = { qs:[], idx:0, correct:0, wrong:0, done:false, answered:false, lastOk:false };
+
+// ═══════════════════════════════════════════════════════════
+// HELPERS
+// ═══════════════════════════════════════════════════════════
+function allSentences() {
+  let out = [];
+  CATS.forEach(c => c.data.forEach((pair, i) => out.push({ catKey:c.key, catTitle:c.title, catIcon:c.icon, id:`${c.key}_${i}`, en:pair[0], de:pair[1] })));
+  return out;
+}
+
+function filtered() {
+  const q = document.getElementById('srch').value.trim().toLowerCase();
+  let data = allSentences();
+  if (activeCat !== 'all') data = data.filter(s => s.catKey === activeCat);
+  if (q) data = data.filter(s => s.en.toLowerCase().includes(q) || s.de.toLowerCase().includes(q));
+  return data;
+}
+
+const TOTAL = allSentences().length;
+
+// ═══════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════
+function init() {
+  // Hero stats
+  document.getElementById('hero-stats').innerHTML =
+    `<div class="hstat"><b>${TOTAL}</b> Sentences</div>
+     <div class="hstat"><b>${CATS.length}</b> Categories</div>
+     <div class="hstat"><b>3</b> Modes</div>
+     <div class="hstat">🔰 A1→A2</div>`;
+  buildSidebar();
+  render();
+}
+
+function buildSidebar() {
+  const n = document.getElementById('sidebar');
+  let h = `<div class="sl">All</div>
+  <button class="sitem ${activeCat==='all'?'on':''}" onclick="setCat('all')">
+    <span class="ic">🌐</span><span class="nm">All Categories</span><span class="ct">${TOTAL}</span>
+  </button>
+  <div class="sl" style="margin-top:14px">Topics</div>`;
+  CATS.forEach(c => {
+    h += `<button class="sitem ${activeCat===c.key?'on':''}" onclick="setCat('${c.key}')">
+      <span class="ic">${c.icon}</span><span class="nm">${c.title}</span><span class="ct">${c.data.length}</span>
+    </button>`;
+  });
+  n.innerHTML = h;
+}
+
+// ═══════════════════════════════════════════════════════════
+// MODE / CAT
+// ═══════════════════════════════════════════════════════════
+function setMode(m) {
+  mode = m;
+  ['study','flash','quiz'].forEach(x => {
+    document.getElementById('m-'+x).className = 'tbtn' + (x===m?' on':'');
+  });
+  if (m === 'quiz') beginQuiz();
+  else if (m === 'flash') { flashData = [...filtered()].sort(()=>Math.random()-.5); flashIdx=0; flashFlipped=false; }
+  render();
+}
+
+function setCat(k) {
+  activeCat = k;
+  buildSidebar();
+  if (mode === 'flash') { flashData = [...filtered()].sort(()=>Math.random()-.5); flashIdx=0; flashFlipped=false; }
+  render();
+}
+
+function doSearch() {
+  if (mode === 'flash') { flashData = [...filtered()].sort(()=>Math.random()-.5); flashIdx=0; flashFlipped=false; }
+  render();
+}
+
+// ═══════════════════════════════════════════════════════════
+// RENDER DISPATCHER
+// ═══════════════════════════════════════════════════════════
+function render() {
+  const m = document.getElementById('content');
+  if (mode==='study') renderStudy(m);
+  else if (mode==='flash') renderFlash(m);
+  else renderQuizCard(m);
+}
+
+// ═══════════════════════════════════════════════════════════
+// STUDY MODE
+// ═══════════════════════════════════════════════════════════
+function renderStudy(m) {
+  const data = filtered();
+  if (!data.length) { m.innerHTML=`<div class="empty"><span class="empty-icon">🔍</span><h3>No results</h3><p>Try a different search</p></div>`; return; }
+
+  const opened = data.filter(s => openSet.has(s.id)).length;
+  const pct = data.length ? Math.round(opened/data.length*100) : 0;
+
+  // Group by category
+  const groups = {};
+  data.forEach(s => { if (!groups[s.catKey]) groups[s.catKey]=[]; groups[s.catKey].push(s); });
+
+  const hasSearch = document.getElementById('srch').value.trim();
+  let html = `<div class="prog-row">
+    <div class="prog-bar"><div class="prog-fill" style="width:${pct}%"></div></div>
+    <div class="prog-txt">${opened}/${data.length} revealed</div>
+  </div>`;
+
+  Object.keys(groups).forEach(key => {
+    const cat = CATS.find(c=>c.key===key);
+    if (cat && !hasSearch) {
+      html += `<div style="margin-bottom:36px">
+        <div class="cat-hd">
+          <div class="cat-em">${cat.icon}</div>
+          <div>
+            <div class="cat-title">${cat.title}</div>
+            <div class="cat-mono">${cat.subtitle}</div>
+            <div class="cat-tip">💡 <strong>Tip:</strong> ${cat.tip}</div>
+          </div>
+        </div>`;
+    } else {
+      html += `<div style="margin-bottom:28px">`;
+    }
+    html += `<div class="grid">`;
+    groups[key].forEach((s, i) => {
+      const open = openSet.has(s.id);
+      html += `<div class="card ${open?'open':''}" onclick="toggleCard('${s.id}')" id="c-${s.id}">
+        <div class="cnum">#${data.indexOf(s)+1}</div>
+        <div class="cbody">
+          <div class="cen">${s.en}</div>
+          <div class="cde">${s.de}</div>
+        </div>
+        <div class="ctog">${open?'✓':'→'}</div>
+      </div>`;
+    });
+    html += `</div></div>`;
+  });
+
+  m.innerHTML = html;
+}
+
+function toggleCard(id) {
+  openSet.has(id) ? openSet.delete(id) : openSet.add(id);
+  const el = document.getElementById('c-'+id);
+  if (!el) return;
+  el.classList.toggle('open', openSet.has(id));
+  el.querySelector('.ctog').textContent = openSet.has(id)?'✓':'→';
+  // update progress
+  const data = filtered();
+  const opened = data.filter(s=>openSet.has(s.id)).length;
+  const pct = data.length ? Math.round(opened/data.length*100) : 0;
+  const fill = document.querySelector('.prog-fill');
+  if (fill) fill.style.width = pct+'%';
+  const txt = document.querySelector('.prog-txt');
+  if (txt) txt.textContent = `${opened}/${data.length} revealed`;
+}
+
+function revealAll() { filtered().forEach(s=>openSet.add(s.id)); render(); }
+function hideAll() { openSet.clear(); render(); }
+
+// ═══════════════════════════════════════════════════════════
+// FLASHCARD MODE
+// ═══════════════════════════════════════════════════════════
+function renderFlash(m) {
+  const data = flashData.length ? flashData : filtered();
+  if (!data.length) { m.innerHTML=`<div class="empty"><span class="empty-icon">🃏</span><h3>No sentences</h3></div>`; return; }
+  if (flashIdx >= data.length) flashIdx = 0;
+  const s = data[flashIdx];
+  const pct = ((flashIdx+1)/data.length*100).toFixed(1);
+
+  m.innerHTML = `
+    <div class="fc-page">
+      <div class="fc-header">
+        <h2>${s.catIcon} ${s.catTitle}</h2>
+        <p>Click the card to flip · Space = flip · ← → to navigate</p>
+      </div>
+      <div class="prog-row" style="margin-bottom:18px">
+        <div class="prog-bar"><div class="prog-fill" style="width:${pct}%"></div></div>
+        <div class="prog-txt">${flashIdx+1} / ${data.length}</div>
+      </div>
+      <div class="fc-outer">
+        <div class="fc ${flashFlipped?'flip':''}" onclick="fcFlip()">
+          <div class="fc-face fc-front">
+            <div class="fc-lang">🇬🇧 English</div>
+            <div class="fc-txt">${s.en}</div>
+            <div class="fc-hint">Tap to reveal German</div>
+          </div>
+          <div class="fc-face fc-back">
+            <div class="fc-lang">🇩🇪 Deutsch</div>
+            <div class="fc-txt">${s.de}</div>
+          </div>
+        </div>
+      </div>
+      <div class="fc-ctrls">
+        <button class="btn" onclick="fcMove(-1)">← Prev</button>
+        <div class="fc-n">${flashIdx+1} of ${data.length}</div>
+        <button class="btn" onclick="fcMove(1)">Next →</button>
+      </div>
+      <div class="fc-btns" style="margin-top:14px">
+        <button class="btn" onclick="fcShuffle()">🔀 Shuffle</button>
+        <button class="btn" onclick="fcReset()">↺ Restart</button>
+      </div>
+    </div>`;
+}
+
+function fcFlip() { flashFlipped=!flashFlipped; renderFlash(document.getElementById('content')); }
+function fcMove(d) {
+  const data = flashData.length ? flashData : filtered();
+  flashIdx = (flashIdx+d+data.length)%data.length;
+  flashFlipped = false;
+  renderFlash(document.getElementById('content'));
+}
+function fcShuffle() { flashData=[...filtered()].sort(()=>Math.random()-.5); flashIdx=0; flashFlipped=false; renderFlash(document.getElementById('content')); }
+function fcReset() { flashIdx=0; flashFlipped=false; renderFlash(document.getElementById('content')); }
+
+// ═══════════════════════════════════════════════════════════
+// QUIZ MODE
+// ═══════════════════════════════════════════════════════════
+function beginQuiz() {
+  const data = [...filtered()].sort(()=>Math.random()-.5).slice(0,30);
+  quiz = { qs:data, idx:0, correct:0, wrong:0, answered:false, lastOk:false };
+}
+
+function renderQuizCard(m) {
+  m = m || document.getElementById('content');
+  if (!quiz.qs.length) { beginQuiz(); }
+  if (quiz.idx >= quiz.qs.length) { renderResult(m); return; }
+
+  const q = quiz.qs[quiz.idx];
+  const pct = (quiz.idx/quiz.qs.length*100).toFixed(1);
+  const cls = quiz.answered ? (quiz.lastOk?'ok':'no') : '';
+
+  m.innerHTML = `
+    <div class="quiz-page">
+      <div class="score-row">
+        <div class="sc"><div class="sc-n green-n">${quiz.correct}</div><div class="sc-l">Correct</div></div>
+        <div class="sc"><div class="sc-n red-n">${quiz.wrong}</div><div class="sc-l">Wrong</div></div>
+        <div class="sc"><div class="sc-n blue-n" style="font-size:1.3rem">${quiz.idx}/${quiz.qs.length}</div><div class="sc-l">Progress</div></div>
+      </div>
+      <div class="prog-row"><div class="prog-bar"><div class="prog-fill" style="width:${pct}%"></div></div></div>
+      <div class="qcard">
+        <div class="q-meta">${q.catIcon} ${q.catTitle} · Question ${quiz.idx+1} of ${quiz.qs.length}</div>
+        <div class="q-q">${q.en}</div>
+        <input class="q-in ${cls}" id="qin" type="text" placeholder="Type the German translation…"
+          value="${esc(quiz._val||'')}"
+          onkeydown="if(event.key==='Enter')checkQ()"
+          ${quiz.answered?'readonly':''}>
+        ${quiz.answered ? `<div class="q-reveal">✓ ${q.de}</div>` : ''}
+        <div class="q-btns">
+          ${!quiz.answered
+            ? `<button class="btn-primary" onclick="checkQ()">Check Answer</button>
+               <button class="btn" onclick="skipQ()">Skip</button>`
+            : `<button class="btn-primary" onclick="nextQ()">Next →</button>`}
+        </div>
+      </div>
+    </div>`;
+
+  if (!quiz.answered) setTimeout(()=>{ const i=document.getElementById('qin'); if(i)i.focus(); },30);
+}
+
+function renderResult(m) {
+  const pct = Math.round(quiz.correct/quiz.qs.length*100);
+  const em = pct>=80?'🎉':pct>=50?'📚':'💪';
+  m.innerHTML = `
+    <div class="result-page">
+      <span class="result-emoji">${em}</span>
+      <h2>Quiz Complete!</h2>
+      <p>You scored ${pct}% — ${pct>=80?'Ausgezeichnet! Excellent!':pct>=50?'Gut gemacht! Keep going!':'Weiter so! Keep practicing!'}</p>
+      <div class="score-row">
+        <div class="sc"><div class="sc-n green-n">${quiz.correct}</div><div class="sc-l">Correct</div></div>
+        <div class="sc"><div class="sc-n red-n">${quiz.wrong}</div><div class="sc-l">Wrong</div></div>
+        <div class="sc"><div class="sc-n blue-n">${pct}%</div><div class="sc-l">Score</div></div>
+      </div>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <button class="btn-primary" onclick="beginQuiz();render()">Try Again</button>
+        <button class="btn" onclick="setMode('study')">Back to Study</button>
+      </div>
+    </div>`;
+}
+
+function norm(s){ return s.toLowerCase().replace(/[!?.'"]/g,'').trim(); }
+function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+function checkQ() {
+  if (quiz.answered) return;
+  const inp = document.getElementById('qin');
+  if (!inp) return;
+  const val = inp.value.trim();
+  const ok = norm(val) === norm(quiz.qs[quiz.idx].de);
+  quiz.answered = true; quiz.lastOk = ok; quiz._val = val;
+  if (ok) quiz.correct++; else quiz.wrong++;
+  renderQuizCard();
+}
+function skipQ() { quiz.answered=true; quiz.lastOk=false; quiz.wrong++; quiz._val=''; renderQuizCard(); }
+function nextQ() { quiz.idx++; quiz.answered=false; quiz._val=''; renderQuizCard(); }
+
+// ═══════════════════════════════════════════════════════════
+// KEYBOARD SHORTCUTS
+// ═══════════════════════════════════════════════════════════
+document.addEventListener('keydown', e => {
+  if (e.target.tagName==='INPUT') return;
+  if (mode==='flash') {
+    if (e.key==='ArrowRight') fcMove(1);
+    else if (e.key==='ArrowLeft') fcMove(-1);
+    else if (e.key===' ') { e.preventDefault(); fcFlip(); }
+  }
+});
+
+init();
+</script>
+</body>
+</html>
