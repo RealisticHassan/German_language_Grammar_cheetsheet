@@ -3,6 +3,7 @@
 ---
 > - **Last updated:**  16.03.2026 
 > - **Access:**  Lifetime
+> - **Content Quality:**  Eorrors or omissions are accepted
 ---
 
 
